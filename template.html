@@ -181,6 +181,13 @@ input:focus,select:focus,textarea:focus{border-color:var(--teal);outline:none}
 .done-box{text-align:left;display:grid;gap:12px}
 .err{color:var(--alert);font-size:14px;font-weight:600}
 
+/* Booking-only keyboard and error states. */
+#v-book .slot,#v-book .date{min-height:44px}
+#v-book input:focus-visible,#v-book select:focus-visible,#v-book textarea:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+#v-book [aria-invalid="true"]{border-color:var(--alert)}
+#v-book #emergencyBox{margin-bottom:18px}
+#v-book .summary span{min-width:0;overflow-wrap:anywhere}
+
 /* team */
 .team{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
 .person{display:grid;gap:10px}
@@ -307,50 +314,50 @@ footer a{color:var(--ink)}
   <div class="card">
    <div class="stepper" id="stepper"><span>1 Pet</span><span>2 Reason</span><span>3 Time</span><span>4 Your details</span></div>
    <form id="bookForm" novalidate>
+    <div class="alert" id="emergencyBox" hidden role="alert"><b>This sounds urgent. Please don't wait for an online booking.</b><span>Call (604) 888-2628 now. During opening hours, come straight in and call on the way. After hours, call the nearest 24-hour emergency clinic.</span></div>
     <fieldset data-step="0">
-     <legend>Who is the visit for?</legend>
+     <legend tabindex="-1">Who is the visit for?</legend>
      <div class="choice" role="radiogroup" aria-label="Type of pet">
-      <label><input type="radio" name="species" value="Dog" id="sp-dog"> Dog</label>
-      <label><input type="radio" name="species" value="Cat" id="sp-cat"> Cat</label>
-      <label><input type="radio" name="species" value="Rabbit or pocket pet" id="sp-small"> Rabbit or pocket pet</label>
-      <label><input type="radio" name="species" value="Other" id="sp-other"> Other</label>
+      <label><input type="radio" name="species" value="Dog" id="sp-dog" aria-describedby="err0"> Dog</label>
+      <label><input type="radio" name="species" value="Cat" id="sp-cat" aria-describedby="err0"> Cat</label>
+      <label><input type="radio" name="species" value="Rabbit or pocket pet" id="sp-small" aria-describedby="err0"> Rabbit or pocket pet</label>
+      <label><input type="radio" name="species" value="Other" id="sp-other" aria-describedby="err0"> Other</label>
      </div>
-     <label for="petName">Pet's name<input type="text" id="petName" name="petName" autocomplete="off" placeholder="e.g. Biscuit"></label>
+     <label for="petName">Pet's name<input type="text" id="petName" aria-describedby="err0" name="petName" autocomplete="off" placeholder="e.g. Biscuit"></label>
      <div class="choice" role="radiogroup" aria-label="New or returning">
       <label><input type="radio" name="client" value="First visit" id="cl-new"> First visit with us</label>
       <label><input type="radio" name="client" value="Returning" id="cl-ret"> We've been before</label>
      </div>
-     <p class="err" id="err0" hidden>Choose the type of pet and tell us their name.</p>
+     <p class="err" id="err0" role="alert" hidden>Choose your type of pet. Enter your pet's name.</p>
     </fieldset>
     <fieldset data-step="1" hidden>
-     <legend>What's the visit for?</legend>
-     <label for="reason">Reason<select id="reason" name="reason"></select></label>
+     <legend tabindex="-1">What's the visit for?</legend>
+     <label for="reason">Reason<select id="reason" aria-describedby="err1" name="reason"></select></label>
      <label for="notes">Anything we should know? (optional)<textarea id="notes" name="notes" placeholder="e.g. limping on the back left leg since Tuesday"></textarea></label>
-     <div class="alert" id="emergencyBox" hidden role="alert"><b>This sounds urgent. Please don't wait for an online booking.</b><span>Call (604) 888-2628 now. During opening hours, come straight in and call on the way.</span></div>
-     <p class="err" id="err1" hidden>Choose a reason for the visit.</p>
+     <p class="err" id="err1" role="alert" hidden>Choose a reason for the visit.</p>
     </fieldset>
     <fieldset data-step="2" hidden>
-     <legend>Pick a time</legend>
-     <div class="dates" id="dates" role="group" aria-label="Date"></div>
-     <div class="slots" id="slots" role="group" aria-label="Time"></div>
+     <legend tabindex="-1">Pick a time</legend>
+     <div class="dates" id="dates" aria-describedby="err2" tabindex="-1" role="group" aria-label="Date"></div>
+     <div class="slots" id="slots" aria-describedby="err2" tabindex="-1" role="group" aria-label="Time"></div>
      <p class="muted" style="font-size:14px">Times shown are for the demo; the live version reads the clinic's real calendar.</p>
-     <p class="err" id="err2" hidden>Pick a date and a time.</p>
+     <p class="err" id="err2" role="alert" hidden>Pick a date and a time.</p>
     </fieldset>
     <fieldset data-step="3" hidden>
-     <legend>Your details</legend>
-     <label for="ownerName">Your name<input type="text" id="ownerName" name="ownerName" autocomplete="off"></label>
-     <label for="phone">Mobile number<input type="tel" id="phone" name="phone" autocomplete="off" placeholder="604 555 0100"></label>
+     <legend tabindex="-1">Your details</legend>
+     <label for="ownerName">Your name<input type="text" id="ownerName" aria-describedby="err3" name="ownerName" autocomplete="off"></label>
+     <label for="phone">Mobile number<input type="tel" id="phone" aria-describedby="err3" name="phone" autocomplete="off" placeholder="604 555 0100"></label>
      <label for="email">Email (optional)<input type="email" id="email" name="email" autocomplete="off"></label>
      <label class="consent" for="remind"><input type="checkbox" id="remind" name="remind"> Text and email me appointment reminders. You can stop them at any time.</label>
-     <p class="err" id="err3" hidden>Add your name and a phone number we can reach.</p>
+     <p class="err" id="err3" role="alert" hidden>Enter your name. Enter a phone number with at least 10 digits.</p>
     </fieldset>
     <div class="done-box" id="doneBox" hidden>
      <div class="eyebrow">Demo only</div>
-     <h2 id="doneTitle">Booking request ready</h2>
-     <p class="muted">On the live site this would go straight into the clinic's calendar and you'd get a text confirmation. In this demo nothing was sent or saved.</p>
+     <h2 id="doneTitle" tabindex="-1">Demo complete</h2>
+     <p class="muted">This is a demo. Nothing was sent. To book now, call (604) 888-2628.</p>
      <button type="button" class="btn ghost" id="restart">Start again</button>
     </div>
-    <div class="nav-row" id="navRow"><button type="button" class="btn ghost" id="back">Back</button><button type="button" class="btn primary" id="next">Continue</button></div>
+    <div class="nav-row" id="navRow"><button type="button" class="btn ghost" id="back" hidden>Back</button><button type="button" class="btn primary" id="next">Continue</button></div>
    </form>
   </div>
   <aside class="card" aria-label="Booking summary">
@@ -497,10 +504,11 @@ $("#faqList").innerHTML=FAQ.map(f=>`<details><summary>${esc(f.q)}</summary><div 
 
 /* booking */
 let step=0,preset=null; const B={date:null,time:null};
-const EMERG=/(not breathing|trouble breathing|difficulty breathing|can't breathe|choking|seizure|collapsed|collapse|unconscious|bleeding|hit by|poison|toxic|ate (chocolate|grapes|raisins|xylitol|rat)|antifreeze|bloat|swollen belly|can't stand|cannot stand|can't pee|cannot urinate|straining)/i;
+const EMERG=/(\bchocolate\b|\bbreathing\b|not breathing|trouble breathing|difficulty breathing|can't breathe|choking|seizure|collapsed|collapse|unconscious|bleeding|hit by|poison|toxic|ate (chocolate|grapes|raisins|xylitol|rat)|antifreeze|bloat|swollen belly|can't stand|cannot stand|can't pee|cannot urinate|straining)/i;
 $("#reason").innerHTML='<option value="">Choose a reason</option>'+CATS.slice(1).map(c=>`<optgroup label="${esc(c)}">${SVC.filter(s=>s.cat===c).map(s=>`<option value="${s.slug}">${esc(s.name)}</option>`).join("")}</optgroup>`).join("")+'<option value="sick">My pet seems unwell</option><option value="other">Something else or not sure</option>';
-function emergencyCheck(){$("#emergencyBox").hidden=!EMERG.test($("#notes").value)}
-$("#notes").addEventListener("input",()=>{emergencyCheck();summary()});
+function emergencyCheck(){const urgent=$$('#bookForm input[type="text"],#bookForm input[type="tel"],#bookForm input[type="email"],#bookForm textarea').some(el=>EMERG.test(el.value));
+ $("#emergencyBox").hidden=!urgent}
+$("#bookForm").addEventListener("input",()=>{emergencyCheck();summary()});
 function dateList(){const n=vanNow();const base=new Date(Date.UTC(n.y,n.mo-1,n.d));const out=[];for(let i=1;i<=14;i++){const d=new Date(base.getTime()+i*864e5);out.push(d)}return out}
 function hash(s){let h=2166136261;for(const c of s){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0}
 function renderDates(){$("#dates").innerHTML=dateList().map(d=>{const k=d.toISOString().slice(0,10);return `<button type="button" class="date" data-k="${k}" data-wd="${d.getUTCDay()}" aria-pressed="${B.date===k}"><div class="d">${DAYS[d.getUTCDay()].slice(0,3)}</div><div class="n">${d.getUTCDate()}</div><div class="d">${d.toLocaleString("en-CA",{month:"short",timeZone:"UTC"})}</div></button>`}).join("")}
@@ -509,32 +517,37 @@ function renderSlots(){if(!B.date){$("#slots").innerHTML='<p class="muted">Choos
  for(let t=oh*60+om;t<=ch*60+cm-30;t+=30){const h=Math.floor(t/60),m=t%60,lab=fmt(h,m),taken=hash(B.date+lab)%3===0;
   html+=`<button type="button" class="slot" data-t="${lab}" ${taken?"disabled aria-label='"+lab+" taken'":""} aria-pressed="${B.time===lab}">${lab}</button>`}
  $("#slots").innerHTML=html}
-$("#dates").addEventListener("click",e=>{const b=e.target.closest(".date");if(!b)return;B.date=b.dataset.k;B.time=null;renderDates();renderSlots();summary()});
-$("#slots").addEventListener("click",e=>{const b=e.target.closest(".slot");if(!b||b.disabled)return;B.time=b.dataset.t;renderSlots();summary()});
+$("#dates").addEventListener("click",e=>{const b=e.target.closest(".date");if(!b)return;B.date=b.dataset.k;B.time=null;renderDates();renderSlots();summary();$(`.date[data-k="${B.date}"]`).focus()});
+$("#slots").addEventListener("click",e=>{const b=e.target.closest(".slot");if(!b||b.disabled)return;B.time=b.dataset.t;renderSlots();summary();$(`.slot[data-t="${B.time}"]`).focus()});
 function val(n){const el=document.querySelector(`[name="${n}"]:checked`);return el?el.value:""}
 function reasonLabel(){const v=$("#reason").value;if(!v)return"";const s=SVC.find(x=>x.slug===v);return s?s.name:$("#reason").selectedOptions[0].textContent}
 function summary(){const rows=[["Pet",[val("species"),$("#petName").value.trim()].filter(Boolean).join(", ")||"–"],["Visit",reasonLabel()||"–"],
  ["When",B.date&&B.time?`${new Date(B.date+"T12:00:00Z").toLocaleDateString("en-CA",{weekday:"short",month:"short",day:"numeric",timeZone:"UTC"})}, ${B.time}`:"–"],["Reminders",$("#remind").checked?"Yes":"No"]];
  $("#summary").innerHTML=rows.map(r=>`<div><span>${r[0]}</span><span>${esc(r[1])}</span></div>`).join("")}
-function show(){$$("#bookForm fieldset").forEach(f=>f.hidden=+f.dataset.step!==step);
- $$("#stepper span").forEach((s,i)=>{s.className=i<step?"done":i===step?"on":""});
- $("#back").style.visibility=step===0?"hidden":"visible";$("#next").textContent=step===3?"Request booking":"Continue";
- if(step===2){renderDates();renderSlots()}summary()}
-function ok(){const e=$("#err"+step);let good=true;
- if(step===0)good=!!val("species")&&$("#petName").value.trim().length>0;
- if(step===1)good=!!$("#reason").value;
- if(step===2)good=!!(B.date&&B.time);
- if(step===3)good=$("#ownerName").value.trim().length>1&&$("#phone").value.replace(/\D/g,"").length>=10;
- e.hidden=good;return good}
-$("#next").onclick=()=>{if(!ok())return;if(step<3){step++;show();$("#bookForm").scrollIntoView({block:"nearest"})}else finish()};
-$("#back").onclick=()=>{if(step>0){step--;show()}};
+function show(moveFocus=false){$$("#bookForm fieldset").forEach(f=>f.hidden=+f.dataset.step!==step);
+ $$("#stepper span").forEach((s,i)=>{s.className=i<step?"done":i===step?"on":"";if(i===step)s.setAttribute("aria-current","step");else s.removeAttribute("aria-current")});
+ $("#back").hidden=step===0;$("#next").textContent=step===3?"Finish demo":"Continue";
+ $("#err"+step).hidden=true;
+ $$("#bookForm [aria-invalid]").forEach(el=>el.removeAttribute("aria-invalid"));
+ if(step===2){renderDates();renderSlots()}emergencyCheck();summary();
+ if(moveFocus)$(`#bookForm fieldset[data-step="${step}"] legend`).focus()}
+function ok(){const e=$("#err"+step),issues=[];
+ $$("#bookForm [aria-invalid]").forEach(el=>el.removeAttribute("aria-invalid"));
+ const missing=(selector,message)=>{issues.push({el:$(selector),message})};
+ if(step===0){if(!val("species"))missing("#sp-dog","Choose your type of pet.");if(!$("#petName").value.trim())missing("#petName","Enter your pet's name.")}
+ if(step===1&&!$("#reason").value)missing("#reason","Choose a reason for the visit.");
+ if(step===2){if(!B.date)missing("#dates","Choose a date.");if(!B.time)missing("#slots","Choose a time.")}
+ if(step===3){if(!$("#ownerName").value.trim())missing("#ownerName","Enter your name.");if($("#phone").value.replace(/\D/g,"").length<10)missing("#phone","Enter a phone number with at least 10 digits.")}
+ e.textContent=issues.map(x=>x.message).join(" ");e.hidden=issues.length===0;
+ issues.forEach(x=>x.el.setAttribute("aria-invalid","true"));if(issues.length)issues[0].el.focus();return issues.length===0}
+$("#next").onclick=()=>{if(!ok())return;if(step<3){step++;show(true)}else finish()};
+$("#back").onclick=()=>{if(step>0){step--;show(true)}};
 $("#bookForm").addEventListener("submit",e=>e.preventDefault());
 $("#bookForm").addEventListener("change",summary);
-$("#petName").addEventListener("input",summary);
-$("#reason").addEventListener("change",()=>{const v=$("#reason").value;$("#emergencyBox").hidden=!(v==="sick"&&EMERG.test($("#notes").value));emergencyCheck()});
-function finish(){$$("#bookForm fieldset").forEach(f=>f.hidden=true);$("#navRow").hidden=true;$("#doneBox").hidden=false;$$("#stepper span").forEach(s=>s.className="done");
- $("#doneTitle").textContent=`Request ready for ${$("#petName").value.trim()}`}
-$("#restart").onclick=()=>{$("#bookForm").reset();step=0;B.date=B.time=null;$("#doneBox").hidden=true;$("#navRow").hidden=false;$("#emergencyBox").hidden=true;show()};
+$("#reason").addEventListener("change",emergencyCheck);
+function finish(){$$("#bookForm fieldset").forEach(f=>f.hidden=true);$("#navRow").hidden=true;$("#emergencyBox").hidden=true;$("#doneBox").hidden=false;$$("#stepper span").forEach(s=>{s.className="done";s.removeAttribute("aria-current")});
+ $("#doneTitle").focus()}
+$("#restart").onclick=()=>{$("#bookForm").reset();step=0;B.date=B.time=null;$("#doneBox").hidden=true;$("#navRow").hidden=false;show(true)};
 
 /* copy phone */
 $("#copyPhone").onclick=async()=>{const b=$("#copyPhone");try{await navigator.clipboard.writeText("6048882628");b.textContent="Copied"}catch(e){const r=document.createRange();r.selectNodeContents($("#phoneTxt"));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected"}setTimeout(()=>b.textContent="Copy",1800)};
