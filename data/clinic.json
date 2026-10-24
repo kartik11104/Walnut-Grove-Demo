@@ -1,0 +1,58 @@
+{
+  "name": "Walnut Grove Animal Hospital",
+  "phone": "(604) 888-2628",
+  "tel": "+16048882628",
+  "address": "101A-20995 88 Ave, Langley, BC V1M 2C9",
+  "geo": [
+    49.16296,
+    -122.6392
+  ],
+  "hours": [
+    [
+      9,
+      0,
+      17,
+      0
+    ],
+    [
+      8,
+      30,
+      19,
+      0
+    ],
+    [
+      8,
+      30,
+      19,
+      0
+    ],
+    [
+      8,
+      30,
+      19,
+      0
+    ],
+    [
+      8,
+      30,
+      19,
+      0
+    ],
+    [
+      8,
+      30,
+      19,
+      0
+    ],
+    [
+      9,
+      0,
+      17,
+      0
+    ]
+  ],
+  "bookingLive": false,
+  "instagram": "https://www.instagram.com/walnutgroveanimalhospitalbc/",
+  "facebook": "https://www.facebook.com/walnutgroveanimalhospitalbc/",
+  "formEndpoint": "https://docs.google.com/forms/d/e/1FAIpQLScJA4N82tv0x5Ek5wLkXZteAvFi0kyf3CBZqdagPe8AmGja3w/formResponse"
+}

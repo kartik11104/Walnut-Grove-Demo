@@ -1,0 +1,62 @@
+"""Run python3 tests/test_v2.py after python3 build_v2.py. Never sends booking data."""
+import contextlib,json,threading,http.server,functools,sys
+from pathlib import Path
+from urllib.parse import urlsplit,unquote
+from playwright.sync_api import sync_playwright
+ROOT=Path(__file__).resolve().parents[1]
+class Quiet(http.server.SimpleHTTPRequestHandler):
+ def log_message(self,*args):pass
+server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Quiet,directory=str(ROOT/'site')))
+threading.Thread(target=server.serve_forever,daemon=True).start()
+BASE=f'http://127.0.0.1:{server.server_port}'
+paths=['/'+str(p.relative_to(ROOT/'site')).replace('index.html','') for p in sorted((ROOT/'site').rglob('*.html'))]
+errors=[];screenshots=0;loads=0;posted=[]
+def check(good,message):
+ if not good:errors.append(message)
+def tab_to(page,selector):
+ for _ in range(180):
+  if page.locator(selector).first.evaluate('(el)=>el===document.activeElement'):return
+  page.keyboard.press('Tab')
+ raise AssertionError('Tab could not reach '+selector)
+try:
+ with sync_playwright() as p:
+  try:browser=p.chromium.launch()
+  except Exception as e:
+   print('BLOCKED: Chromium unavailable. Browser tests and screenshots were not run.');print(str(e).splitlines()[0]);sys.exit(2)
+  for w,h in [(390,844),(1280,800)]:
+   context=browser.new_context(viewport={'width':w,'height':h},timezone_id='America/Vancouver')
+   # Belt and braces: any real Google Form submission fails the suite and is aborted.
+   def prevent_form(route):posted.append(route.request.url);route.abort()
+   context.route('**/forms/**',prevent_form)
+   page=context.new_page();page.on('pageerror',lambda e:errors.append(str(e)));page.on('console',lambda m:errors.append('console: '+m.text) if m.type=='error' else None)
+   for path in paths:
+    response=page.goto(BASE+path);page.wait_for_load_state('networkidle');loads+=1
+    check(response.status==200,f'{path}: HTTP {response.status}')
+    check(page.locator('h1').count()==1,f'{path}: H1 count')
+    check(page.evaluate('document.documentElement.scrollWidth<=innerWidth'),f'{path}: horizontal scroll at {w}')
+    check(page.locator('img:not([alt])').count()==0,f'{path}: missing image alt')
+    page.locator('img').evaluate_all('(imgs)=>imgs.forEach(i=>i.loading="eager")');page.wait_for_function('Array.from(document.images).every(i=>i.complete)')
+    check(page.locator('img').evaluate_all('(imgs)=>imgs.every(i=>i.complete&&i.naturalWidth>0)'),f'{path}: broken image')
+    check(page.locator('img').evaluate_all('(imgs)=>imgs.every(i=>i.getBoundingClientRect().width<=i.naturalWidth)'),f'{path}: upscaled image')
+    for link in page.locator('a[href]').evaluate_all('(as)=>as.map(a=>a.getAttribute("href"))'):
+     u=urlsplit(link)
+     if u.scheme or u.netloc or not u.path:continue
+     check(context.request.get(BASE+u.path).status==200,f'{path}: broken link {link}')
+    out=ROOT/'review'/f'{path.strip("/").replace("/","-") or "home"}-{w}.png';out.parent.mkdir(exist_ok=True);page.screenshot(path=str(out),full_page=True);screenshots+=1
+   page.goto(BASE+'/visit/');page.get_by_role('link',name='Pet emergency?',exact=True).click();check(page.locator('#emergency').is_visible(),'Emergency did not open');page.keyboard.press('Escape');check(not page.locator('#emergency').is_visible(),'Emergency did not close with Escape')
+   page.goto(BASE+'/faq/#q-hours');check(page.locator('#q-hours button').get_attribute('aria-expanded')=='true','FAQ hash not open')
+   page.goto(BASE+'/book/');check(page.locator('#clinic-data').evaluate('(el)=>JSON.parse(el.textContent).bookingLive') is False,'bookingLive must be false')
+   tab_to(page,'#booking-next');page.keyboard.press('Enter');check(page.locator('#err-name').is_visible(),'Name validation absent');check(page.locator('#err-phone').is_visible(),'Phone validation absent')
+   tab_to(page,'#name');page.keyboard.type('Review Tester');tab_to(page,'#phone');page.keyboard.type('6045550100');tab_to(page,'#pet');page.keyboard.type('Review Pet')
+   tab_to(page,'input[name=species][value=Dog]');page.keyboard.press('Space');tab_to(page,'#booking-next');page.keyboard.press('Enter');check(page.locator('[data-step="2"]').is_visible(),'Step 2 not shown')
+   tab_to(page,'input[name=reason]');page.keyboard.press('Space');tab_to(page,'input[name=date]');page.keyboard.press('Space');tab_to(page,'input[name=time][value=Morning]');page.keyboard.press('Space');tab_to(page,'#booking-next');page.keyboard.press('Enter');tab_to(page,'#booking-next');page.keyboard.press('Enter');check(page.locator('#review-mode').is_visible(),'Review mode success absent');check(not posted,'Real booking POST attempted')
+   context.close()
+  for instant,expected in [('2026-10-27T17:00:00Z','Open today until 7 pm'),('2026-10-28T01:45:00Z','Closing soon, at 7 pm'),('2026-10-26T01:00:00Z','Closed now · Opens tomorrow at 8:30 am')]:
+   context=browser.new_context(timezone_id='America/Vancouver');page=context.new_page();page.clock.install(time=instant);page.goto(BASE+'/');check(expected in page.locator('[data-today]').first.inner_text(),f'Today line incorrect at {instant}');context.close()
+  browser.close()
+except SystemExit:raise
+except Exception as e:errors.append(str(e))
+finally:server.shutdown()
+print(f'Page loads: {loads}; screenshots: {screenshots}; real form submissions: {len(posted)}')
+print('ERRORS:',json.dumps(errors,ensure_ascii=False))
+sys.exit(bool(errors))
