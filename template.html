@@ -97,6 +97,25 @@ section+section{margin-top:56px}
 .split img{border-radius:var(--r);width:100%;height:100%;object-fit:cover;max-height:420px}
 @media (max-width:760px){.split{grid-template-columns:1fr}}
 
+/* Home-only overrides keep the first actions ahead of the photo. */
+#v-home .hero-copy{gap:14px}
+#v-home .hero-copy h1{font-size:clamp(32px,4.5vw,50px)}
+#v-home .hero-copy p.lead{font-size:18px;max-width:36ch}
+#v-home .home-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#v-home .home-actions .btn{min-height:56px;padding:12px;font-size:17px;white-space:normal;text-align:center}
+#v-home .home-actions .home-call{flex-direction:column;gap:5px}
+#v-home .home-call span{font-size:14px}
+#v-home .home-directions{grid-column:1/-1}
+#v-home .emerg-note p+p{margin-top:8px}
+#v-home .split .hero-actions .btn{min-height:44px;white-space:normal;text-align:center}
+@media (max-width:600px){
+ #v-home .hero{gap:20px}
+ #v-home .hero-copy{gap:12px;padding-block:0}
+ #v-home .hero-copy h1{font-size:32px}
+ #v-home .hero-copy p.lead{font-size:17px}
+ #v-home .home-actions .btn{min-height:52px}
+}
+
 /* services */
 .svc-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
 .pill{font:600 14px var(--body);border:1.5px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 13px;border-radius:999px;cursor:pointer}
@@ -215,9 +234,13 @@ footer a{color:var(--ink)}
   <div class="hero">
    <div class="hero-copy">
     <div class="status"><span class="dot" id="openDot"></span><span id="openText">Checking today's hours…</span></div>
-    <h1>Your neighbourhood vet in Walnut Grove, open seven days a week.</h1>
-    <p class="lead">Check-ups, vaccines, dental care, surgery and lab tests for dogs, cats and small mammals, on 88 Avenue in Langley.</p>
-    <div class="hero-actions"><a class="btn primary" href="#book">Book a visit online</a><a class="btn ghost" href="#visit">Call (604) 888-2628</a></div>
+    <h1>Veterinary care in Walnut Grove</h1>
+    <p class="lead">Care for dogs, cats and small mammals in Langley, seven days a week.</p>
+    <div class="home-actions" aria-label="Contact and booking">
+     <a class="btn primary home-call" href="tel:+16048882628">Call the clinic<span>(604) 888-2628</span></a>
+     <a class="btn primary" href="#book">Book a visit</a>
+     <a class="btn ghost home-directions" href="https://www.google.com/maps/place/Walnut+Grove+Animal+Hospital+Langley/@49.1629613,-122.6546539,17z" target="_blank" rel="noopener">Get directions</a>
+    </div>
    </div>
    <div class="hero-photo"><img src="__HERO__" alt="A veterinarian gently examining a calico cat"><span class="tag stock">Stock photo, replace</span></div>
   </div>
@@ -230,7 +253,7 @@ footer a{color:var(--ink)}
  </section>
 
  <section>
-  <div class="emerg-note" role="note"><div><b>Emergency during opening hours?</b> Come straight to the hospital and call us on the way at (604) 888-2628 so we can be ready. <span class="tag confirm">To confirm</span> After-hours emergency clinic to name here.</div></div>
+  <div class="emerg-note" role="note"><div><b>Emergency?</b><p>During opening hours, call (604) 888-2628 on your way in.</p><p>After hours, call the nearest 24-hour emergency clinic.</p><p><span class="tag confirm">To confirm</span> [CONFIRM: after-hours emergency clinic name]</p></div></div>
  </section>
 
  <section>
@@ -241,9 +264,9 @@ footer a{color:var(--ink)}
  <section>
   <div class="sec-head"><div><div class="eyebrow">New here?</div><h2>Your first visit, in three steps</h2></div></div>
   <div class="grid steps3">
-   <div class="card"><div class="n">01</div><h3>Book in two minutes</h3><p class="muted">Pick a reason and a time online, any hour of the day. Prefer the phone? We're happy to book you in.</p></div>
-   <div class="card"><div class="n">02</div><h3>Bring what you have</h3><p class="muted">Past records, a list of food and medicines, and a carrier for cats or a leash for dogs.</p></div>
-   <div class="card"><div class="n">03</div><h3>Leave with a plan</h3><p class="muted">We explain what we found, the options and the costs before anything is done.</p></div>
+   <div class="card"><div class="n">01</div><h3>Book your visit</h3><p class="muted">Choose a time online or call us to book.</p></div>
+   <div class="card"><div class="n">02</div><h3>Bring what you have</h3><p class="muted">Bring past records and a list of food and medicines.</p><p class="muted">Use a carrier for cats or a leash for dogs.</p></div>
+   <div class="card"><div class="n">03</div><h3>Leave with a plan</h3><p class="muted">We explain the options and costs before care begins.</p></div>
   </div>
  </section>
 
@@ -253,7 +276,8 @@ footer a{color:var(--ink)}
    <div class="grid" style="gap:14px">
     <div class="eyebrow">Find us</div>
     <h2>On 88 Avenue in Walnut Grove</h2>
-    <p class="muted">Unit 101A at 20995 88 Avenue, Langley, BC V1M 2C9. Look for the blue sign.</p>
+    <p class="muted">101A-20995 88 Ave, Langley BC V1M 2C9.</p>
+    <p class="muted">Look for the blue sign.</p>
     <div class="hero-actions"><a class="btn primary small" href="#visit">Hours and directions</a><a class="btn ghost small" href="https://www.google.com/maps/place/Walnut+Grove+Animal+Hospital+Langley/@49.1629613,-122.6546539,17z" target="_blank" rel="noopener">Open in Google Maps</a></div>
    </div>
   </div>
