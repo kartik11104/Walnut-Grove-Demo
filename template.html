@@ -1,0 +1,514 @@
+<title>Walnut Grove Animal Hospital Demo</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Demo for review: proposed new website for Walnut Grove Animal Hospital, Langley BC. Not the live site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">__SCHEMA__</script>
+<style>
+/* Layout: a calm clinic front desk. Status bar (open now, phone) on top, one view at a time, services as a categorised menu board, booking as a 4-step desk form. */
+:root{
+ --bg:#F3F6F5; --surface:#FFFFFF; --sunk:#E8EEEC; --ink:#24130E; --ink-2:#5D4E48; --line:#D5DEDB;
+ --teal:#0D6577; --teal-ink:#FFFFFF; --teal-soft:#DCEDEF; --amber:#B9770E; --amber-soft:#FBF0DC; --alert:#B42318; --alert-soft:#FDECEA; --ok:#1E7B4E;
+ --display:"Young Serif",Georgia,"Times New Roman",serif; --body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+ --r:14px; --shadow:0 1px 2px rgba(36,19,14,.06),0 8px 24px rgba(36,19,14,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --bg:#0E1416; --surface:#162024; --sunk:#1C292E; --ink:#EDF2F1; --ink-2:#A9B6B8; --line:#2A3A40;
+ --teal:#4FB3C4; --teal-ink:#06262C; --teal-soft:#173338; --amber:#E2A847; --amber-soft:#33281A; --alert:#F2645A; --alert-soft:#3A1E1C; --ok:#5CC28E;
+ --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+ --bg:#0E1416; --surface:#162024; --sunk:#1C292E; --ink:#EDF2F1; --ink-2:#A9B6B8; --line:#2A3A40;
+ --teal:#4FB3C4; --teal-ink:#06262C; --teal-soft:#173338; --amber:#E2A847; --amber-soft:#33281A; --alert:#F2645A; --alert-soft:#3A1E1C; --ok:#5CC28E;
+ --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+*{box-sizing:border-box} [hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--amber-soft)}
+a{color:var(--teal);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px;border-radius:6px}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,5.4vw,58px)} h2{font-size:clamp(26px,3.4vw,38px)} h3{font-size:21px}
+p{margin:0} .muted{color:var(--ink-2)}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.skip{position:absolute;left:-9999px;top:0}.skip:focus{left:16px;top:16px;z-index:99;background:var(--surface);padding:10px 14px;border-radius:8px}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+
+/* demo banner + header */
+.demo{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--amber-soft);color:var(--ink);border-bottom:1px solid var(--line);font-size:13.5px}
+.demo .wrap{display:flex;gap:10px;align-items:center;padding-block:7px;flex-wrap:wrap}
+.demo b{font-weight:700}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;border:1px solid currentColor;border-radius:999px;padding:1px 8px;line-height:1.6;white-space:nowrap}
+.tag.confirm{color:var(--amber)} .tag.stock{color:var(--ink-2)}
+header.site{background:var(--surface);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:18px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.brand .chip{background:#fff;border-radius:10px;padding:5px 8px;display:flex}
+.brand img{height:38px;width:auto}
+nav.main{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+nav.main a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;padding:8px 11px;border-radius:9px}
+nav.main a:hover{background:var(--sunk)}
+nav.main a[aria-current="page"]{background:var(--teal-soft);color:var(--ink)}
+.btn.menu-btn{display:none;margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15.5px/1 var(--body);padding:13px 18px;border-radius:11px;border:1.5px solid transparent;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn.primary{background:var(--teal);color:var(--teal-ink)} .btn.primary:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;border-color:var(--line);color:var(--ink)} .btn.ghost:hover{background:var(--sunk)}
+.btn.small{padding:9px 13px;font-size:14px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.status{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink-2)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--ink-2);flex-shrink:0}
+.dot.open{background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 22%,transparent)}
+@media (max-width:900px){
+ nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:8px max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px));z-index:40}
+ nav.main.open{display:flex} nav.main a{padding:12px}
+ .btn.menu-btn{display:inline-flex} header.site .wrap{position:relative} .hdr-cta{display:none}
+}
+
+/* views */
+main{padding-block:28px 64px}
+.view{display:none} .view.on{display:block}
+section+section{margin-top:56px}
+.grid{display:grid;gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+
+/* home */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:stretch}
+.hero-copy{display:flex;flex-direction:column;gap:18px;justify-content:center;padding-block:10px;min-width:0}
+.hero-copy p.lead{font-size:19px;color:var(--ink-2);max-width:52ch}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.hero-photo{position:relative;border-radius:20px;overflow:hidden;min-height:340px;background:var(--sunk)}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-photo .tag{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.55);color:#fff;border-color:transparent}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-top:22px}
+.facts>div{padding:16px 18px;min-width:0;border-left:1px solid var(--line)} .facts>div:first-child{border-left:0}
+.facts .k{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
+.facts .v{font-weight:600;margin-top:4px}
+.emerg-note{border:1.5px solid var(--alert);background:var(--alert-soft);border-radius:var(--r);padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
+.emerg-note b{color:var(--alert)}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.hero-photo{min-height:240px}.facts{grid-template-columns:1fr 1fr}.facts>div:nth-child(3){border-left:0}.facts>div:nth-child(n+3){border-top:1px solid var(--line)}}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+.steps3{grid-template-columns:repeat(3,1fr)} .steps3 .n{font-family:var(--mono);color:var(--teal);font-size:13px}
+.steps3 h3{margin:6px 0 6px}
+@media (max-width:760px){.steps3{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
+.split img{border-radius:var(--r);width:100%;height:100%;object-fit:cover;max-height:420px}
+@media (max-width:760px){.split{grid-template-columns:1fr}}
+
+/* services */
+.svc-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.pill{font:600 14px var(--body);border:1.5px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 13px;border-radius:999px;cursor:pointer}
+.pill[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.svc-grid{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+#homeSvc{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.svc{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;text-align:left;font:inherit;color:inherit;padding:0}
+.svc:hover{border-color:var(--teal)}
+.svc .ph{aspect-ratio:16/10;background:var(--sunk);overflow:hidden}.svc .ph img{width:100%;height:100%;object-fit:cover}
+.svc .bd{padding:14px 16px 16px;display:grid;gap:6px}
+.svc .cat{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
+.svc h3{font-size:19px}
+.svc p{font-size:14.5px;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(10,14,16,.5);z-index:70;display:none}
+.scrim.on{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--surface);z-index:71;overflow:auto;transform:translateX(105%);transition:transform .25s ease;padding:0 0 max(24px,env(safe-area-inset-bottom,0px))}
+.drawer.on{transform:none}
+.drawer .ph{aspect-ratio:16/9;background:var(--sunk)} .drawer .ph img{width:100%;height:100%;object-fit:cover}
+.drawer .in{padding:22px max(22px,env(safe-area-inset-right,0px)) 0 22px;display:grid;gap:14px}
+.drawer ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.drawer .close{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));background:var(--surface);border:1px solid var(--line);border-radius:10px;width:40px;height:40px;cursor:pointer;color:var(--ink);font-size:20px}
+
+/* booking */
+.book{display:grid;grid-template-columns:1fr 320px;gap:22px;align-items:start}
+@media (max-width:900px){.book{grid-template-columns:1fr}}
+.stepper{display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap}
+.stepper span{font-family:var(--mono);font-size:12px;padding:6px 10px;border-radius:999px;background:var(--sunk);color:var(--ink-2)}
+.stepper span.on{background:var(--teal);color:var(--teal-ink)} .stepper span.done{background:var(--teal-soft);color:var(--ink)}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:14px;min-width:0}
+legend{font-family:var(--display);font-size:24px;margin-bottom:6px;padding:0}
+label{font-weight:600;font-size:15px;display:grid;gap:6px}
+input[type=text],input[type=tel],input[type=email],select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;width:100%}
+textarea{min-height:84px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--teal);outline:none}
+.choice{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.choice label{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;cursor:pointer;font-weight:500}
+.choice input{accent-color:var(--teal)}
+.choice label:has(input:checked){border-color:var(--teal);background:var(--teal-soft)}
+.dates{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+.date{flex:0 0 auto;min-width:74px;border:1.5px solid var(--line);background:var(--surface);border-radius:12px;padding:8px 10px;text-align:center;cursor:pointer;font:inherit;color:var(--ink)}
+.date .d{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);text-transform:uppercase}
+.date .n{font-size:20px;font-weight:700}
+.date[aria-pressed="true"]{border-color:var(--teal);background:var(--teal-soft)}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:8px}
+.slot{font:600 14.5px var(--mono);border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:10px 6px;cursor:pointer}
+.slot[aria-pressed="true"]{background:var(--teal);color:var(--teal-ink);border-color:var(--teal)}
+.slot:disabled{text-decoration:line-through;color:var(--ink-2);background:var(--sunk);cursor:not-allowed;opacity:.7}
+.nav-row{display:flex;justify-content:space-between;gap:10px;margin-top:20px}
+.alert{border:1.5px solid var(--alert);background:var(--alert-soft);border-radius:12px;padding:14px 16px;display:grid;gap:6px}
+.alert b{color:var(--alert)}
+.summary{display:grid;gap:10px;font-size:15px}
+.summary div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding-bottom:8px}
+.summary span:first-child{color:var(--ink-2)} .summary span:last-child{text-align:right;font-weight:600}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14.5px}
+.consent input{margin-top:4px;accent-color:var(--teal);width:18px;height:18px}
+.done-box{text-align:left;display:grid;gap:12px}
+.err{color:var(--alert);font-size:14px;font-weight:600}
+
+/* team */
+.team{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.person{display:grid;gap:10px}
+.avatar{width:72px;height:72px;border-radius:50%;background:var(--teal-soft);color:var(--ink);display:grid;place-items:center;font-family:var(--display);font-size:26px}
+.person .role{color:var(--ink-2);font-size:15px}
+
+/* pet care */
+.plants{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.plants h3{font-size:18px;margin-bottom:8px}
+.plants ul{margin:0;padding-left:18px;columns:2;column-gap:16px;font-size:14.5px}
+.plants li{break-inside:avoid;margin-bottom:3px}
+
+/* faq */
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:0 18px}
+details+details{margin-top:10px}
+summary{cursor:pointer;font-weight:600;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--teal);font-size:20px;line-height:1}
+details[open] summary::after{content:"\2212"}
+details .a{padding:0 0 16px;color:var(--ink-2);display:grid;gap:8px}
+
+/* visit */
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)} .hours td:last-child{text-align:right;font-family:var(--mono);font-size:14.5px}
+.hours tr.today td{font-weight:700;color:var(--teal)}
+.copy{font:inherit;background:none;border:0;color:var(--teal);cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
+.photos2{grid-template-columns:1.4fr 1fr}
+.photos2 img{border-radius:var(--r);width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.photos2{grid-template-columns:1fr}}
+
+footer{background:var(--surface);border-top:1px solid var(--line);padding-block:32px calc(32px + env(safe-area-inset-bottom,0px));font-size:14.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+footer .cols>div{min-width:0}
+@media (max-width:760px){footer .cols{grid-template-columns:1fr}}
+footer h4{margin:0 0 8px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);font-weight:500}
+footer a{color:var(--ink)}
+</style>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo" role="note"><div class="wrap"><span class="tag">Demo</span><span><b>Proposed new website, for review only.</b> This is not the live site; forms send nothing. Items marked <span class="tag confirm">To confirm</span> need Dr. Garg's sign-off.</span></div></div>
+
+<header class="site"><div class="wrap">
+ <a class="brand" href="#home" aria-label="Walnut Grove Animal Hospital, home"><span class="chip"><img src="__LOGO__" alt="Walnut Grove Animal Hospital"></span></a>
+ <nav class="main" id="nav" aria-label="Main">
+  <a href="#home">Home</a><a href="#services">Services</a><a href="#book">Book a visit</a><a href="#team">Our team</a><a href="#petcare">Pet care</a><a href="#faq">FAQ</a><a href="#visit">Visit us</a>
+ </nav>
+ <a class="btn primary small hdr-cta" href="#book">Book online</a>
+ <button class="btn ghost small menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+</div></header>
+
+<main id="main" class="wrap">
+
+<!-- HOME -->
+<div class="view" id="v-home" data-title="Home">
+ <section>
+  <div class="hero">
+   <div class="hero-copy">
+    <div class="status"><span class="dot" id="openDot"></span><span id="openText">Checking today's hours…</span></div>
+    <h1>Your neighbourhood vet in Walnut Grove, open seven days a week.</h1>
+    <p class="lead">Check-ups, vaccines, dental care, surgery and lab tests for dogs, cats and small mammals, on 88 Avenue in Langley.</p>
+    <div class="hero-actions"><a class="btn primary" href="#book">Book a visit online</a><a class="btn ghost" href="#visit">Call (604) 888-2628</a></div>
+   </div>
+   <div class="hero-photo"><img src="__HERO__" alt="A veterinarian gently examining a calico cat"><span class="tag stock">Stock photo, replace</span></div>
+  </div>
+  <div class="facts" aria-label="Quick facts">
+   <div><div class="k">Today</div><div class="v" id="todayHours">–</div></div>
+   <div><div class="k">Address</div><div class="v">101A-20995 88 Ave, Langley</div></div>
+   <div><div class="k">Phone</div><div class="v">(604) 888-2628</div></div>
+   <div><div class="k">We see</div><div class="v">Dogs, cats, rabbits and pocket pets</div></div>
+  </div>
+ </section>
+
+ <section>
+  <div class="emerg-note" role="note"><div><b>Emergency during opening hours?</b> Come straight to the hospital and call us on the way at (604) 888-2628 so we can be ready. <span class="tag confirm">To confirm</span> After-hours emergency clinic to name here.</div></div>
+ </section>
+
+ <section>
+  <div class="sec-head"><div><div class="eyebrow">What we do</div><h2>Some of our services</h2></div><a class="btn ghost small" href="#services">All 20 services</a></div>
+  <div class="grid svc-grid" id="homeSvc"></div>
+ </section>
+
+ <section>
+  <div class="sec-head"><div><div class="eyebrow">New here?</div><h2>Your first visit, in three steps</h2></div></div>
+  <div class="grid steps3">
+   <div class="card"><div class="n">01</div><h3>Book in two minutes</h3><p class="muted">Pick a reason and a time online, any hour of the day. Prefer the phone? We're happy to book you in.</p></div>
+   <div class="card"><div class="n">02</div><h3>Bring what you have</h3><p class="muted">Past records, a list of food and medicines, and a carrier for cats or a leash for dogs.</p></div>
+   <div class="card"><div class="n">03</div><h3>Leave with a plan</h3><p class="muted">We explain what we found, the options and the costs before anything is done.</p></div>
+  </div>
+ </section>
+
+ <section>
+  <div class="split">
+   <img src="__EXTERIOR__" alt="The Walnut Grove Animal Hospital storefront on 88 Avenue">
+   <div class="grid" style="gap:14px">
+    <div class="eyebrow">Find us</div>
+    <h2>On 88 Avenue in Walnut Grove</h2>
+    <p class="muted">Unit 101A at 20995 88 Avenue, Langley, BC V1M 2C9. Look for the blue sign.</p>
+    <div class="hero-actions"><a class="btn primary small" href="#visit">Hours and directions</a><a class="btn ghost small" href="https://www.google.com/maps/place/Walnut+Grove+Animal+Hospital+Langley/@49.1629613,-122.6546539,17z" target="_blank" rel="noopener">Open in Google Maps</a></div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<!-- SERVICES -->
+<div class="view" id="v-services" data-title="Services">
+ <div class="sec-head"><div><div class="eyebrow">Services</div><h1>Care for every stage of your pet's life</h1></div></div>
+ <div class="svc-filter" role="group" aria-label="Filter services" id="svcFilter"></div>
+ <div class="grid svc-grid" id="svcGrid"></div>
+</div>
+
+<!-- BOOK -->
+<div class="view" id="v-book" data-title="Book a visit">
+ <div class="sec-head"><div><div class="eyebrow">Book a visit</div><h1>Book online in four steps</h1></div></div>
+ <div class="book">
+  <div class="card">
+   <div class="stepper" id="stepper"><span>1 Pet</span><span>2 Reason</span><span>3 Time</span><span>4 Your details</span></div>
+   <form id="bookForm" novalidate>
+    <fieldset data-step="0">
+     <legend>Who is the visit for?</legend>
+     <div class="choice" role="radiogroup" aria-label="Type of pet">
+      <label><input type="radio" name="species" value="Dog" id="sp-dog"> Dog</label>
+      <label><input type="radio" name="species" value="Cat" id="sp-cat"> Cat</label>
+      <label><input type="radio" name="species" value="Rabbit or pocket pet" id="sp-small"> Rabbit or pocket pet</label>
+      <label><input type="radio" name="species" value="Other" id="sp-other"> Other</label>
+     </div>
+     <label for="petName">Pet's name<input type="text" id="petName" name="petName" autocomplete="off" placeholder="e.g. Biscuit"></label>
+     <div class="choice" role="radiogroup" aria-label="New or returning">
+      <label><input type="radio" name="client" value="First visit" id="cl-new"> First visit with us</label>
+      <label><input type="radio" name="client" value="Returning" id="cl-ret"> We've been before</label>
+     </div>
+     <p class="err" id="err0" hidden>Choose the type of pet and tell us their name.</p>
+    </fieldset>
+    <fieldset data-step="1" hidden>
+     <legend>What's the visit for?</legend>
+     <label for="reason">Reason<select id="reason" name="reason"></select></label>
+     <label for="notes">Anything we should know? (optional)<textarea id="notes" name="notes" placeholder="e.g. limping on the back left leg since Tuesday"></textarea></label>
+     <div class="alert" id="emergencyBox" hidden role="alert"><b>This sounds urgent. Please don't wait for an online booking.</b><span>Call (604) 888-2628 now. During opening hours, come straight in and call on the way.</span></div>
+     <p class="err" id="err1" hidden>Choose a reason for the visit.</p>
+    </fieldset>
+    <fieldset data-step="2" hidden>
+     <legend>Pick a time</legend>
+     <div class="dates" id="dates" role="group" aria-label="Date"></div>
+     <div class="slots" id="slots" role="group" aria-label="Time"></div>
+     <p class="muted" style="font-size:14px">Times shown are for the demo; the live version reads the clinic's real calendar.</p>
+     <p class="err" id="err2" hidden>Pick a date and a time.</p>
+    </fieldset>
+    <fieldset data-step="3" hidden>
+     <legend>Your details</legend>
+     <label for="ownerName">Your name<input type="text" id="ownerName" name="ownerName" autocomplete="off"></label>
+     <label for="phone">Mobile number<input type="tel" id="phone" name="phone" autocomplete="off" placeholder="604 555 0100"></label>
+     <label for="email">Email (optional)<input type="email" id="email" name="email" autocomplete="off"></label>
+     <label class="consent" for="remind"><input type="checkbox" id="remind" name="remind"> Text and email me appointment reminders. You can stop them at any time.</label>
+     <p class="err" id="err3" hidden>Add your name and a phone number we can reach.</p>
+    </fieldset>
+    <div class="done-box" id="doneBox" hidden>
+     <div class="eyebrow">Demo only</div>
+     <h2 id="doneTitle">Booking request ready</h2>
+     <p class="muted">On the live site this would go straight into the clinic's calendar and you'd get a text confirmation. In this demo nothing was sent or saved.</p>
+     <button type="button" class="btn ghost" id="restart">Start again</button>
+    </div>
+    <div class="nav-row" id="navRow"><button type="button" class="btn ghost" id="back">Back</button><button type="button" class="btn primary" id="next">Continue</button></div>
+   </form>
+  </div>
+  <aside class="card" aria-label="Booking summary">
+   <h3 style="margin-bottom:12px">Your visit</h3>
+   <div class="summary" id="summary"></div>
+   <p class="muted" style="font-size:14px;margin-top:14px">Rather talk to someone? Call (604) 888-2628.</p>
+  </aside>
+ </div>
+</div>
+
+<!-- TEAM -->
+<div class="view" id="v-team" data-title="Our team">
+ <div class="sec-head"><div><div class="eyebrow">Our team</div><h1>The people who'll look after your pet</h1></div></div>
+ <div class="grid team">
+  <div class="card person"><div class="avatar" aria-hidden="true">RG</div><h3>Dr. Rattan Garg, DVM</h3><p class="role">Veterinarian</p><p class="muted"><span class="tag confirm">To confirm</span> Short bio: training, years in practice, special interests.</p></div>
+  <div class="card person"><div class="avatar" aria-hidden="true">KJ</div><h3>Kirsten Jensen</h3><p class="role">Receptionist</p></div>
+  <div class="card person"><div class="avatar" aria-hidden="true">JG</div><h3>Jasleen Gill</h3><p class="role">Veterinary assistant</p></div>
+  <div class="card person"><div class="avatar" aria-hidden="true">CB</div><h3>Carrie Bartlett</h3><p class="role">Veterinary assistant</p></div>
+ </div>
+ <p class="muted" style="margin-top:14px;font-size:14.5px">Real team photos go here; they are stored in the site's content system, not in the code used for this demo.</p>
+ <section>
+  <div class="split">
+   <img src="__DESKCAT__" alt="A tabby cat at the clinic's front desk">
+   <div class="grid" style="gap:12px"><div class="eyebrow">How we work</div><h2>Unhurried visits and plain answers</h2>
+    <p class="muted">We take time to examine, explain what we find, and talk through options and costs before treatment. Gentle handling, modern diagnostics and clear follow-up are part of every visit.</p></div>
+  </div>
+ </section>
+</div>
+
+<!-- PET CARE -->
+<div class="view" id="v-petcare" data-title="Pet care">
+ <div class="sec-head"><div><div class="eyebrow">Pet care</div><h1>Keeping your pet safe at home</h1></div></div>
+ <div class="card" style="border-color:var(--amber);background:var(--amber-soft)">
+  <div class="eyebrow">This month <span class="tag confirm">Vet to review</span></div>
+  <h2 style="margin:6px 0 10px">Halloween hazards</h2>
+  <ul style="margin:0;padding-left:20px;display:grid;gap:6px">
+   <li>Chocolate is toxic to dogs and cats. Darker chocolate is more dangerous.</li>
+   <li>Sugar-free sweets and gum can contain xylitol, which is very dangerous for dogs.</li>
+   <li>Keep raisins, wrappers and glow sticks out of reach.</li>
+   <li>Doorbells and costumes stress many pets. A quiet room helps.</li>
+  </ul>
+  <p style="margin-top:10px">If your pet has eaten something it shouldn't, call (604) 888-2628 right away.</p>
+ </div>
+ <section>
+  <div class="sec-head"><div><div class="eyebrow">Poisonous plants</div><h2>Plants to keep away from pets</h2></div></div>
+  <div class="grid plants" id="plants"></div>
+  <div class="alert" style="margin-top:18px"><b>Signs your pet may have eaten a toxic plant</b><span id="toxSigns"></span><span>Call us straight away. Early treatment makes a real difference.</span></div>
+ </section>
+ <section>
+  <div class="card"><div class="eyebrow">Food recalls</div><h3 style="margin:6px 0">Check whether your pet's food has been recalled</h3><p class="muted">The Veterinary Information Network keeps an up-to-date list of pet food recalls. <a href="https://www.vin.com/recallcenter/default.aspx" target="_blank" rel="noopener">Open the recall list</a></p></div>
+ </section>
+</div>
+
+<!-- FAQ -->
+<div class="view" id="v-faq" data-title="FAQ">
+ <div class="sec-head"><div><div class="eyebrow">Questions</div><h1>Frequently asked questions</h1></div></div>
+ <div id="faqList"></div>
+</div>
+
+<!-- VISIT -->
+<div class="view" id="v-visit" data-title="Visit us">
+ <div class="sec-head"><div><div class="eyebrow">Visit us</div><h1>Hours, address and phone</h1></div></div>
+ <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+  <div class="card"><h3 style="margin-bottom:10px">Opening hours</h3><table class="hours" id="hoursTable"><caption class="muted" style="text-align:left;caption-side:bottom;padding-top:10px;font-size:14px">Pacific time. Holiday hours: <span class="tag confirm">To confirm</span></caption></table></div>
+  <div class="card grid" style="gap:12px;align-content:start">
+   <h3>Contact</h3>
+   <div><div class="eyebrow">Address</div><p>101A-20995 88 Ave<br>Langley, BC V1M 2C9</p></div>
+   <div><div class="eyebrow">Phone</div><p><span id="phoneTxt">(604) 888-2628</span> <button class="copy" id="copyPhone" type="button">Copy</button></p></div>
+   <div><div class="eyebrow">Parking</div><p class="muted"><span class="tag confirm">To confirm</span> Parking details.</p></div>
+   <div class="hero-actions"><a class="btn primary small" href="https://www.google.com/maps/place/Walnut+Grove+Animal+Hospital+Langley/@49.1629613,-122.6546539,17z" target="_blank" rel="noopener">Directions in Google Maps</a><a class="btn ghost small" href="#book">Book online</a></div>
+  </div>
+ </div>
+ <section><div class="grid photos2"><img src="__EXTERIOR__" alt="Storefront of Walnut Grove Animal Hospital"><img src="__ENTRANCE__" alt="The clinic entrance under the blue Walnut Grove Animal Hospital sign"></div></section>
+</div>
+
+</main>
+
+<footer><div class="wrap cols">
+ <div><div class="brand"><span class="chip"><img src="__LOGO__" alt="Walnut Grove Animal Hospital" style="height:30px"></span></div><p class="muted" style="margin-top:12px">101A-20995 88 Ave, Langley, BC V1M 2C9 · (604) 888-2628</p><p class="muted" style="margin-top:6px">Demo for review, October 2026. Not the live website.</p></div>
+ <div><h4>Visit</h4><p>Mon to Fri 8:30am to 7pm<br>Sat and Sun 9am to 5pm</p></div>
+ <div><h4>Follow</h4><p><a href="https://www.instagram.com/walnutgroveanimalhospitalbc/" target="_blank" rel="noopener">Instagram</a><br><a href="https://www.facebook.com/walnutgroveanimalhospitalbc" target="_blank" rel="noopener">Facebook</a></p></div>
+</div></footer>
+
+<div class="scrim" id="scrim"></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle" aria-hidden="true">
+ <button class="close" id="dClose" aria-label="Close">×</button>
+ <div class="ph" id="dPh"></div>
+ <div class="in"><div class="eyebrow" id="dCat"></div><h2 id="dTitle"></h2><div id="dBody" class="grid" style="gap:12px"></div>
+  <div class="hero-actions"><a class="btn primary" href="#book" id="dBook">Book this</a></div></div>
+</div>
+
+<script>
+const SVC=__SERVICES__;
+const PLANTS=__PLANTS__;
+const TOX=__TOX__;
+const FAQ=__FAQ__;
+const HOURS={0:[9,0,17,0],1:[8,30,19,0],2:[8,30,19,0],3:[8,30,19,0],4:[8,30,19,0],5:[8,30,19,0],6:[9,0,17,0]};
+const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[m]);
+const fmt=(h,m)=>{const ap=h>=12?"pm":"am";const hh=((h+11)%12)+1;return m?`${hh}:${String(m).padStart(2,"0")}${ap}`:`${hh}${ap}`};
+
+/* time in Langley */
+function vanNow(){const p=new Intl.DateTimeFormat("en-CA",{timeZone:"America/Vancouver",weekday:"short",hour:"numeric",minute:"numeric",hour12:false,year:"numeric",month:"numeric",day:"numeric"}).formatToParts(new Date());
+ const g=t=>p.find(x=>x.type===t).value;const wd=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+ return {wd,h:+g("hour")%24,m:+g("minute"),y:+g("year"),mo:+g("month"),d:+g("day")}}
+function openStatus(){const n=vanNow(),[oh,om,ch,cm]=HOURS[n.wd],t=n.h*60+n.m,o=oh*60+om,c=ch*60+cm;
+ $("#todayHours").textContent=`${fmt(oh,om)} to ${fmt(ch,cm)}`;
+ const dot=$("#openDot"),tx=$("#openText");
+ if(t>=o&&t<c){dot.classList.add("open");tx.textContent=`Open now until ${fmt(ch,cm)}`}
+ else{dot.classList.remove("open");const nd=t<o?n.wd:(n.wd+1)%7;const[a,b]=HOURS[nd];tx.textContent=`Closed now. Opens ${t<o?"today":DAYS[nd]} at ${fmt(a,b)}`}
+ const tb=$("#hoursTable");if(!tb.dataset.done){[1,2,3,4,5,6,0].forEach(d=>{const r=tb.insertRow();if(d===n.wd)r.className="today";const[a,b,c2,d2]=HOURS[d];r.insertCell().textContent=DAYS[d]+(d===n.wd?" (today)":"");r.insertCell().textContent=`${fmt(a,b)} – ${fmt(c2,d2)}`});tb.dataset.done=1}}
+
+/* services */
+const CATS=["All",...new Set(SVC.map(s=>s.cat))];
+function card(s){return `<button class="svc" data-slug="${s.slug}" type="button"><div class="ph">${s.img?`<img src="${s.img}" alt="" loading="lazy">`:""}</div><div class="bd"><div class="cat">${esc(s.cat)}</div><h3>${esc(s.name)}</h3><p>${esc(s.intro)}</p></div></button>`}
+function renderSvc(cat){$("#svcGrid").innerHTML=SVC.filter(s=>cat==="All"||s.cat===cat).map(card).join("");
+ $$("#svcFilter .pill").forEach(p=>p.setAttribute("aria-pressed",p.dataset.cat===cat))}
+$("#svcFilter").innerHTML=CATS.map(c=>`<button class="pill" type="button" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+$("#svcFilter").addEventListener("click",e=>{const b=e.target.closest(".pill");if(b)renderSvc(b.dataset.cat)});
+renderSvc("All");
+$("#homeSvc").innerHTML=["preventative-care","vaccines","dental-services","spay-neuter","puppy-kitten-care","bloodwork"].map(k=>card(SVC.find(s=>s.slug===k))).join("");
+let lastFocus=null;
+function openSvc(slug){const s=SVC.find(x=>x.slug===slug);if(!s)return;lastFocus=document.activeElement;
+ $("#dPh").innerHTML=s.img?`<img src="${s.img}" alt="">`:"";$("#dCat").textContent=s.cat;$("#dTitle").textContent=s.name;
+ $("#dBody").innerHTML=`<p>${esc(s.intro)}</p>`+(s.points.length?`<div><div class="eyebrow" style="margin-bottom:6px">What's included</div><ul>${s.points.map(p=>`<li>${esc(p)}</li>`).join("")}</ul></div>`:"")+s.more.map(p=>`<p class="muted">${esc(p)}</p>`).join("");
+ $("#dBook").onclick=()=>{closeSvc();preset=s.slug};
+ $("#drawer").classList.add("on");$("#scrim").classList.add("on");$("#drawer").setAttribute("aria-hidden","false");$("#dClose").focus()}
+function closeSvc(){$("#drawer").classList.remove("on");$("#scrim").classList.remove("on");$("#drawer").setAttribute("aria-hidden","true");if(lastFocus)lastFocus.focus()}
+document.addEventListener("click",e=>{const c=e.target.closest(".svc");if(c)openSvc(c.dataset.slug)});
+$("#dClose").onclick=closeSvc;$("#scrim").onclick=closeSvc;
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("#drawer").classList.contains("on"))closeSvc()});
+
+/* pet care + faq */
+$("#plants").innerHTML=PLANTS.map(g=>`<div class="card"><div class="eyebrow">${esc(g.heading)}</div><h3 style="margin-top:4px">${esc(g.title)}</h3><ul>${g.plants.map(p=>`<li>${esc(p)}</li>`).join("")}</ul></div>`).join("");
+$("#toxSigns").textContent=TOX.join(" · ");
+$("#faqList").innerHTML=FAQ.map(f=>`<details><summary>${esc(f.q)}</summary><div class="a"><p>${f.a}</p>${f.confirm?'<p><span class="tag confirm">To confirm</span></p>':""}</div></details>`).join("");
+
+/* booking */
+let step=0,preset=null; const B={date:null,time:null};
+const EMERG=/(not breathing|trouble breathing|difficulty breathing|can't breathe|choking|seizure|collapsed|collapse|unconscious|bleeding|hit by|poison|toxic|ate (chocolate|grapes|raisins|xylitol|rat)|antifreeze|bloat|swollen belly|can't stand|cannot stand|can't pee|cannot urinate|straining)/i;
+$("#reason").innerHTML='<option value="">Choose a reason</option>'+CATS.slice(1).map(c=>`<optgroup label="${esc(c)}">${SVC.filter(s=>s.cat===c).map(s=>`<option value="${s.slug}">${esc(s.name)}</option>`).join("")}</optgroup>`).join("")+'<option value="sick">My pet seems unwell</option><option value="other">Something else or not sure</option>';
+function emergencyCheck(){$("#emergencyBox").hidden=!EMERG.test($("#notes").value)}
+$("#notes").addEventListener("input",()=>{emergencyCheck();summary()});
+function dateList(){const n=vanNow();const base=new Date(Date.UTC(n.y,n.mo-1,n.d));const out=[];for(let i=1;i<=14;i++){const d=new Date(base.getTime()+i*864e5);out.push(d)}return out}
+function hash(s){let h=2166136261;for(const c of s){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0}
+function renderDates(){$("#dates").innerHTML=dateList().map(d=>{const k=d.toISOString().slice(0,10);return `<button type="button" class="date" data-k="${k}" data-wd="${d.getUTCDay()}" aria-pressed="${B.date===k}"><div class="d">${DAYS[d.getUTCDay()].slice(0,3)}</div><div class="n">${d.getUTCDate()}</div><div class="d">${d.toLocaleString("en-CA",{month:"short",timeZone:"UTC"})}</div></button>`}).join("")}
+function renderSlots(){if(!B.date){$("#slots").innerHTML='<p class="muted">Choose a date first.</p>';return}
+ const wd=+$(`.date[data-k="${B.date}"]`).dataset.wd,[oh,om,ch,cm]=HOURS[wd];let html="";
+ for(let t=oh*60+om;t<=ch*60+cm-30;t+=30){const h=Math.floor(t/60),m=t%60,lab=fmt(h,m),taken=hash(B.date+lab)%3===0;
+  html+=`<button type="button" class="slot" data-t="${lab}" ${taken?"disabled aria-label='"+lab+" taken'":""} aria-pressed="${B.time===lab}">${lab}</button>`}
+ $("#slots").innerHTML=html}
+$("#dates").addEventListener("click",e=>{const b=e.target.closest(".date");if(!b)return;B.date=b.dataset.k;B.time=null;renderDates();renderSlots();summary()});
+$("#slots").addEventListener("click",e=>{const b=e.target.closest(".slot");if(!b||b.disabled)return;B.time=b.dataset.t;renderSlots();summary()});
+function val(n){const el=document.querySelector(`[name="${n}"]:checked`);return el?el.value:""}
+function reasonLabel(){const v=$("#reason").value;if(!v)return"";const s=SVC.find(x=>x.slug===v);return s?s.name:$("#reason").selectedOptions[0].textContent}
+function summary(){const rows=[["Pet",[val("species"),$("#petName").value.trim()].filter(Boolean).join(", ")||"–"],["Visit",reasonLabel()||"–"],
+ ["When",B.date&&B.time?`${new Date(B.date+"T12:00:00Z").toLocaleDateString("en-CA",{weekday:"short",month:"short",day:"numeric",timeZone:"UTC"})}, ${B.time}`:"–"],["Reminders",$("#remind").checked?"Yes":"No"]];
+ $("#summary").innerHTML=rows.map(r=>`<div><span>${r[0]}</span><span>${esc(r[1])}</span></div>`).join("")}
+function show(){$$("#bookForm fieldset").forEach(f=>f.hidden=+f.dataset.step!==step);
+ $$("#stepper span").forEach((s,i)=>{s.className=i<step?"done":i===step?"on":""});
+ $("#back").style.visibility=step===0?"hidden":"visible";$("#next").textContent=step===3?"Request booking":"Continue";
+ if(step===2){renderDates();renderSlots()}summary()}
+function ok(){const e=$("#err"+step);let good=true;
+ if(step===0)good=!!val("species")&&$("#petName").value.trim().length>0;
+ if(step===1)good=!!$("#reason").value;
+ if(step===2)good=!!(B.date&&B.time);
+ if(step===3)good=$("#ownerName").value.trim().length>1&&$("#phone").value.replace(/\D/g,"").length>=10;
+ e.hidden=good;return good}
+$("#next").onclick=()=>{if(!ok())return;if(step<3){step++;show();$("#bookForm").scrollIntoView({block:"nearest"})}else finish()};
+$("#back").onclick=()=>{if(step>0){step--;show()}};
+$("#bookForm").addEventListener("submit",e=>e.preventDefault());
+$("#bookForm").addEventListener("change",summary);
+$("#petName").addEventListener("input",summary);
+$("#reason").addEventListener("change",()=>{const v=$("#reason").value;$("#emergencyBox").hidden=!(v==="sick"&&EMERG.test($("#notes").value));emergencyCheck()});
+function finish(){$$("#bookForm fieldset").forEach(f=>f.hidden=true);$("#navRow").hidden=true;$("#doneBox").hidden=false;$$("#stepper span").forEach(s=>s.className="done");
+ $("#doneTitle").textContent=`Request ready for ${$("#petName").value.trim()}`}
+$("#restart").onclick=()=>{$("#bookForm").reset();step=0;B.date=B.time=null;$("#doneBox").hidden=true;$("#navRow").hidden=false;$("#emergencyBox").hidden=true;show()};
+
+/* copy phone */
+$("#copyPhone").onclick=async()=>{const b=$("#copyPhone");try{await navigator.clipboard.writeText("6048882628");b.textContent="Copied"}catch(e){const r=document.createRange();r.selectNodeContents($("#phoneTxt"));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected"}setTimeout(()=>b.textContent="Copy",1800)};
+
+/* router */
+const VIEWS=["home","services","book","team","petcare","faq","visit"];
+function route(){let h=location.hash.replace("#","");if(!VIEWS.includes(h))h="home";
+ $$(".view").forEach(v=>v.classList.toggle("on",v.id==="v-"+h));
+ $$("nav.main a").forEach(a=>a.getAttribute("href")==="#"+h?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
+ $("#nav").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false");
+ if(h==="book"){if(preset){$("#reason").value=preset;preset=null;if(step<1)step=0}show()}
+ window.scrollTo(0,0)}
+addEventListener("hashchange",route);
+$("#menuBtn").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#menuBtn").setAttribute("aria-expanded",o)};
+openStatus();setInterval(openStatus,60000);route();
+</script>

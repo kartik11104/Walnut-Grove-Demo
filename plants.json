@@ -1,0 +1,177 @@
+{
+ "plants": [
+  {
+   "heading": "Ornamental Flowers & Garden Plants",
+   "title": "Garden Blooms",
+   "plants": [
+    "Autumn Crocus",
+    "Azalea",
+    "Bleeding Heart",
+    "Bluebonnet",
+    "Cardinal Flower",
+    "Four O'Clock",
+    "Foxglove",
+    "Hydrangea",
+    "Lantana",
+    "Larkspur",
+    "Periwinkle",
+    "Ranunculus (Buttercup)",
+    "Snowdrop"
+   ]
+  },
+  {
+   "heading": "Ornamental Flowers & Garden Plants",
+   "title": "Vines & Climbers",
+   "plants": [
+    "Clematis",
+    "English Ivy",
+    "Honeysuckle",
+    "Morning Glory",
+    "Sweet Pea",
+    "Wisteria"
+   ]
+  },
+  {
+   "heading": "Ornamental Flowers & Garden Plants",
+   "title": "Exotics",
+   "plants": [
+    "Bird Of Paradise",
+    "Caladium",
+    "Dieffenbachia",
+    "Elephant Ear (Taro)",
+    "Philodendron",
+    "Poinsettia"
+   ]
+  },
+  {
+   "heading": "Ornamental Flowers & Garden Plants",
+   "title": "Lilies",
+   "plants": [
+    "Arum Lily",
+    "Calla Lily",
+    "Easter Lily",
+    "Lily Of The Valley"
+   ]
+  },
+  {
+   "heading": "Wildflowers, Herbs & Weeds",
+   "title": "Wild and Field Plants",
+   "plants": [
+    "Bishop's Weed",
+    "Bloodroot",
+    "Burdock",
+    "Cocklebur",
+    "Heliotrope",
+    "Milkweed",
+    "Pigweed",
+    "Pokeweed",
+    "Spurges",
+    "Tansy",
+    "Vetch"
+   ]
+  },
+  {
+   "heading": "Wildflowers, Herbs & Weeds",
+   "title": "Highly Toxic and Wild",
+   "plants": [
+    "Baneberry",
+    "False Hellebore",
+    "Hemlock",
+    "Henbane",
+    "Jimsonweed",
+    "Mandrake",
+    "Nightshades",
+    "Monkshood"
+   ]
+  },
+  {
+   "heading": "Wildflowers, Herbs & Weeds",
+   "title": "Herbs & Crops",
+   "plants": [
+    "Cacao",
+    "Coffee",
+    "Coriander",
+    "Rape",
+    "Tobacco"
+   ]
+  },
+  {
+   "heading": "Trees & Large Woody Shrubs",
+   "title": "Hardwoods & Evergreens",
+   "plants": [
+    "Avocado",
+    "Black Laurel",
+    "Eucalyptus",
+    "Horse Chestnut",
+    "Mountain Laurel",
+    "Red Maple",
+    "Yews"
+   ]
+  },
+  {
+   "heading": "Trees & Large Woody Shrubs",
+   "title": "Highly Toxic and Wild",
+   "plants": [
+    "Baneberry",
+    "False Hellebore",
+    "Hemlock",
+    "Henbane",
+    "Jimsonweed",
+    "Mandrake",
+    "Nightshades",
+    "Monkshood"
+   ]
+  },
+  {
+   "heading": "Trees & Large Woody Shrubs",
+   "title": "Flowering Trees",
+   "plants": [
+    "Australian Flame Tree",
+    "Black Locust",
+    "Cherry Tree",
+    "Chinaberry Tree",
+    "Golden Chain",
+    "Poinciana",
+    "Rain Tree"
+   ]
+  },
+  {
+   "heading": "Irritants & Specialized Growth",
+   "title": "Agricultural and Misc",
+   "plants": [
+    "Gladiolum",
+    "Goatweed",
+    "Chervil",
+    "Gentry",
+    "Marijuana",
+    "Mezereum",
+    "Mexican Poppy",
+    "Pukio Shrubs"
+   ]
+  },
+  {
+   "heading": "Irritants & Specialized Growth",
+   "title": "Succulent & Parasitic",
+   "plants": [
+    "Mistletoe",
+    "Fall Plant",
+    "Sarah Plant"
+   ]
+  },
+  {
+   "heading": "Irritants & Specialized Growth",
+   "title": "Contact Irritants",
+   "plants": [
+    "Poison Ivy",
+    "Poison Oak"
+   ]
+  }
+ ],
+ "tox": [
+  "Vomiting or diarrhea",
+  "Drooling or pawing at the mouth",
+  "Loss of appetite",
+  "Difficulty breathing",
+  "Tremors or seizures (in severe cases)"
+ ]
+}
