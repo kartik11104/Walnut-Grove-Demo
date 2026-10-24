@@ -1,5 +1,6 @@
 <title>Walnut Grove Animal Hospital Demo</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Demo for review: proposed new website for Walnut Grove Animal Hospital, Langley BC. Not the live site.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,22 +9,25 @@
 <style>
 /* Layout: a calm clinic front desk. Status bar (open now, phone) on top, one view at a time, services as a categorised menu board, booking as a 4-step desk form. */
 :root{
- --bg:#F3F6F5; --surface:#FFFFFF; --sunk:#E8EEEC; --ink:#24130E; --ink-2:#5D4E48; --line:#D5DEDB;
- --teal:#0D6577; --teal-ink:#FFFFFF; --teal-soft:#DCEDEF; --amber:#B9770E; --amber-soft:#FBF0DC; --alert:#B42318; --alert-soft:#FDECEA; --ok:#1E7B4E;
- --display:"Young Serif",Georgia,"Times New Roman",serif; --body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
- --r:14px; --shadow:0 1px 2px rgba(36,19,14,.06),0 8px 24px rgba(36,19,14,.06);
+--bg:#F6F8F7;--surface:#FFFFFF;--sunk:#E9EFED;--line:#D3DDDA;--ink:#1B100C;--ink-2:#4F413B;--ink-3:#6F625C;
+--teal:#0B5E70;--teal-ink:#FFFFFF;--teal-soft:#DAECEF;--teal-press:#084A59;--amber:#A86806;--amber-soft:#FBF0DC;--alert:#B42318;--alert-soft:#FDECEA;--ok:#1B7249;--ok-soft:#E2F3EA;
+--e1:0 1px 2px rgba(27,16,12,.06);--e2:0 2px 4px rgba(27,16,12,.05),0 12px 28px rgba(27,16,12,.08);--e3:0 4px 8px rgba(27,16,12,.08),0 24px 56px rgba(27,16,12,.16);
+--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;--s9:112px;
+--r-sm:8px;--r:14px;--r-lg:22px;--r-pill:999px;
+--display:"Young Serif",Georgia,"Times New Roman",serif;--body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+--fs-display:clamp(38px,6.2vw,64px);--fs-h1:clamp(32px,4.6vw,48px);--fs-h2:clamp(26px,3.2vw,36px);--fs-h3:21px;--fs-lead:clamp(18px,1.6vw,20px);--fs-body:17px;--fs-small:14.5px;--fs-eyebrow:12.5px;
+--ease:cubic-bezier(.2,.8,.2,1);--ease-in-out:cubic-bezier(.65,0,.35,1);--d1:120ms;--d2:220ms;--d3:360ms;--d4:520ms;
+--shadow:var(--e2);--gutter:var(--s4);--section-space:var(--s8);
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
- --bg:#0E1416; --surface:#162024; --sunk:#1C292E; --ink:#EDF2F1; --ink-2:#A9B6B8; --line:#2A3A40;
- --teal:#4FB3C4; --teal-ink:#06262C; --teal-soft:#173338; --amber:#E2A847; --amber-soft:#33281A; --alert:#F2645A; --alert-soft:#3A1E1C; --ok:#5CC28E;
- --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
-:root[data-theme="dark"]{
- --bg:#0E1416; --surface:#162024; --sunk:#1C292E; --ink:#EDF2F1; --ink-2:#A9B6B8; --line:#2A3A40;
- --teal:#4FB3C4; --teal-ink:#06262C; --teal-soft:#173338; --amber:#E2A847; --amber-soft:#33281A; --alert:#F2645A; --alert-soft:#3A1E1C; --ok:#5CC28E;
- --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1416;--surface:#162024;--sunk:#1C292E;--line:#2A3A40;--ink:#EEF3F2;--ink-2:#B3C0C2;--ink-3:#8FA0A3;
+--teal:#5BBBCB;--teal-ink:#052329;--teal-soft:#173338;--teal-press:#7FCBD8;--amber:#E6B050;--amber-soft:#33281A;--alert:#F4766C;--alert-soft:#3A1E1C;--ok:#62C795;--ok-soft:#14301F;
+--e1:0 1px 2px rgba(0,0,0,.35);--e2:0 2px 4px rgba(0,0,0,.35),0 12px 28px rgba(0,0,0,.45);--e3:0 4px 8px rgba(0,0,0,.35),0 24px 56px rgba(0,0,0,.45);color-scheme:dark;}}
+:root[data-theme="dark"]{--bg:#0E1416;--surface:#162024;--sunk:#1C292E;--line:#2A3A40;--ink:#EEF3F2;--ink-2:#B3C0C2;--ink-3:#8FA0A3;
+--teal:#5BBBCB;--teal-ink:#052329;--teal-soft:#173338;--teal-press:#7FCBD8;--amber:#E6B050;--amber-soft:#33281A;--alert:#F4766C;--alert-soft:#3A1E1C;--ok:#62C795;--ok-soft:#14301F;
+--e1:0 1px 2px rgba(0,0,0,.35);--e2:0 2px 4px rgba(0,0,0,.35),0 12px 28px rgba(0,0,0,.45);--e3:0 4px 8px rgba(0,0,0,.35),0 24px 56px rgba(0,0,0,.45);color-scheme:dark;}
 *{box-sizing:border-box} [hidden]{display:none!important}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--amber-soft)}
 a{color:var(--teal);text-underline-offset:3px}
@@ -217,13 +221,100 @@ footer .cols>div{min-width:0}
 @media (max-width:760px){footer .cols{grid-template-columns:1fr}}
 footer h4{margin:0 0 8px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);font-weight:500}
 footer a{color:var(--ink)}
+
+/* R1 foundation: DESIGN.md sections 3–6. */
+body{font-size:var(--fs-body);line-height:1.6}
+h1,#v-home .hero-copy h1{font-size:var(--fs-h1);line-height:1.08}
+h2{font-size:var(--fs-h2);line-height:1.12}h3{font-size:var(--fs-h3);line-height:1.2}
+p{max-width:62ch;text-wrap:pretty}
+.lead,#v-home .hero-copy p.lead{font-size:var(--fs-lead);line-height:1.5}
+.eyebrow,.svc .cat{font-size:var(--fs-eyebrow);letter-spacing:.08em}
+.svc h3{font-size:var(--fs-h3);line-height:1.2}.svc .bd{padding:var(--s5);gap:var(--s2)}
+.svc p,.person .role,label{font-size:var(--fs-small);line-height:1.5}
+.hero-actions,.home-actions,.nav-row,nav.main{gap:var(--s2)}
+input:disabled,select:disabled,textarea:disabled{opacity:.5;pointer-events:none}
+.wrap{padding-inline:max(var(--gutter),env(safe-area-inset-left,0px)) max(var(--gutter),env(safe-area-inset-right,0px))}
+section+section{margin-top:var(--section-space)}
+@media(min-width:721px){:root{--gutter:var(--s5)}}
+@media(min-width:960px){:root{--gutter:var(--s6);--section-space:var(--s9)}}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:var(--r-sm)}
+h1:focus:not(:focus-visible),h1[tabindex="-1"]:focus{outline:none}
+.btn,.btn.small,#v-home .home-actions .btn,#v-home .split .hero-actions .btn{min-height:48px;padding:14px 22px;border-radius:var(--r);font:600 16px var(--body);gap:var(--s2);transition:background var(--d1) var(--ease),transform var(--d1) var(--ease),box-shadow var(--d1) var(--ease);white-space:normal;text-align:center}
+#v-home .home-actions .btn{min-height:56px}
+.btn.primary:hover{filter:none;background:var(--teal);transform:none}
+.btn.ghost:hover{background:transparent}
+@media(pointer:fine){
+ .btn.primary:hover{background:var(--teal-press);transform:translateY(-1px);box-shadow:var(--e2)}
+ .btn.ghost:hover{background:var(--sunk)}
+ .card.interactive:hover,.svc:hover{transform:translateY(-2px);box-shadow:var(--e2)}
+ .card.interactive:hover img,.svc:hover img{transform:scale(1.03)}
+}
+.btn.primary:active,.btn.ghost:active{transform:translateY(0) scale(.98);box-shadow:var(--e1)}
+.btn:disabled,.btn[aria-disabled="true"]{opacity:.5;pointer-events:none;transform:none;box-shadow:none}
+button.close,.icon-btn{min-width:44px;min-height:44px}
+.card{padding:var(--s5);box-shadow:var(--e1)}
+.card.interactive,.svc{border-radius:var(--r);box-shadow:var(--e1);transition:transform var(--d1) var(--ease),box-shadow var(--d1) var(--ease)}
+.card.interactive img,.svc img{transition:transform var(--d3) var(--ease)}
+.card.interactive:active,.svc:active{transform:scale(.99)}
+input[type=text],input[type=tel],input[type=email],input[type=search],#v-services input[type=search],select,textarea{min-height:48px;padding:12px 14px;border-radius:var(--r-sm);border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:var(--fs-body)/1.6 var(--body)}
+input:focus,select:focus,textarea:focus{border-color:var(--teal);outline:3px solid color-mix(in srgb,var(--teal) 25%,transparent);outline-offset:0}
+[aria-invalid="true"]{border-color:var(--alert)}
+.err{font-size:var(--fs-small);line-height:1.5;color:var(--alert)}.err::before{content:"!";margin-right:var(--s2)}
+.pill{min-height:44px;padding:10px 16px;border-radius:var(--r-pill);font-size:var(--fs-small)}
+.status{display:inline-flex;align-self:flex-start;gap:var(--s2);padding:6px 12px;border-radius:var(--r-pill);background:var(--sunk);font-size:var(--fs-small);line-height:1.5}
+.dot{width:8px;height:8px;background:var(--ink-3)}.dot.open{background:var(--ok);box-shadow:none}.dot.closing{background:var(--amber)}
+.emerg-note,.alert{position:relative;background:var(--alert-soft);border:1px solid color-mix(in srgb,var(--alert) 40%,transparent);border-left:4px solid var(--alert);border-radius:var(--r);padding:var(--s4);padding-left:calc(28px + var(--s4) + var(--s3));gap:var(--s2)}
+.emerg-note::before,.alert::before{content:"!";position:absolute;left:var(--s3);top:var(--s4);width:28px;height:28px;border-radius:var(--r-pill);display:grid;place-items:center;background:var(--alert);color:var(--alert-soft);font-weight:600}
+.emerg-note b,.alert b{font-weight:600}
+.confirm-box{display:block;border:1.5px dashed var(--amber);background:var(--amber-soft);border-radius:var(--r);padding:14px 16px;color:var(--ink)}
+.confirm-box .tag{font-family:var(--mono);color:var(--amber)}
+img{aspect-ratio:auto}.brand img{aspect-ratio:504/105;object-fit:contain}
+.hero-photo,.split img,.photos2 img{border-radius:var(--r-lg)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+html:not(.routing-ready) #v-home{display:block}
+.view.view-out{animation:view-out var(--d1) var(--ease) both}.view.view-in{animation:view-in var(--d2) var(--ease) both}
+@keyframes view-out{to{opacity:0}}@keyframes view-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+[data-reveal].revealing{animation:reveal var(--d4) var(--ease) both;animation-delay:var(--reveal-delay,0ms)}
+@keyframes reveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+header.site{position:sticky;top:var(--demo-height,0px);z-index:40;transition:box-shadow var(--d2) var(--ease)}
+header.site .brand img{transition:height var(--d2) var(--ease)}header.site.compact{box-shadow:var(--e1)}header.site.compact .brand img{height:32px}
+nav.main a[aria-current="page"]{border-radius:var(--r-pill)}
+@media(max-width:900px){nav.main a{min-height:56px;display:flex;align-items:center}nav.main{max-height:calc(100dvh - var(--demo-height,0px) - var(--s8));overflow:auto}}
+html.menu-open,html.menu-open body{overflow:hidden}
+.mobile-actions{display:none}
+@media(max-width:720px){
+ .mobile-actions{position:fixed;inset:auto 0 0;z-index:50;display:flex;align-items:center;gap:var(--s2);height:calc(64px + env(safe-area-inset-bottom,0px));padding:var(--s2) var(--s4) calc(var(--s2) + env(safe-area-inset-bottom,0px));background:var(--surface);border-top:1px solid var(--line);box-shadow:var(--e2);transform:translateY(calc(64px + env(safe-area-inset-bottom,0px)));visibility:hidden;transition:transform var(--d2) var(--ease),visibility var(--d2)}
+ .mobile-actions.on{transform:none;visibility:visible}.mobile-actions .btn{flex:1}
+ body.has-action-space{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+}
+.copy-number{display:none}@media(pointer:fine){.copy-number{display:inline-flex}}
+.toast{position:fixed;left:50%;bottom:calc(var(--s4) + env(safe-area-inset-bottom,0px));z-index:80;max-width:calc(100% - var(--s6));padding:12px 18px;border-radius:var(--r-pill);background:var(--ink);color:var(--bg);transform:translateX(-50%);visibility:hidden;opacity:0;transition:opacity var(--d2) var(--ease),translate var(--d2) var(--ease);translate:0 8px}
+.toast.on{visibility:visible;opacity:1;translate:0 0}
+@media(max-width:720px){body.has-action-space .toast{bottom:calc(64px + var(--s4) + env(safe-area-inset-bottom,0px))}}
+.print-clinic{display:none}
+@media(prefers-reduced-motion:reduce){
+ :root{--d1:.01ms;--d2:.01ms;--d3:.01ms;--d4:.01ms}
+ *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important;transform:none!important;translate:none!important}
+ .view.view-in,.view.view-out,[data-reveal].revealing{animation:none!important;opacity:1!important}
+ .drawer:not(.on){visibility:hidden}.drawer.on{visibility:visible}
+ .toast{left:var(--s4);right:var(--s4);width:fit-content;margin-inline:auto}
+}
+@media print{
+ :root{color-scheme:light}html,body{background:white!important;color:black!important;overflow:visible!important}body{padding:0!important}
+ .demo,header.site,nav,.mobile-actions,.drawer,.scrim,.toast,.copy-number,.skip{display:none!important}
+ .print-clinic{display:block;color:black;background:white}
+ .view{display:none!important}#v-visit{display:block!important;opacity:1!important;transform:none!important}
+ #v-visit,#v-visit *{color:black!important;background:white!important;box-shadow:none!important}
+ #v-visit .hero-actions,footer{display:none!important}main{padding:0}.card{break-inside:avoid}
+}
+
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
 <div class="demo" role="note"><div class="wrap"><span class="tag">Demo</span><span><b>Proposed new website, for review only.</b> This is not the live site; forms send nothing. Items marked <span class="tag confirm">To confirm</span> need Dr. Garg's sign-off.</span></div></div>
 
 <header class="site"><div class="wrap">
- <a class="brand" href="#home" aria-label="Walnut Grove Animal Hospital, home"><span class="chip"><img src="__LOGO__" alt="Walnut Grove Animal Hospital"></span></a>
+ <a class="brand" href="#home" aria-label="Walnut Grove Animal Hospital, home"><span class="chip"><img src="__LOGO__" width="504" height="105" alt="Walnut Grove Animal Hospital" loading="lazy"></span></a>
  <nav class="main" id="nav" aria-label="Main">
   <a href="#home">Home</a><a href="#services">Services</a><a href="#book">Book a visit</a><a href="#team">Our team</a><a href="#petcare">Pet care</a><a href="#faq">FAQ</a><a href="#visit">Visit us</a>
  </nav>
@@ -231,6 +322,8 @@ footer a{color:var(--ink)}
  <button class="btn ghost small menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
 </div></header>
 
+<div class="sr-only" id="pageAnnouncement" aria-live="polite" aria-atomic="true"></div>
+<div class="print-clinic"><b>Walnut Grove Animal Hospital</b><p>101A-20995 88 Ave, Langley BC V1M 2C9</p><p>(604) 888-2628</p><p>Mon-Fri 8:30am-7pm, Sat-Sun 9am-5pm</p></div>
 <main id="main" class="wrap">
 
 <!-- HOME -->
@@ -238,16 +331,16 @@ footer a{color:var(--ink)}
  <section>
   <div class="hero">
    <div class="hero-copy">
-    <div class="status"><span class="dot" id="openDot"></span><span id="openText">Checking today's hours…</span></div>
+    <div class="status" aria-live="polite"><span class="dot" id="openDot"></span><span id="openText">Checking today's hours…</span></div>
     <h1>Veterinary care in Walnut Grove</h1>
     <p class="lead">Care for dogs, cats and small mammals in Langley, seven days a week.</p>
     <div class="home-actions" aria-label="Contact and booking">
      <a class="btn primary home-call" href="tel:+16048882628">Call the clinic<span>(604) 888-2628</span></a>
      <a class="btn primary" href="#book">Book a visit</a>
-     <a class="btn ghost home-directions" href="https://www.google.com/maps/place/Walnut+Grove+Animal+Hospital+Langley/@49.1629613,-122.6546539,17z" target="_blank" rel="noopener">Get directions</a>
+     <a class="btn ghost home-directions" href="https://www.google.com/maps/place/Walnut+Grove+Animal+Hospital+Langley/@49.1629613,-122.6546539,17z" target="_blank" rel="noopener" aria-label="Get directions (opens in a new tab)">Get directions</a>
     </div>
    </div>
-   <div class="hero-photo"><img src="__HERO__" alt="A veterinarian gently examining a calico cat"><span class="tag stock">Stock photo, replace</span></div>
+   <div class="hero-photo"><img src="__HERO__" width="1400" height="934" alt="A veterinarian gently examining a calico cat" fetchpriority="high"><span class="tag stock">Stock photo, replace</span></div>
   </div>
   <div class="facts" aria-label="Quick facts">
    <div><div class="k">Today</div><div class="v" id="todayHours">–</div></div>
@@ -258,7 +351,7 @@ footer a{color:var(--ink)}
  </section>
 
  <section>
-  <div class="emerg-note" role="note"><div><b>Emergency?</b><p>During opening hours, call (604) 888-2628 on your way in.</p><p>After hours, call the nearest 24-hour emergency clinic.</p><p><span class="tag confirm">To confirm</span> [CONFIRM: after-hours emergency clinic name]</p></div></div>
+  <div class="emerg-note" role="note"><div><b>Emergency?</b><p>During opening hours, call (604) 888-2628 on your way in.</p><p>After hours, call the nearest 24-hour emergency clinic.</p><p class="confirm-box"><span class="tag confirm">To confirm</span> [CONFIRM: after-hours emergency clinic name]</p></div></div>
  </section>
 
  <section>
@@ -277,13 +370,13 @@ footer a{color:var(--ink)}
 
  <section>
   <div class="split">
-   <img src="__EXTERIOR__" alt="The Walnut Grove Animal Hospital storefront on 88 Avenue">
+   <img src="__EXTERIOR__" width="792" height="619" alt="The Walnut Grove Animal Hospital storefront on 88 Avenue" loading="lazy">
    <div class="grid" style="gap:14px">
     <div class="eyebrow">Find us</div>
     <h2>On 88 Avenue in Walnut Grove</h2>
     <p class="muted">101A-20995 88 Ave, Langley BC V1M 2C9.</p>
     <p class="muted">Look for the blue sign.</p>
-    <div class="hero-actions"><a class="btn primary small" href="#visit">Hours and directions</a><a class="btn ghost small" href="https://www.google.com/maps/place/Walnut+Grove+Animal+Hospital+Langley/@49.1629613,-122.6546539,17z" target="_blank" rel="noopener">Open in Google Maps</a></div>
+    <div class="hero-actions"><a class="btn primary small" href="#visit">Hours and directions</a><a class="btn ghost small" href="https://www.google.com/maps/place/Walnut+Grove+Animal+Hospital+Langley/@49.1629613,-122.6546539,17z" target="_blank" rel="noopener" aria-label="Open in Google Maps (opens in a new tab)">Open in Google Maps</a></div>
    </div>
   </div>
  </section>
@@ -320,21 +413,21 @@ footer a{color:var(--ink)}
       <label><input type="radio" name="client" value="First visit" id="cl-new"> First visit with us</label>
       <label><input type="radio" name="client" value="Returning" id="cl-ret"> We've been before</label>
      </div>
-     <p class="err" id="err0" hidden>Choose the type of pet and tell us their name.</p>
+     <p class="err" role="alert" id="err0" hidden>Choose the type of pet and tell us their name.</p>
     </fieldset>
     <fieldset data-step="1" hidden>
      <legend>What's the visit for?</legend>
      <label for="reason">Reason<select id="reason" name="reason"></select></label>
      <label for="notes">Anything we should know? (optional)<textarea id="notes" name="notes" placeholder="e.g. limping on the back left leg since Tuesday"></textarea></label>
      <div class="alert" id="emergencyBox" hidden role="alert"><b>This sounds urgent. Please don't wait for an online booking.</b><span>Call (604) 888-2628 now. During opening hours, come straight in and call on the way.</span></div>
-     <p class="err" id="err1" hidden>Choose a reason for the visit.</p>
+     <p class="err" role="alert" id="err1" hidden>Choose a reason for the visit.</p>
     </fieldset>
     <fieldset data-step="2" hidden>
      <legend>Pick a time</legend>
      <div class="dates" id="dates" role="group" aria-label="Date"></div>
      <div class="slots" id="slots" role="group" aria-label="Time"></div>
      <p class="muted" style="font-size:14px">Times shown are for the demo; the live version reads the clinic's real calendar.</p>
-     <p class="err" id="err2" hidden>Pick a date and a time.</p>
+     <p class="err" role="alert" id="err2" hidden>Pick a date and a time.</p>
     </fieldset>
     <fieldset data-step="3" hidden>
      <legend>Your details</legend>
@@ -342,7 +435,7 @@ footer a{color:var(--ink)}
      <label for="phone">Mobile number<input type="tel" id="phone" name="phone" autocomplete="off" placeholder="604 555 0100"></label>
      <label for="email">Email (optional)<input type="email" id="email" name="email" autocomplete="off"></label>
      <label class="consent" for="remind"><input type="checkbox" id="remind" name="remind"> Text and email me appointment reminders. You can stop them at any time.</label>
-     <p class="err" id="err3" hidden>Add your name and a phone number we can reach.</p>
+     <p class="err" role="alert" id="err3" hidden>Add your name and a phone number we can reach.</p>
     </fieldset>
     <div class="done-box" id="doneBox" hidden>
      <div class="eyebrow">Demo only</div>
@@ -373,7 +466,7 @@ footer a{color:var(--ink)}
  <p class="muted" style="margin-top:14px;font-size:14.5px">Real team photos go here; they are stored in the site's content system, not in the code used for this demo.</p>
  <section>
   <div class="split">
-   <img src="__DESKCAT__" alt="A tabby cat at the clinic's front desk">
+   <img src="__DESKCAT__" width="303" height="320" alt="A tabby cat at the clinic's front desk" loading="lazy">
    <div class="grid" style="gap:12px"><div class="eyebrow">How we work</div><h2>Unhurried visits and plain answers</h2>
     <p class="muted">We take time to examine, explain what we find, and talk through options and costs before treatment. Gentle handling, modern diagnostics and clear follow-up are part of every visit.</p></div>
   </div>
@@ -418,22 +511,24 @@ footer a{color:var(--ink)}
   <div class="card grid" style="gap:12px;align-content:start">
    <h3>Contact</h3>
    <div><div class="eyebrow">Address</div><p>101A-20995 88 Ave<br>Langley, BC V1M 2C9</p></div>
-   <div><div class="eyebrow">Phone</div><p><span id="phoneTxt">(604) 888-2628</span> <button class="copy" id="copyPhone" type="button">Copy</button></p></div>
+   <div><div class="eyebrow">Phone</div><p><span id="phoneTxt">(604) 888-2628</span> <button class="btn ghost small copy-number" id="copyPhone" type="button" data-copy-phone="phoneTxt">Copy number</button></p></div>
    <div><div class="eyebrow">Parking</div><p class="muted"><span class="tag confirm">To confirm</span> Parking details.</p></div>
-   <div class="hero-actions"><a class="btn primary small" href="https://www.google.com/maps/place/Walnut+Grove+Animal+Hospital+Langley/@49.1629613,-122.6546539,17z" target="_blank" rel="noopener">Directions in Google Maps</a><a class="btn ghost small" href="#book">Book online</a></div>
+   <div class="hero-actions"><a class="btn primary small" href="https://www.google.com/maps/place/Walnut+Grove+Animal+Hospital+Langley/@49.1629613,-122.6546539,17z" target="_blank" rel="noopener" aria-label="Directions in Google Maps (opens in a new tab)">Directions in Google Maps</a><a class="btn ghost small" href="#book">Book online</a></div>
   </div>
  </div>
- <section><div class="grid photos2"><img src="__EXTERIOR__" alt="Storefront of Walnut Grove Animal Hospital"><img src="__ENTRANCE__" alt="The clinic entrance under the blue Walnut Grove Animal Hospital sign"></div></section>
+ <section><div class="grid photos2"><img src="__EXTERIOR__" width="792" height="619" alt="Storefront of Walnut Grove Animal Hospital" loading="lazy"><img src="__ENTRANCE__" width="466" height="320" alt="The clinic entrance under the blue Walnut Grove Animal Hospital sign" loading="lazy"></div></section>
 </div>
 
 </main>
 
 <footer><div class="wrap cols">
- <div><div class="brand"><span class="chip"><img src="__LOGO__" alt="Walnut Grove Animal Hospital" style="height:30px"></span></div><p class="muted" style="margin-top:12px">101A-20995 88 Ave, Langley, BC V1M 2C9 · (604) 888-2628</p><p class="muted" style="margin-top:6px">Demo for review, October 2026. Not the live website.</p></div>
+ <div><div class="brand"><span class="chip"><img src="__LOGO__" width="504" height="105" alt="Walnut Grove Animal Hospital" style="height:30px" loading="lazy"></span></div><p class="muted" style="margin-top:12px">101A-20995 88 Ave, Langley, BC V1M 2C9 · <span id="footerPhone">(604) 888-2628</span> <button class="btn ghost small copy-number" type="button" data-copy-phone="footerPhone">Copy number</button></p><p class="muted" style="margin-top:6px">Demo for review, October 2026. Not the live website.</p></div>
  <div><h4>Visit</h4><p>Mon to Fri 8:30am to 7pm<br>Sat and Sun 9am to 5pm</p></div>
  <div><h4>Follow</h4><p><a href="https://www.instagram.com/walnutgroveanimalhospitalbc/" target="_blank" rel="noopener">Instagram</a><br><a href="https://www.facebook.com/walnutgroveanimalhospitalbc" target="_blank" rel="noopener">Facebook</a></p></div>
 </div></footer>
 
+<div class="mobile-actions" id="mobileActions" aria-label="Contact and booking" aria-hidden="true" inert><a class="btn ghost" href="tel:+16048882628">Call</a><a class="btn primary" href="#book">Book a visit</a></div>
+<div class="toast" id="phoneToast" role="status" aria-live="polite"></div>
 <div class="scrim" id="scrim"></div>
 <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle" aria-hidden="true">
  <button class="close" id="dClose" aria-label="Close">×</button>
@@ -444,6 +539,7 @@ footer a{color:var(--ink)}
 
 <script>
 const SVC=__SERVICES__;
+const SERVICE_IMAGE_SIZES={"preventative-care":[553,428],"vaccines":[553,428],"parasite-prevention":[553,428],"puppy-kitten-care":[553,428],"microchipping":[553,428],"dental-services":[560,433],"skin-ear-infections":[553,428],"chronic-pain-management":[553,428],"small-mammal-medicine":[553,428],"euthanasia":[560,560],"bloodwork":[553,428],"lab-services":[560,409],"pet-x-ray":[553,428],"ultrasound-services":[553,428],"pet-surgery":[553,428],"spay-neuter":[556,428],"soft-tissue-eye-ear":[553,400],"anesthesia":[553,428],"pet-boarding-services":[553,428],"dog-breeding":[553,400]};
 const PLANTS=__PLANTS__;
 const TOX=__TOX__;
 const FAQ=__FAQ__;
@@ -460,13 +556,14 @@ function vanNow(){const p=new Intl.DateTimeFormat("en-CA",{timeZone:"America/Van
 function openStatus(){const n=vanNow(),[oh,om,ch,cm]=HOURS[n.wd],t=n.h*60+n.m,o=oh*60+om,c=ch*60+cm;
  $("#todayHours").textContent=`${fmt(oh,om)} to ${fmt(ch,cm)}`;
  const dot=$("#openDot"),tx=$("#openText");
- if(t>=o&&t<c){dot.classList.add("open");tx.textContent=`Open now until ${fmt(ch,cm)}`}
- else{dot.classList.remove("open");const nd=t<o?n.wd:(n.wd+1)%7;const[a,b]=HOURS[nd];tx.textContent=`Closed now. Opens ${t<o?"today":DAYS[nd]} at ${fmt(a,b)}`}
- const tb=$("#hoursTable");if(!tb.dataset.done){[1,2,3,4,5,6,0].forEach(d=>{const r=tb.insertRow();if(d===n.wd)r.className="today";const[a,b,c2,d2]=HOURS[d];r.insertCell().textContent=DAYS[d]+(d===n.wd?" (today)":"");r.insertCell().textContent=`${fmt(a,b)} – ${fmt(c2,d2)}`});tb.dataset.done=1}}
+ dot.classList.remove("open","closing");
+ if(t>=o&&t<c){const closing=c-t<=60;dot.classList.add(closing?"closing":"open");tx.textContent=closing?`Closing soon, at ${fmt(ch,cm)}`:`Open now, until ${fmt(ch,cm)}`}
+ else{const nd=t<o?n.wd:(n.wd+1)%7;const[a,b]=HOURS[nd];tx.textContent=`Closed now, opens ${fmt(a,b)} ${t<o?"today":"tomorrow"}`}
+ const tb=$("#hoursTable");if(tb.dataset.day!==String(n.wd)){[...tb.rows].forEach(r=>r.remove());[1,2,3,4,5,6,0].forEach(d=>{const r=tb.insertRow();if(d===n.wd)r.className="today";const[a,b,c2,d2]=HOURS[d];r.insertCell().textContent=DAYS[d]+(d===n.wd?" (today)":"");r.insertCell().textContent=`${fmt(a,b)} – ${fmt(c2,d2)}`});tb.dataset.day=String(n.wd)}}
 
 /* services */
 const CATS=["All",...new Set(SVC.map(s=>s.cat))];
-function card(s){return `<button class="svc" data-slug="${s.slug}" type="button"><div class="ph">${s.img?`<img src="${s.img}" alt="" loading="lazy">`:""}</div><div class="bd"><div class="cat">${esc(s.cat)}</div><h3>${esc(s.name)}</h3><p>${esc(s.intro)}</p></div></button>`}
+function card(s){return `<button class="svc" data-slug="${s.slug}" type="button"><div class="ph">${s.img?`<img src="${s.img}" alt="" loading="lazy" width="${SERVICE_IMAGE_SIZES[s.slug][0]}" height="${SERVICE_IMAGE_SIZES[s.slug][1]}">`:""}</div><div class="bd"><div class="cat">${esc(s.cat)}</div><h3>${esc(s.name)}</h3><p>${esc(s.intro)}</p></div></button>`}
 let svcCategory="All";
 function renderSvc(cat=svcCategory){svcCategory=cat;
  const query=$("#svcSearch").value.trim().toLocaleLowerCase();
@@ -481,7 +578,7 @@ renderSvc("All");
 $("#homeSvc").innerHTML=["preventative-care","vaccines","dental-services","spay-neuter","puppy-kitten-care","bloodwork"].map(k=>card(SVC.find(s=>s.slug===k))).join("");
 let lastFocus=null;
 function openSvc(slug,opener=document.activeElement){const s=SVC.find(x=>x.slug===slug);if(!s)return;lastFocus=opener;
- $("#dPh").innerHTML=s.img?`<img src="${s.img}" alt="">`:"";$("#dCat").textContent=s.cat;$("#dTitle").textContent=s.name;
+ $("#dPh").innerHTML=s.img?`<img src="${s.img}" alt="" loading="lazy" width="${SERVICE_IMAGE_SIZES[s.slug][0]}" height="${SERVICE_IMAGE_SIZES[s.slug][1]}">`:"";$("#dCat").textContent=s.cat;$("#dTitle").textContent=s.name;
  $("#dBody").innerHTML=`<p>${esc(s.intro)}</p>`+(s.points.length?`<div><div class="eyebrow" style="margin-bottom:6px">What's included</div><ul>${s.points.map(p=>`<li>${esc(p)}</li>`).join("")}</ul></div>`:"")+s.more.map(p=>`<p class="muted">${esc(p)}</p>`).join("");
  $("#dBook").onclick=()=>{closeSvc();preset=s.slug};
  $("#drawer").classList.add("on");$("#scrim").classList.add("on");$("#drawer").setAttribute("aria-hidden","false");$("#dClose").focus()}
@@ -536,18 +633,54 @@ function finish(){$$("#bookForm fieldset").forEach(f=>f.hidden=true);$("#navRow"
  $("#doneTitle").textContent=`Request ready for ${$("#petName").value.trim()}`}
 $("#restart").onclick=()=>{$("#bookForm").reset();step=0;B.date=B.time=null;$("#doneBox").hidden=true;$("#navRow").hidden=false;$("#emergencyBox").hidden=true;show()};
 
-/* copy phone */
-$("#copyPhone").onclick=async()=>{const b=$("#copyPhone");try{await navigator.clipboard.writeText("6048882628");b.textContent="Copied"}catch(e){const r=document.createRange();r.selectNodeContents($("#phoneTxt"));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected"}setTimeout(()=>b.textContent="Copy",1800)};
-
-/* router */
+/* R1 global behaviors. No personal details are stored. */
+const motion=matchMedia("(prefers-reduced-motion: reduce)");
+const phoneScreen=matchMedia("(max-width:720px)");
+const menuScreen=matchMedia("(max-width:900px)");
+const finePointer=matchMedia("(pointer:fine)");
 const VIEWS=["home","services","book","team","petcare","faq","visit"];
-function route(){let h=location.hash.replace("#","");if(!VIEWS.includes(h))h="home";
- $$(".view").forEach(v=>v.classList.toggle("on",v.id==="v-"+h));
+let currentView="home",routeVersion=0,heroLeft=false,toastTimer;
+function duration(name){return parseFloat(getComputedStyle(document.documentElement).getPropertyValue(name))||0}
+function updateActions(){const typing=document.activeElement?.matches('input,textarea,select,[contenteditable="true"]');
+ const eligible=currentView!=="book";
+ const visible=phoneScreen.matches&&eligible&&!typing&&(currentView!=="home"||heroLeft);
+ const bar=$("#mobileActions");bar.classList.toggle("on",visible);bar.inert=!visible;bar.setAttribute("aria-hidden",String(!visible));
+ document.body.classList.toggle("has-action-space",phoneScreen.matches&&eligible)}
+function updateHero(){heroLeft=$("#v-home .hero").getBoundingClientRect().bottom<=0;updateActions()}
+function closeMenu(restore=true){const wasOpen=$("#nav").classList.contains("open");$("#nav").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false");document.documentElement.classList.remove("menu-open");if(wasOpen&&restore)$("#menuBtn").focus();updateActions()}
+function trapMenu(e){if(!$("#nav").classList.contains("open"))return;
+ if(e.key==="Escape"){e.preventDefault();closeMenu();return}
+ if(e.key!=="Tab")return;
+ const controls=[$("#menuBtn"),...$$("#nav a")],first=controls[0],last=controls[controls.length-1];
+ if(e.shiftKey&&(document.activeElement===first||!controls.includes(document.activeElement))){e.preventDefault();last.focus()}
+ else if(!e.shiftKey&&(document.activeElement===last||!controls.includes(document.activeElement))){e.preventDefault();first.focus()}}
+$("#menuBtn").onclick=()=>{if($("#nav").classList.contains("open")){closeMenu();return}$("#nav").classList.add("open");$("#menuBtn").setAttribute("aria-expanded","true");document.documentElement.classList.add("menu-open");$("#nav a").focus()};
+document.addEventListener("keydown",trapMenu);
+menuScreen.addEventListener("change",()=>{if(!menuScreen.matches)closeMenu(false)});
+function updateHeader(){const demo=$(".demo");document.documentElement.style.setProperty("--demo-height",`${demo.getBoundingClientRect().height}px`);$("header.site").classList.toggle("compact",window.scrollY>80)}
+if("ResizeObserver" in window)new ResizeObserver(updateHeader).observe($(".demo"));
+addEventListener("resize",()=>{updateHeader();updateHero()});
+addEventListener("scroll",()=>{updateHeader();updateHero()},{passive:true});
+document.addEventListener("focusin",updateActions);document.addEventListener("focusout",()=>queueMicrotask(updateActions));
+phoneScreen.addEventListener("change",updateActions);
+if("IntersectionObserver" in window){const heroObserver=new IntersectionObserver(()=>updateHero());heroObserver.observe($("#v-home .hero"))}
+function setupReveal(){const targets=$$("[data-reveal]");if(motion.matches||!("IntersectionObserver" in window)){targets.forEach(el=>el.classList.remove("revealing"));return}
+ const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(!entry.isIntersecting)continue;const el=entry.target;const siblings=[...el.parentElement.children].filter(x=>x.hasAttribute("data-reveal"));el.style.setProperty("--reveal-delay",`${Math.min(siblings.indexOf(el),4)*60}ms`);el.classList.add("revealing");el.addEventListener("animationend",()=>el.classList.remove("revealing"),{once:true});observer.unobserve(el)}},{rootMargin:"0px 0px -8% 0px"});
+ targets.forEach(el=>observer.observe(el));motion.addEventListener("change",()=>{if(motion.matches){observer.disconnect();targets.forEach(el=>el.classList.remove("revealing"))}},{once:true})}
+function showToast(){const toast=$("#phoneToast");clearTimeout(toastTimer);toast.textContent="Number copied";toast.classList.add("on");toastTimer=setTimeout(()=>{toast.classList.remove("on");toast.textContent=""},2200)}
+$$('[data-copy-phone]').forEach(button=>button.addEventListener("click",async()=>{if(!finePointer.matches)return;try{await navigator.clipboard.writeText("(604) 888-2628");showToast()}catch{const range=document.createRange();range.selectNodeContents(document.getElementById(button.dataset.copyPhone));const selection=getSelection();selection.removeAllRanges();selection.addRange(range)}}));
+async function route(){const version=++routeVersion;let h=location.hash.replace("#","");if(!VIEWS.includes(h))h="home";
+ closeMenu(false);if($("#drawer").classList.contains("on"))closeSvc();
+ const old=$(".view.on"),next=$("#v-"+h);$$(".view").forEach(v=>v.classList.remove("view-in","view-out"));
+ if(old&&old!==next&&!motion.matches){old.classList.add("view-out");await new Promise(resolve=>setTimeout(resolve,duration("--d1")));if(version!==routeVersion)return}
+ $$(".view").forEach(v=>{v.classList.toggle("on",v===next);v.classList.remove("view-out")});
+ document.documentElement.classList.add("routing-ready");currentView=h;
+ if(old!==next&&!motion.matches)next.classList.add("view-in");
  $$("nav.main a").forEach(a=>a.getAttribute("href")==="#"+h?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
- $("#nav").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false");
  if(h==="book"){if(preset){$("#reason").value=preset;preset=null;if(step<1)step=0}show()}
- window.scrollTo(0,0)}
+ window.scrollTo({top:0,left:0,behavior:"instant"});document.title=`${next.dataset.title} | Walnut Grove Animal Hospital`;
+ const heading=next.querySelector("h1");heading.setAttribute("tabindex","-1");heading.focus({preventScroll:true});$("#pageAnnouncement").textContent=`Page: ${next.dataset.title}`;
+ updateHeader();updateHero()}
 addEventListener("hashchange",route);
-$("#menuBtn").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#menuBtn").setAttribute("aria-expanded",o)};
-openStatus();setInterval(openStatus,60000);route();
+openStatus();setInterval(openStatus,60000);setupReveal();route();
 </script>
