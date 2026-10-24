@@ -40,3 +40,5 @@ main.page-content>.band-dark,main.page-content>.band-soft{grid-column:1/-1}
 .band-soft{background:#EFE7DA;padding-block:96px}
 .page-content:has(>.band-dark:last-child){padding-bottom:96px}
 @media(max-width:599px){.band-dark,.band-soft{padding-block:64px}}
+
+.picker-result{display:grid;grid-template-rows:0fr;transition:grid-template-rows 220ms ease-out}.picker-result>div{overflow:hidden}.picker-result.open{grid-template-rows:1fr}

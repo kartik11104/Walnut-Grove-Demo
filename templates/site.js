@@ -54,3 +54,20 @@ const form=$('#booking');if(form){
  }catch{$('#send-error').hidden=false}finally{sending=false;$('#booking-next').disabled=false}});
  restore();refresh();form.hidden=false;hashStep();showStep();
 }
+
+/* C1: keyboard-native radio picker. */
+const picker=$('.home-picker');if(picker){const needs={
+ wellness:{sentence:'A yearly exam and vaccines keep small problems small.',links:[['preventative-care','Wellness exams']],reason:'wellness'},
+ sick:{sentence:'Is it urgent?',links:[],reason:'sick'},
+ dental:{sentence:"Bad breath or a sore mouth often means dental disease. We'll take a look.",links:[['dental-services','Dental care']],reason:'dental'},
+ surgery:{sentence:"We'll start with a consult and explain every step.",links:[['spay-neuter','Spay and neuter'],['pet-surgery','Pet surgery']],reason:'surgery'},
+ young:{sentence:'First vaccines, deworming and a plan for the first year.',links:[['puppy-kitten-care','Puppy and kitten care']],reason:'wellness'},
+ goodbye:{sentence:"We're here to help you decide when it's time, gently.",links:[['euthanasia','End-of-life care']]}};
+ picker.addEventListener('change',()=>{const pet=$('input[name="picker-pet"]:checked',picker)?.value,key=$('input[name="picker-need"]:checked',picker)?.value;if(!pet||!key)return;const need=needs[key],content=$('#picker-content');content.replaceChildren();const p=document.createElement('p');p.textContent=need.sentence;content.append(p);
+ if(key==='sick'){const signs=document.createElement('p');signs.textContent='Difficulty breathing; collapse or seizure; suspected poisoning; a swollen, hard belly with retching; a male cat straining to pee; heavy bleeding; hit by a car.';content.append(signs);const urgent=document.createElement('a');urgent.href='#emergency';urgent.textContent='Is it urgent?';urgent.addEventListener('click',e=>{e.preventDefault();dialogOpen($('#emergency'),urgent)});content.append(urgent)}
+ for(const [slug,label] of need.links){const p=document.createElement('p'),link=document.createElement('a');link.href='/services/'+slug+'/';link.textContent=label;p.append(link);content.append(p)}
+ if(pet==='rabbit'){const p=document.createElement('p'),a=document.createElement('a');p.textContent='We see rabbits and pocket pets too. ';a.href='/services/small-mammal-medicine/';a.textContent='Small mammal medicine';p.append(a);content.append(p)}
+ const actions=document.createElement('div');actions.className='actions';
+ if(key==='goodbye'||key==='sick'){const call=document.createElement('a');call.className='button '+(key==='goodbye'?'primary':'secondary');call.href='tel:+16048882628';call.textContent=key==='goodbye'?'Call us to talk it through':'Call';actions.append(call)}
+ if(need.reason){const book=document.createElement('a');book.className='button primary';book.href='/book/?'+new URLSearchParams({species:pet,reason:need.reason});book.textContent=key==='sick'?'Not urgent? Book a sick visit':'Book this visit';actions.append(book)}
+ content.append(actions);$('#picker-result').classList.add('open');$('#picker-result').inert=false})}
