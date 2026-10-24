@@ -53,3 +53,10 @@ main.page-content>.band-dark,main.page-content>.band-soft{grid-column:1/-1}
 
 .service-group-index{display:none}[data-filter-group]{scroll-margin-top:96px}
 @media(min-width:900px){.service-index{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px}.service-group-index{display:grid;gap:16px;position:sticky;top:96px;align-self:start}.service-group-index a{padding-left:12px;border-left:2px solid transparent}.service-group-index a.active{border-left-color:var(--walnut)}.service-group-content{min-width:0}}
+@view-transition{navigation:auto}
+header{view-transition-name:site-header}
+::view-transition-old(root){animation:v3-page-out 180ms both}
+::view-transition-new(root){animation:v3-page-in 180ms both}
+@keyframes v3-page-out{to{opacity:0}}@keyframes v3-page-in{from{opacity:0}}
+::view-transition-group(site-header),::view-transition-new(site-header){animation:none}::view-transition-old(site-header){display:none}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}::view-transition-old(root),::view-transition-new(root){animation:none!important}}
