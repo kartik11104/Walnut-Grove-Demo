@@ -1,0 +1,102 @@
+{
+  "preventative-care": {
+    "summary": "Regular visits help us spot health changes early. We plan check-ups, food advice and prevention around your pet's age and daily life.",
+    "description": "Check-ups, food advice and prevention plans for each stage of your pet's life.",
+    "body": "We check your pet's weight, growth and general health. These checks give us a record to compare as your pet gets older.\n\n### What's included\n\n* Health exams and screening for puppies, adult pets and seniors.\n* Advice on food and weight.\n* Help with behaviour and daily care.\n* Blood tests to look for early signs of illness.\n* Plans for vaccines and parasite prevention.\n\nWe talk with you about changes at home and adjust care as your pet's needs change."
+  },
+  "vaccines": {
+    "summary": "We help protect dogs and cats from serious infections. Your pet's age, health and daily activities guide which vaccines we recommend.",
+    "description": "Vaccines chosen for your pet's age, health and risk of infection.",
+    "body": "We review your pet's health and risk of infection before choosing vaccines. Some vaccines are recommended for most dogs and cats. Others depend on travel, time outdoors and contact with other animals.\n\n### What's included\n\n* Core vaccines for dogs and cats.\n* Vaccines for risks linked to your pet's daily life.\n* Puppy and kitten vaccine schedules.\n* Booster vaccines for adult pets.\n* Visits to review which vaccines your pet needs.\n\nWe can discuss parasite prevention at the same visit."
+  },
+  "parasite-prevention": {
+    "summary": "Fleas, ticks and worms can affect pets all year. We help you choose prevention based on your pet's daily life and risk of exposure.",
+    "description": "Testing and prevention for fleas, ticks, heartworm and intestinal worms.",
+    "body": "We use health checks and tests to look for parasites. We recommend treatment based on your pet's habits and the risks where they spend time.\n\n### What's included\n\n* Year-round flea and tick prevention.\n* Heartworm testing and prevention.\n* Tests for intestinal parasites.\n* Advice on medicines suited to your pet.\n* Reviews of seasonal risks.\n\nBlood tests can help find heartworm and other infections. Prevention also helps protect the people who share your pet's home."
+  },
+  "puppy-kitten-care": {
+    "summary": "Young pets need care as they grow. We help you plan vaccines, parasite prevention, food and early health checks for your puppy or kitten.",
+    "description": "Growth checks, vaccines, deworming and practical advice for your new puppy or kitten.",
+    "body": "At each visit, we check how your young pet is growing. We also talk with you about food, behaviour and care at home.\n\n### What's included\n\n* Exams to check growth and general health.\n* Vaccine and deworming schedules.\n* Checks on physical growth and behaviour.\n* Food advice for growing pets.\n* Help with questions about caring for a new pet.\n\nAs your pet grows, we can discuss microchipping and when to spay or neuter."
+  },
+  "microchipping": {
+    "summary": "A microchip gives your pet a lasting ID number. Clinics and shelters can scan it to help find you if your pet gets lost.",
+    "description": "A lasting ID number that helps clinics and shelters reunite lost pets with their families.",
+    "body": "We can place a microchip during a routine visit or surgery. Each chip holds a unique number that links to your contact details in a registry.\n\n### What's included\n\n* Microchip placement.\n* Help with registration.\n* Scanning to check that the chip works.\n* Placement during a check-up, spay or neuter.\n* Help identifying lost pets when a chip is scanned.\n\nWe recommend microchipping for puppies and kittens as part of their early care."
+  },
+  "bloodwork": {
+    "summary": "Blood tests help us check what's happening inside your pet's body. We use them for health screening, before surgery and to follow ongoing illness.",
+    "description": "Blood tests to check organ health, look for illness and guide care before surgery.",
+    "body": "Our in-house lab lets us test samples and review results without sending every sample away. Blood tests can show changes before you notice symptoms.\n\n### What's included\n\n* Blood cell counts to look for infection or anaemia.\n* Tests of kidney and liver function, body salts and metabolism.\n* Blood tests before anesthesia.\n* Screening during routine health visits.\n* Follow-up tests for ongoing illness.\n\nWe may use blood results alongside ultrasound images to help plan treatment."
+  },
+  "lab-services": {
+    "summary": "Our in-house lab helps us investigate illness and check your pet's health. Blood, urine and stool tests give us different pieces of the picture.",
+    "description": "In-house blood, urine and stool tests to help find the cause of illness.",
+    "body": "We choose tests based on your pet's symptoms and health history. Lab results can work alongside X-rays and ultrasound images.\n\n### What's included\n\n* Blood cell counts and platelet checks.\n* Tests of kidney and liver function, body salts and blood sugar.\n* Blood tests before anesthesia.\n* Urine and stool tests.\n* Heartworm and tick-borne disease tests.\n* Feline leukaemia and FIV tests.\n* Tests for pancreas problems, blood clotting, skin and ear conditions, and parasites.\n\nWe explain what the results mean for your pet's care."
+  },
+  "pet-x-ray": {
+    "summary": "Digital X-rays help us look at bones, joints and organs. They can show injuries and other changes that help us decide what care your pet needs.",
+    "description": "Digital images of bones, joints and organs to help assess injuries and illness.",
+    "body": "We use X-rays to investigate symptoms and plan treatment. We may also use blood tests or ultrasound to understand your pet's health.\n\n### What's included\n\n* Images to look for broken bones, arthritis and other bone changes.\n* Checks after accidents or sudden trouble moving.\n* Chest and belly images.\n* Dental and bone assessments.\n* Images to help plan surgery."
+  },
+  "ultrasound-services": {
+    "summary": "Ultrasound uses sound waves to show organs and soft tissues as they move. It helps us investigate symptoms and monitor pregnancy or ongoing illness.",
+    "description": "Sound-wave images to check organs, investigate symptoms and monitor pregnancy.",
+    "body": "We look at live images of your pet's organs. Ultrasound can reveal changes that are hard to find during an exam or with blood tests alone.\n\n### What's included\n\n* Checks of the liver, kidneys, bladder and digestive tract.\n* Checks for lumps, fluid or changes in organs.\n* Pregnancy and reproductive health checks.\n* Investigation of pain, weight loss, vomiting or appetite changes.\n* Follow-up images for ongoing conditions.\n\nWe may use ultrasound alongside X-rays and blood tests."
+  },
+  "spay-neuter": {
+    "summary": "Spaying or neutering prevents unplanned litters and can lower some health risks. We help you decide when the procedure makes sense for your pet.",
+    "description": "Surgery to prevent unplanned litters, with advice on timing and recovery.",
+    "body": "We review your pet's health before surgery and plan anesthesia for their needs. We also use blood tests before the procedure.\n\n### What's included\n\n* Advice about timing based on age, breed and health.\n* A health check and bloodwork before surgery.\n* Anesthesia and care through the procedure.\n* Guidance on what to expect.\n\nSpaying and neutering can reduce some hormone-driven behaviours. These procedures also lower certain risks, including mammary tumours and prostate disease. We can discuss the benefits for your pet."
+  },
+  "pet-surgery": {
+    "summary": "We perform surgery for a range of health problems. We plan each procedure around your pet's condition, with anesthesia, monitoring and care during recovery.",
+    "description": "Surgery for lumps and internal health problems, with planning and recovery care.",
+    "body": "Before surgery, we examine your pet and review bloodwork. We explain the procedure and plan anesthesia for your pet's health needs.\n\n### What's included\n\n* Soft tissue procedures for internal health problems.\n* Removal of tumours, lumps and other growths.\n* Surgery for digestive, reproductive or structural problems.\n* Visits to discuss and plan surgery.\n* Monitoring and care after the procedure."
+  },
+  "soft-tissue-eye-ear": {
+    "summary": "Some lumps, injuries and eye or ear conditions need surgery. We assess your pet and explain which procedure may help.",
+    "description": "Surgical care for lumps, injuries and conditions affecting eyes, ears or internal organs.",
+    "body": "We perform soft tissue procedures for conditions affecting the eyes, ears and internal organs. We review your pet's needs before surgery and plan their anesthesia.\n\n### What's included\n\n* Procedures for internal health problems and abnormal growths.\n* Tumour and lump removal.\n* Surgery for digestive, reproductive or structural concerns.\n* A visit to assess your pet and plan treatment.\n* Monitoring and care during recovery.\n\nWe recommend bloodwork before surgery. Skin and ear problems that do not need surgery can be managed with medical treatment."
+  },
+  "dental-services": {
+    "summary": "Dental problems can hurt and affect your pet's wider health. We examine teeth and gums, clean them and treat problems below the gumline.",
+    "description": "Teeth cleaning, dental X-rays and treatment for painful or damaged teeth.",
+    "body": "We remove plaque and tartar with professional cleaning and polishing. Dental X-rays help us find damage that we cannot see above the gums.\n\n### What's included\n\n* Teeth cleaning and polishing.\n* Dental X-rays.\n* Tooth removal and oral surgery when needed.\n\nGum disease, broken teeth, infections and tumours can cause discomfort. Many dental procedures need anesthesia to keep your pet still and comfortable.\n\n### Care at home\n\nBrushing can reduce plaque. Do not use human toothpaste, which may contain xylitol that is toxic to pets. Regular dental checks help us find problems early."
+  },
+  "anesthesia": {
+    "summary": "Anesthesia keeps pets still and manages pain during surgery and dental care. We choose a plan for your pet and monitor them through the procedure.",
+    "description": "Anesthesia planned for your pet, with monitoring during the procedure and recovery.",
+    "body": "We review your pet's age, health and planned procedure before choosing anesthesia. We recommend bloodwork to check organ function before sedation.\n\n### What's included\n\n* An exam and tests before the procedure.\n* An anesthesia plan based on health history.\n* Checks of heart rate, oxygen levels and blood pressure.\n* Equipment to monitor your pet during anesthesia.\n* Close monitoring as your pet wakes up."
+  },
+  "skin-ear-infections": {
+    "summary": "Itchy skin and sore ears can have several causes. We look for the cause so we can treat the problem and help your pet feel better.",
+    "description": "Exams and tests for itching, ear pain, infections and recurring skin problems.",
+    "body": "We examine your pet's skin and ears. Tests can help us tell whether bacteria, yeast or allergies are part of the problem.\n\n### What's included\n\n* Treatment for skin and ear infections.\n* Checks for allergy-related itching and swelling.\n* Ear exams for infections or changes in the ear.\n* Looking at skin samples under a microscope.\n* Plans for problems that keep coming back.\n\nBloodwork may help us check for other health conditions. Severe or lasting problems sometimes need surgery."
+  },
+  "chronic-pain-management": {
+    "summary": "Pain from arthritis or other lasting conditions can change your pet's daily life. We look for the cause and adjust care as their needs change.",
+    "description": "Help with lasting pain, including arthritis, with regular checks and treatment adjustments.",
+    "body": "We assess how your pet moves and how comfortable they are. Blood tests and X-rays can help us find the source of pain.\n\n### What's included\n\n* Checks for arthritis and joint pain.\n* Regular reviews of pain and treatment.\n* Medicines and other therapies for pain and swelling.\n* Advice on daily habits and support for moving around.\n* Reviews of your pet's comfort and quality of life.\n\nWe follow up to see how treatment is working and make changes when needed."
+  },
+  "small-mammal-medicine": {
+    "summary": "Rabbits and pocket pets have their own health needs. We offer exams, food advice, dental care and treatment suited to small mammals.",
+    "description": "Health checks, food advice and dental care for rabbits and other small mammals.",
+    "body": "Small mammals can hide signs of illness. We check their health and talk with you about changes in eating, movement or behaviour. Bloodwork can help find hidden problems.\n\n### What's included\n\n* Exams for rabbits, guinea pigs and other small mammals.\n* Advice on food and living space.\n* Dental and digestive health checks.\n* Tests and treatment for illness or behaviour changes.\n* Prevention advice for your pet's species.\n\nSome small mammals have teeth that keep growing. Their dental care needs regular attention."
+  },
+  "dog-breeding": {
+    "summary": "We help you plan breeding care and follow your dog's pregnancy. Health checks before breeding can help identify concerns for the mother and future puppies.",
+    "description": "Health checks before breeding, pregnancy monitoring and care for mothers and newborn puppies.",
+    "body": "We discuss reproductive health, breeding plans and care through pregnancy. Bloodwork and exams help us assess your dog before breeding.\n\n### What's included\n\n* Health checks before breeding.\n* Breeding advice and planning.\n* Help with ovulation timing.\n* Ultrasound and other checks during pregnancy.\n* Care for the mother and puppies after birth.\n\nIf you do not plan to breed your dog, we can discuss spaying or neutering."
+  },
+  "pet-boarding-services": {
+    "summary": "We provide boarding for cats while you are away. Your cat stays in a quiet space at the clinic, with daily care and veterinary supervision.",
+    "description": "Cat boarding at the clinic, with daily feeding, litter care and veterinary supervision.",
+    "body": "Our staff follow your cat's daily care routine and check on them during their stay. A vet can provide care if a health concern comes up.\n\n### What's included\n\n* Private accommodation in a quiet area.\n* Feeding, litter care and daily checks.\n* Gentle interaction and activities.\n* Veterinary supervision.\n* Drop-off and pick-up during regular hospital hours.\n\nWe recommend current vaccines, microchipping and parasite prevention before boarding."
+  },
+  "euthanasia": {
+    "summary": "Saying goodbye is hard. We can talk with you about your pet's comfort, help you weigh the choices and support your family through the next steps.",
+    "description": "Support with quality-of-life decisions, saying goodbye and aftercare arrangements.",
+    "body": "We listen to your concerns and help you assess pain and quality of life. Blood tests can help us understand your pet's current health. Pain management may help with comfort during difficult health problems.\n\n### What's included\n\n* Visits to discuss comfort, pain and quality of life.\n* A quiet, private space at the clinic.\n* An explanation of each step.\n* Choices about staying with your pet.\n* Private or communal cremation and memorial keepsakes.\n\nPlease call if you need to talk or ask questions. We can also help you find support for pet loss and grief."
+  }
+}
