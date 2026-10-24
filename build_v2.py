@@ -80,7 +80,7 @@ for group,items in GROUPS.items():
 save('services.json',services)
 # Parse plants directly from the supplied resource, preserving every group/list entry.
 plants=[];ptext=source('resources_poisonous-plants.md')
-for title,body in re.findall(r'^### (.+)\n(.*?)(?=^#{2,3} |\Z)',ptext,re.M|re.S):
+for title,body in re.findall(r'^### ([^\n]+)\n(.*?)(?=^#{2,3} |\Z)',ptext,re.M|re.S):
  items=re.findall(r'^\s*\* (.+)',body,re.M)
  if items:plants.append({'name':title,'items':items})
 save('plants.json',plants)

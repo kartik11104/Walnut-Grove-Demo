@@ -1,1 +1,155 @@
-[]
+[
+  {
+    "name": "Garden Blooms",
+    "items": [
+      "Autumn Crocus",
+      "Azalea",
+      "Bleeding Heart",
+      "Bluebonnet",
+      "Cardinal Flower",
+      "Four O'Clock",
+      "Foxglove",
+      "Hydrangea",
+      "Lantana",
+      "Larkspur",
+      "Periwinkle",
+      "Ranunculus (Buttercup)",
+      "Snowdrop"
+    ]
+  },
+  {
+    "name": "Vines & Climbers",
+    "items": [
+      "Clematis",
+      "English Ivy",
+      "Honeysuckle",
+      "Morning Glory",
+      "Sweet Pea",
+      "Wisteria"
+    ]
+  },
+  {
+    "name": "Exotics",
+    "items": [
+      "Bird Of Paradise",
+      "Caladium",
+      "Dieffenbachia",
+      "Elephant Ear (Taro)",
+      "Philodendron",
+      "Poinsettia"
+    ]
+  },
+  {
+    "name": "Lilies",
+    "items": [
+      "Arum Lily",
+      "Calla Lily",
+      "Easter Lily",
+      "Lily Of The Valley"
+    ]
+  },
+  {
+    "name": "Wild/Field Plants",
+    "items": [
+      "Bishop's Weed",
+      "Bloodroot",
+      "Burdock",
+      "Cocklebur",
+      "Heliotrope",
+      "Milkweed",
+      "Pigweed",
+      "Pokeweed",
+      "Spurges",
+      "Tansy",
+      "Vetch"
+    ]
+  },
+  {
+    "name": "Highly Toxic/Wild",
+    "items": [
+      "Baneberry",
+      "False Hellebore",
+      "Hemlock",
+      "Henbane",
+      "Jimsonweed",
+      "Mandrake",
+      "Nightshades",
+      "Monkshood"
+    ]
+  },
+  {
+    "name": "Herbs & Crops",
+    "items": [
+      "Cacao",
+      "Coffee",
+      "Coriander",
+      "Rape",
+      "Tobacco"
+    ]
+  },
+  {
+    "name": "Hardwoods & Evergreens",
+    "items": [
+      "Avocado",
+      "Black Laurel",
+      "Eucalyptus",
+      "Horse Chestnut",
+      "Mountain Laurel",
+      "Red Maple",
+      "Yews"
+    ]
+  },
+  {
+    "name": "Highly Toxic/Wild",
+    "items": [
+      "Baneberry",
+      "False Hellebore",
+      "Hemlock",
+      "Henbane",
+      "Jimsonweed",
+      "Mandrake",
+      "Nightshades",
+      "Monkshood"
+    ]
+  },
+  {
+    "name": "Flowering Trees",
+    "items": [
+      "Australian Flame Tree",
+      "Black Locust",
+      "Cherry Tree",
+      "Chinaberry Tree",
+      "Golden Chain",
+      "Poinciana",
+      "Rain Tree"
+    ]
+  },
+  {
+    "name": "Agricultural/Misc",
+    "items": [
+      "Gladiolum",
+      "Goatweed",
+      "Chervil",
+      "Gentry",
+      "Marijuana",
+      "Mezereum",
+      "Mexican Poppy",
+      "Pukio Shrubs"
+    ]
+  },
+  {
+    "name": "Succulent & Parasitic",
+    "items": [
+      "Mistletoe",
+      "Fall Plant",
+      "Sarah Plant"
+    ]
+  },
+  {
+    "name": "Contact Irritants",
+    "items": [
+      "Poison Ivy",
+      "Poison Oak"
+    ]
+  }
+]
