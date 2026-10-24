@@ -1,2 +1,5 @@
 dist/
 __pycache__/
+source/html/
+source/img/
+review/
