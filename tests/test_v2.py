@@ -1,5 +1,5 @@
 """Run python3 tests/test_v2.py after python3 build_v2.py. Never sends booking data."""
-import contextlib,json,threading,http.server,functools,sys
+import contextlib,json,threading,http.server,functools,sys,re,shutil
 from pathlib import Path
 from urllib.parse import urlsplit,unquote
 from playwright.sync_api import sync_playwright
@@ -23,9 +23,12 @@ from html.parser import HTMLParser
 from urllib.request import urlopen
 class StaticPage(HTMLParser):
  def __init__(self):
-  super().__init__();self.h1=0;self.images=[];self.links=[];self.ids=[];self.title=False;self.title_text='';self.lang=False;self.description=False;self.canonical=False
+  super().__init__();self.h1=0;self.images=[];self.links=[];self.ids=[];self.title=False;self.title_text='';self.lang=False;self.description=False;self.canonical=False;self.copy=[];self.skip_copy=[]
  def handle_starttag(self,tag,attrs):
   a=dict(attrs)
+  if tag in ['script','style']:self.skip_copy.append(tag)
+  if tag=='img':self.copy.append(a.get('alt',''))
+  if tag=='meta' and a.get('name')=='description':self.copy.append(a.get('content',''))
   if tag=='h1':self.h1+=1
   if tag=='img':self.images.append(a)
   if tag=='a':self.links.append(a.get('href',''))
@@ -35,13 +38,22 @@ class StaticPage(HTMLParser):
   if tag=='meta' and a.get('name')=='description':self.description=0<len(a.get('content',''))<=155
   if tag=='link' and a.get('rel')=='canonical':self.canonical=True
  def handle_endtag(self,tag):
+  if tag in ['script','style'] and self.skip_copy:self.skip_copy.pop()
   if tag=='title':self.title=False
  def handle_data(self,text):
+  if not self.skip_copy:self.copy.append(text)
   if self.title:self.title_text+=text
 static={}
 for path in paths:
  with urlopen(BASE+path) as response:
   page=StaticPage();page.feed(response.read().decode());static[path]=page
+ copy=' '.join(page.copy)
+ banned=['furry friends','fur babies','state-of-the-art','cutting-edge','comprehensive','seamless','elevate','unparalleled','journey','peace of mind']
+ check('—' not in copy and '!' not in copy,path+': forbidden punctuation')
+ for phrase in banned:check(not re.search(r'\b'+re.escape(phrase)+r'\b',copy,re.I),path+': banned copy '+phrase)
+ if path.startswith('/services/') and path!='/services/':
+  for phrase in ['plays a critical role','comprehensive','thorough','ensure','designed to','optimal','foundation']:
+   check(not re.search(r'\b'+re.escape(phrase)+r'\b',copy,re.I),path+': banned service copy '+phrase)
  check(page.h1==1 and page.lang and page.description and page.canonical,path+': static metadata/H1')
  check(len(page.ids)==len(set(page.ids)),path+': duplicate IDs')
  for image in page.images:check(all(k in image for k in ['alt','width','height','decoding']),path+': image attributes')
@@ -58,12 +70,19 @@ for path,page in static.items():
   if u.fragment and not u.fragment.startswith('step-') and target in static:check(unquote(u.fragment) in static[target].ids,path+': missing fragment '+link)
 check(len({p.title_text for p in static.values()})==len(static),'Duplicate page titles')
 check(json.loads((ROOT/'data/clinic.json').read_text())['bookingLive'] is False,'bookingLive must be false')
+service_data=json.loads((ROOT/'data/services.json').read_text())
+for service in service_data:
+ check(len(service['summary'].split())<=45,service['slug']+': summary word limit')
+ check(len(service['description'].split())<=16,service['slug']+': index word limit')
+ check(service['summary'] not in service['body'],service['slug']+': repeated summary')
 print(f'Static checks: {len(static)} pages, {len(errors)} errors')
 if errors:
  print('ERRORS:',json.dumps(errors));server.shutdown();sys.exit(1)
 try:
  with sync_playwright() as p:
-  try:browser=p.chromium.launch()
+  try:
+   executable=p.chromium.executable_path
+   browser=p.chromium.launch(**({} if Path(executable).exists() else {'executable_path':shutil.which('chromium') or executable}))
   except Exception as e:
    print('BLOCKED: Chromium unavailable. Browser tests and screenshots were not run.');print(str(e).splitlines()[0]);sys.exit(2)
   for w,h in [(390,844),(1280,800)]:
@@ -78,9 +97,11 @@ try:
     check(page.locator('h1').count()==1,f'{path}: H1 count')
     check(page.evaluate('document.documentElement.scrollWidth<=innerWidth'),f'{path}: horizontal scroll at {w}')
     check(page.locator('img:not([alt])').count()==0,f'{path}: missing image alt')
-    page.locator('img').evaluate_all('(imgs)=>imgs.forEach(i=>i.loading="eager")');page.wait_for_function('Array.from(document.images).every(i=>i.complete)')
+    page.locator('img').evaluate_all('(imgs)=>Promise.all(imgs.map(i=>{i.loading="eager";return i.decode()}))')
     check(page.locator('img').evaluate_all('(imgs)=>imgs.every(i=>i.complete&&i.naturalWidth>0)'),f'{path}: broken image')
-    check(page.locator('img').evaluate_all('(imgs)=>imgs.every(i=>i.getBoundingClientRect().width<=i.naturalWidth)'),f'{path}: upscaled image')
+    # Rotation expands an axis-aligned bounding rectangle without enlarging image pixels.
+    check(page.locator('img').evaluate_all('(imgs)=>imgs.every(i=>i.offsetWidth<=i.naturalWidth)'),f'{path}: upscaled image')
+    check(page.locator('main img').evaluate_all('(imgs)=>imgs.every(i=>i.offsetWidth<=i.parentElement.clientWidth)'),f'{path}: image wider than its column')
     for link in page.locator('a[href]').evaluate_all('(as)=>as.map(a=>a.getAttribute("href"))'):
      u=urlsplit(link)
      if u.scheme or u.netloc or not u.path:continue

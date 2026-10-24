@@ -3,8 +3,9 @@
     "slug": "preventative-care",
     "name": "Wellness exams",
     "group": "Everyday care",
-    "summary": "Our preventative care programs are designed to protect your pet's health before problems arise.",
-    "body": "\nOur preventative care programs are designed to protect your pet's health before problems arise. Through regular wellness examinations, routine bloodwork screenings, and lifestyle-based care plans, we focus on maintaining long-term health and early disease detection.\n\nBy monitoring your pet's development, weight, and overall condition, our team can identify potential concerns early and recommend proactive treatment strategies tailored to your pet's individual needs. Keeping up with vaccinations and parasite prevention is a key part of any wellness plan.\n\n#### Key Preventative Care Services Include\n\n  * thorough wellness examinations to monitor your pet's overall health and detect early signs of medical concerns.\n  * Age-based health screening recommendations tailored to puppies, adult pets, and senior companions.\n  * Nutritional counselling and weight management guidance to support healthy growth and prevent obesity-related conditions.\n  * Lifestyle and behavioural health guidance to ensure your pet's physical and emotional wellbeing.\n  * Long-term preventative health planning designed to protect your pet throughout every stage of life.\n\nPreventative medicine plays a vital role in maintaining your pet's quality of life. Through regular monitoring and proactive care, we help reduce the risk of serious illnesses while supporting a long, healthy life for your companion.\n\n\n\n",
+    "summary": "Regular visits help us spot health changes early. We plan check-ups, food advice and prevention around your pet's age and daily life.",
+    "description": "Check-ups, food advice and prevention plans for each stage of your pet's life.",
+    "body": "We check your pet's weight, growth and general health. These checks give us a record to compare as your pet gets older.\n\n### What's included\n\n* Health exams and screening for puppies, adult pets and seniors.\n* Advice on food and weight.\n* Help with behaviour and daily care.\n* Blood tests to look for early signs of illness.\n* Plans for vaccines and parasite prevention.\n\nWe talk with you about changes at home and adjust care as your pet's needs change.",
     "when": [],
     "questions": [
       {
@@ -22,7 +23,7 @@
       {
         "id": "q-what-is-included-in-a-puppy-or-kitten-wellness-exam",
         "q": "What is included in a puppy or kitten wellness exam?",
-        "a": "A pediatric wellness exam includes a thorough physical evaluation, monitoring of growth and skeletal development, a dental assessment, congenital condition screenings, and a review of initial health requirements.",
+        "a": "A pediatric wellness exam includes a full physical evaluation, monitoring of growth and skeletal development, a dental assessment, congenital condition screenings, and a review of initial health requirements.",
         "group": "Vaccines and prevention"
       }
     ],
@@ -46,8 +47,9 @@
     "slug": "vaccines",
     "name": "Vaccines",
     "group": "Everyday care",
-    "summary": "Vaccinations play a critical role in protecting pets from infectious and potentially life-threatening diseases.",
-    "body": "\nVaccinations play a critical role in protecting pets from infectious and potentially life-threatening diseases. As part of our preventative care programs, our vaccination protocols are designed to provide effective protection while considering your pet's lifestyle, age, and individual risk factors.\n\nOur team follows evidence-based guidelines to ensure each pet receives the appropriate immunizations without unnecessary treatments. Vaccines are often paired with parasite prevention for thorough protection.\n\n#### Key Vaccination Services Include\n\n  * Core vaccinations for dogs and cats to protect against highly contagious and serious diseases.\n  * Lifestyle-based non-core vaccines recommended based on your pet's environment, travel, and exposure risks.\n  * Structured puppy and kitten vaccination schedules to safely build immunity during early development.\n  * Adult booster vaccinations to maintain long-term disease protection throughout your pet's life.\n  * Personalized vaccine consultations to evaluate your pet's health status and determine the most appropriate schedule.\n\nA strong start during puppy-hood and kitten-hood helps create the foundation for a lifetime of good health. Learn more about our puppy & kitten care programs.\n\n\n\n",
+    "summary": "We help protect dogs and cats from serious infections. Your pet's age, health and daily activities guide which vaccines we recommend.",
+    "description": "Vaccines chosen for your pet's age, health and risk of infection.",
+    "body": "We review your pet's health and risk of infection before choosing vaccines. Some vaccines are recommended for most dogs and cats. Others depend on travel, time outdoors and contact with other animals.\n\n### What's included\n\n* Core vaccines for dogs and cats.\n* Vaccines for risks linked to your pet's daily life.\n* Puppy and kitten vaccine schedules.\n* Booster vaccines for adult pets.\n* Visits to review which vaccines your pet needs.\n\nWe can discuss parasite prevention at the same visit.",
     "when": [],
     "questions": [
       {
@@ -89,8 +91,9 @@
     "slug": "parasite-prevention",
     "name": "Parasite prevention",
     "group": "Everyday care",
-    "summary": "Parasites can affect pets throughout the year and may lead to significant health problems if left untreated.",
-    "body": "\nParasites can affect pets throughout the year and may lead to significant health problems if left untreated. Our parasite prevention programs are designed to protect pets from both internal and external parasites, and form a key part of our preventative care approach.\n\nThrough regular screenings and preventative treatments, we help reduce the risk of infection and protect your pet's overall wellbeing. Routine bloodwork can help detect heartworm and other parasitic infections.\n\n#### Key Parasite Prevention Services Include\n\n  * Flea and tick prevention programs designed to provide year-round protection against external parasites.\n  * Heart-worm testing and preventative treatment plans to protect dogs and cats from serious cardiovascular disease.\n  * Routine intestinal parasite screening to detect common internal parasites early.\n  * Preventative medication recommendations tailored to your pet's lifestyle and exposure risk.\n  * Seasonal parasite risk assessments to ensure your pet remains protected throughout the year.\n\nConsistent parasite prevention helps safeguard not only your pet's health but also the health of your household. It is especially critical for puppies and kittens during their early development.\n\nGet Protected Today\n\n",
+    "summary": "Fleas, ticks and worms can affect pets all year. We help you choose prevention based on your pet's daily life and risk of exposure.",
+    "description": "Testing and prevention for fleas, ticks, heartworm and intestinal worms.",
+    "body": "We use health checks and tests to look for parasites. We recommend treatment based on your pet's habits and the risks where they spend time.\n\n### What's included\n\n* Year-round flea and tick prevention.\n* Heartworm testing and prevention.\n* Tests for intestinal parasites.\n* Advice on medicines suited to your pet.\n* Reviews of seasonal risks.\n\nBlood tests can help find heartworm and other infections. Prevention also helps protect the people who share your pet's home.",
     "when": [],
     "questions": [
       {
@@ -144,8 +147,9 @@
     "slug": "puppy-kitten-care",
     "name": "Puppy and kitten care",
     "group": "Everyday care",
-    "summary": "The early stages of life are essential for building a strong foundation of lifelong health.",
-    "body": "\nThe early stages of life are essential for building a strong foundation of lifelong health. Our puppy and kitten care programs focus on growth monitoring, preventative medicine, and early behavioural guidance, including timely vaccinations and parasite prevention.\n\nThrough structured wellness visits and education for new pet owners, we help ensure young pets develop into healthy adult companions.\n\n#### Key Puppy & Kitten Services Include\n\n  * Early-life wellness examinations to monitor growth, development, and overall health.\n  * Vaccination and deworming schedules carefully designed for young pets.\n  * Development and growth monitoring to track physical and behavioural milestones.\n  * Nutritional guidance to support healthy development during the early stages of life.\n  * Preventative health education for owners to build confidence in caring for a new pet.\n\nAs your young pet grows, we also recommend discussing spay and neuter options and microchipping to ensure their long-term safety and health.\n\n\n\n",
+    "summary": "Young pets need care as they grow. We help you plan vaccines, parasite prevention, food and early health checks for your puppy or kitten.",
+    "description": "Growth checks, vaccines, deworming and practical advice for your new puppy or kitten.",
+    "body": "At each visit, we check how your young pet is growing. We also talk with you about food, behaviour and care at home.\n\n### What's included\n\n* Exams to check growth and general health.\n* Vaccine and deworming schedules.\n* Checks on physical growth and behaviour.\n* Food advice for growing pets.\n* Help with questions about caring for a new pet.\n\nAs your pet grows, we can discuss microchipping and when to spay or neuter.",
     "when": [],
     "questions": [
       {
@@ -157,13 +161,13 @@
       {
         "id": "q-what-is-included-in-a-puppy-or-kitten-wellness-exam",
         "q": "What is included in a puppy or kitten wellness exam?",
-        "a": "A pediatric wellness exam includes a thorough physical evaluation, monitoring of growth and skeletal development, a dental assessment, congenital condition screenings, and a review of initial health requirements.",
+        "a": "A pediatric wellness exam includes a full physical evaluation, monitoring of growth and skeletal development, a dental assessment, congenital condition screenings, and a review of initial health requirements.",
         "group": "Vaccines and prevention"
       },
       {
         "id": "q-how-do-you-follow-my-puppy-s-or-kitten-s-growth",
         "q": "How do you follow my puppy's or kitten's growth?",
-        "a": "We evaluate weight trends and behavioural milestones during regular preventative care visits to help ensure your companion is progressing on a healthy developmental track.",
+        "a": "We track your young pet's weight and behaviour at regular visits. This helps us check how they are growing.",
         "group": "Vaccines and prevention"
       },
       {
@@ -175,7 +179,7 @@
       {
         "id": "q-what-long-term-health-topics-should-i-consult-for-my-young-pet",
         "q": "What long-term health topics should I consult for my young pet?",
-        "a": "During early veterinary visits, it is highly beneficial to discuss future milestones, including permanent identification via microchipping, establishing a life-stage vaccination timeline, and planning for an optimal spay or neuter schedule.",
+        "a": "During early veterinary visits, it is highly beneficial to discuss future milestones, including permanent identification via microchipping, establishing a life-stage vaccination timeline, and planning for an suitable spay or neuter schedule.",
         "group": "Vaccines and prevention"
       }
     ],
@@ -199,8 +203,9 @@
     "slug": "microchipping",
     "name": "Microchipping",
     "group": "Everyday care",
-    "summary": "Microchipping provides permanent identification that significantly increases the chances of reuniting lost pets with their families.",
-    "body": "\nMicrochipping provides permanent identification that significantly increases the chances of reuniting lost pets with their families. The procedure is quick, safe, and can be performed during a routine wellness visit or alongside spay & neuter surgery.\n\nEach microchip contains a unique identification number that can be scanned by veterinary clinics, shelters, and animal control organizations.\n\n#### Key Microchipping Services Include\n\n  * Safe and minimally invasive microchip placement performed during a routine appointment.\n  * Microchip registration guidance to ensure your pet's information is correctly stored in national databases.\n  * Microchip scanning and verification to confirm proper chip placement and functionality.\n  * Microchip placement during routine visits or surgical procedures for added convenience.\n  * Lost pet identification support when a scanned microchip helps reunite pets with their families.\n\nMicrochipping offers a reliable layer of protection that can greatly improve the chances of bringing a lost pet back home. We recommend it for all puppies and kittens as part of their early care.\n\nProtect My Pet\n\n",
+    "summary": "A microchip gives your pet a lasting ID number. Clinics and shelters can scan it to help find you if your pet gets lost.",
+    "description": "A lasting ID number that helps clinics and shelters reunite lost pets with their families.",
+    "body": "We can place a microchip during a routine visit or surgery. Each chip holds a unique number that links to your contact details in a registry.\n\n### What's included\n\n* Microchip placement.\n* Help with registration.\n* Scanning to check that the chip works.\n* Placement during a check-up, spay or neuter.\n* Help identifying lost pets when a chip is scanned.\n\nWe recommend microchipping for puppies and kittens as part of their early care.",
     "when": [],
     "questions": [
       {
@@ -212,7 +217,7 @@
       {
         "id": "q-what-occurs-after-my-pet-receives-a-microchip",
         "q": "What occurs after my pet receives a microchip?",
-        "a": "Implanting the chip is only the first step; you must register the unique chip number with your current contact details in the national database. Our team will provide you with the registry information to ensure your account is successfully updated.",
+        "a": "After we place the chip, register its number with your current contact details. We give you the registry information to do this.",
         "group": "Vaccines and prevention"
       }
     ],
@@ -236,8 +241,9 @@
     "slug": "bloodwork",
     "name": "Bloodwork",
     "group": "Finding answers",
-    "summary": "Blood testing provides important insights into your pet's internal health and organ function.",
-    "body": "\nBlood testing provides important insights into your pet's internal health and organ function. Our in-house laboratory capabilities allow us to perform blood tests quickly and interpret results without unnecessary delay.\n\nRoutine bloodwork is a vital part of preventative care and can help detect early signs of disease before symptoms become visible. Pre- anesthetic blood panels ensure your pet is ready for any procedure.\n\n#### Key Bloodwork Services Include\n\n  * Complete Blood Counts (CBC) to evaluate red and white blood cells and detect infections or anaemia.\n  * thorough chemistry panels assessing kidney, liver, electrolyte, and metabolic health.\n  * Pre-anesthetic blood testing to ensure pets are healthy enough for surgical procedures.\n  * Routine wellness blood screening for early detection of underlying medical conditions.\n  * Ongoing disease monitoring for pets with chronic conditions requiring regular evaluation.\n\nTimely blood diagnostics allow us to detect health concerns early and provide more effective treatment plans. Combined with ultrasound imaging, we can form a thorough diagnostic picture.\n\n\n\n",
+    "summary": "Blood tests help us check what's happening inside your pet's body. We use them for health screening, before surgery and to follow ongoing illness.",
+    "description": "Blood tests to check organ health, look for illness and guide care before surgery.",
+    "body": "Our in-house lab lets us test samples and review results without sending every sample away. Blood tests can show changes before you notice symptoms.\n\n### What's included\n\n* Blood cell counts to look for infection or anaemia.\n* Tests of kidney and liver function, body salts and metabolism.\n* Blood tests before anesthesia.\n* Screening during routine health visits.\n* Follow-up tests for ongoing illness.\n\nWe may use blood results alongside ultrasound images to help plan treatment.",
     "when": [],
     "questions": [
       {
@@ -255,7 +261,7 @@
       {
         "id": "q-why-do-my-dogs-or-cats-need-bloodwork-prior-to-surgery",
         "q": "Why do my dogs or cats need bloodwork prior to surgery?",
-        "a": "Pre-surgical bloodwork screens your pet's internal health, specifically assessing liver and kidney functions. This evaluation provides a vital safety baseline to ensure your pet can properly metabolize and eliminate anesthetic agents.",
+        "a": "Before surgery, bloodwork checks your pet's liver and kidneys. The results help us assess how their body will process anesthesia.",
         "group": "Tests and imaging"
       },
       {
@@ -267,7 +273,7 @@
       {
         "id": "q-what-is-a-good-time-for-my-older-pet-to-have-their-blood-checked",
         "q": "What is a good time for my older pet to have their blood checked?",
-        "a": "For senior dogs and cats, we generally recommend thorough blood screening once or twice a year. Senior animals can experience rapid changes in their health, and regular testing allows us to monitor chronic conditions proactively.",
+        "a": "For senior dogs and cats, we generally recommend full blood screening once or twice a year. Senior animals can experience rapid changes in their health, and regular testing allows us to monitor chronic conditions proactively.",
         "group": "Tests and imaging"
       },
       {
@@ -304,8 +310,9 @@
     "slug": "lab-services",
     "name": "Lab services",
     "group": "Finding answers",
-    "summary": "Detailed lab testing is essential for accurate diagnosis and effective treatment.",
-    "body": "\nDetailed lab testing is essential for accurate diagnosis and effective treatment. Our thorough in-house laboratory services, including bloodwork analysis, allow us to perform a variety of tests quickly and accurately, providing prompt answers for your pet's care.\n\nFrom routine wellness screenings to urgent diagnostic evaluations, our lab capabilities support every aspect of veterinary medicine. Lab results complement ultrasound and X-ray imaging for thorough diagnostics.\n\n#### Our Lab Capabilities Include\n\n  * Complete Blood Counts (CBCs) to assess red and white blood cells and platelets\n  * Chemistry profiles evaluating kidney, liver, electrolyte, and blood glucose levels\n  * Pre-anesthetic blood panels to support safe surgical procedures\n  * Urinalysis and fecal testing for kidney health and parasite screening\n  * Heartworm and tick-borne disease testing\n  * Feline leukaemia (FeLV) and FIV testing\n  * Pancreatic, clotting, skin, ear, and parasite diagnostics\n\nFast and accurate lab results allow us to begin appropriate treatments sooner, promoting better health outcomes for your pet.\n\n\n\n",
+    "summary": "Our in-house lab helps us investigate illness and check your pet's health. Blood, urine and stool tests give us different pieces of the picture.",
+    "description": "In-house blood, urine and stool tests to help find the cause of illness.",
+    "body": "We choose tests based on your pet's symptoms and health history. Lab results can work alongside X-rays and ultrasound images.\n\n### What's included\n\n* Blood cell counts and platelet checks.\n* Tests of kidney and liver function, body salts and blood sugar.\n* Blood tests before anesthesia.\n* Urine and stool tests.\n* Heartworm and tick-borne disease tests.\n* Feline leukaemia and FIV tests.\n* Tests for pancreas problems, blood clotting, skin and ear conditions, and parasites.\n\nWe explain what the results mean for your pet's care.",
     "when": [],
     "questions": [
       {
@@ -323,7 +330,7 @@
       {
         "id": "q-what-kinds-of-lab-tests-do-you-offer",
         "q": "What kinds of lab tests do you offer?",
-        "a": "We provide a thorough array of diagnostic testing, including: * *Bloodwork:* Evaluates red and white blood cells, platelets, glucose levels, electrolytes, and markers for kidney and liver function. * *Urinalysis and Fecal Testing:* Monitors urinary tract health, assesses renal filtration, and screens for internal gastrointestinal parasites. * *Screenings:* Evaluates for vector-borne diseases (such as tick-related illnesses), heartworm disease, and viral conditions like FeLV and FIV. * *Specialty Diagnostics:* Includes skin cytologies, ear swabs, and pancreatic biomarker tracking.",
+        "a": "We provide a full array of diagnostic testing, including: * *Bloodwork:* Evaluates red and white blood cells, platelets, glucose levels, electrolytes, and markers for kidney and liver function. * *Urinalysis and Fecal Testing:* Monitors urinary tract health, assesses renal filtration, and screens for internal gastrointestinal parasites. * *Screenings:* Evaluates for vector-borne diseases (such as tick-related illnesses), heartworm disease, and viral conditions like FeLV and FIV. * *Specialty Diagnostics:* Includes skin cytologies, ear swabs, and pancreatic biomarker tracking.",
         "group": "Tests and imaging"
       },
       {
@@ -366,8 +373,9 @@
     "slug": "pet-x-ray",
     "name": "Digital X-ray",
     "group": "Finding answers",
-    "summary": "Digital X-ray imaging allows veterinarians to quickly evaluate bones, joints, and internal structures.",
-    "body": "\nDigital X-ray imaging allows veterinarians to quickly evaluate bones, joints, and internal structures. Combined with ultrasound imaging and lab services, X-rays help identify injuries, structural abnormalities, and certain internal conditions.\n\nOur imaging technology allows us to diagnose problems efficiently and guide appropriate treatment plans, including pre- surgical planning and dental assessments.\n\n#### Key Diagnostic Radiology Includes\n\n  * Bone and joint imaging used to diagnose fractures, arthritis, and skeletal abnormalities.\n  * Injury and trauma evaluation to assess accidents or sudden mobility issues.\n  * Chest and abdominal imaging to examine internal organs and detect abnormalities.\n  * Dental and structural evaluations when imaging is required for oral or skeletal assessment.\n  * Pre-surgical diagnostic imaging used to guide treatment planning and procedures.\n\nAccurate imaging provides essential information that helps us diagnose conditions quickly and develop effective treatment strategies.\n\nLearn About Radiology\n\n",
+    "summary": "Digital X-rays help us look at bones, joints and organs. They can show injuries and other changes that help us decide what care your pet needs.",
+    "description": "Digital images of bones, joints and organs to help assess injuries and illness.",
+    "body": "We use X-rays to investigate symptoms and plan treatment. We may also use blood tests or ultrasound to understand your pet's health.\n\n### What's included\n\n* Images to look for broken bones, arthritis and other bone changes.\n* Checks after accidents or sudden trouble moving.\n* Chest and belly images.\n* Dental and bone assessments.\n* Images to help plan surgery.",
     "when": [],
     "questions": [
       {
@@ -403,7 +411,7 @@
       {
         "id": "q-how-do-you-combine-x-rays-with-other-diagnostics",
         "q": "How do you combine X-rays with other diagnostics?",
-        "a": "We utilize multiple diagnostic tools in tandem to form a thorough understanding of your pet's health. Combining the structural skeletal data from an X-ray with the soft-tissue clarity of an ultrasound and the metabolic data from bloodwork helps support an accurate diagnosis.",
+        "a": "We utilize multiple diagnostic tools in tandem to form a full understanding of your pet's health. Combining the structural skeletal data from an X-ray with the soft-tissue clarity of an ultrasound and the metabolic data from bloodwork helps support an accurate diagnosis.",
         "group": "Tests and imaging"
       }
     ],
@@ -427,8 +435,9 @@
     "slug": "ultrasound-services",
     "name": "Ultrasound",
     "group": "Finding answers",
-    "summary": "Ultrasound imaging allows us to look inside your pet's body in a gentle, non-invasive way.",
-    "body": "\nUltrasound imaging allows us to look inside your pet's body in a gentle, non-invasive way. This advanced diagnostic tool helps us assess internal organs in real time, complementing X-ray imaging and bloodwork for a complete diagnostic picture.\n\nUltrasounds are especially useful for evaluating soft tissues and identifying concerns that may not appear on routine exams or blood tests. They are also an essential part of dog breeding and pregnancy monitoring.\n\n#### What Ultrasound Helps Us Evaluate\n\n  * Liver, kidneys, bladder, and gastrointestinal tract\n  * Abdominal masses, fluid buildup, or organ changes\n  * Pregnancy monitoring and reproductive health\n  * Unexplained pain, weight loss, vomiting, or changes in appetite\n  * Follow-up monitoring of ongoing medical conditions\n\nUltrasound imaging gives us a clearer picture of your pet's internal health, helping us diagnose conditions earlier and plan treatment with confidence, always prioritizing comfort, safety, and clarity for you and your pet.\n\n\n\n",
+    "summary": "Ultrasound uses sound waves to show organs and soft tissues as they move. It helps us investigate symptoms and monitor pregnancy or ongoing illness.",
+    "description": "Sound-wave images to check organs, investigate symptoms and monitor pregnancy.",
+    "body": "We look at live images of your pet's organs. Ultrasound can reveal changes that are hard to find during an exam or with blood tests alone.\n\n### What's included\n\n* Checks of the liver, kidneys, bladder and digestive tract.\n* Checks for lumps, fluid or changes in organs.\n* Pregnancy and reproductive health checks.\n* Investigation of pain, weight loss, vomiting or appetite changes.\n* Follow-up images for ongoing conditions.\n\nWe may use ultrasound alongside X-rays and blood tests.",
     "when": [],
     "questions": [
       {
@@ -452,13 +461,13 @@
       {
         "id": "q-will-my-dog-cat-need-to-be-sedated",
         "q": "Will my dog/cat need to be sedated?",
-        "a": "Most dogs and cats do not require sedation and remain comfortable and relaxed with gentle handling and positioning mats. A mild sedative may be recommended only if a patient experiences significant anxiety or acute physical pain, helping to ensure their comfort.",
+        "a": "Most dogs and cats do not need sedation. Gentle handling and positioning mats help them stay comfortable. We may recommend mild sedation if your pet is very anxious or in pain.",
         "group": "Tests and imaging"
       },
       {
         "id": "q-can-i-get-the-ultrasound-results-right-away",
         "q": "Can I get the ultrasound results right away?",
-        "a": "Ultrasound images are routinely submitted to a board-certified veterinary radiologist for a thorough final review and formal report.",
+        "a": "Ultrasound images are routinely submitted to a board-certified veterinary radiologist for a full final review and formal report.",
         "group": "Tests and imaging"
       },
       {
@@ -495,8 +504,9 @@
     "slug": "spay-neuter",
     "name": "Spay and neuter",
     "group": "Surgery and dental",
-    "summary": "Spaying and neutering are important preventive procedures that support your pet's long-term health and well-being.",
-    "body": "\nSpaying and neutering are important preventive procedures that support your pet's long-term health and well-being. Beyond preventing unplanned litters, these surgical procedures play a key role in reducing the risk of serious health conditions and improving quality of life.\n\nOur experienced veterinary team provides professional, compassionate spay and neuter care, using safe anesthesia protocols and guiding you through every step of the process. Pre-surgical bloodwork ensures your pet is ready for the procedure.\n\n#### Benefits of Spaying & Neutering\n\n  * Lower Risk of Hormone-Driven Aggression: Supports more stable behavioural patterns.\n  * Prevention of Unplanned Litters: Responsible population control and community health.\n  * Reduced Risk of Mammary Tumors: Significantly lowers cancer risk when performed early.\n  * Reduced Prostate Disease Risk: Lowers incidence of benign prostatic enlargement and infections.\n  * Long-Term Health & Longevity Benefits: Contributes to a healthier, more predictable life course.\n\nWe recommend discussing the ideal timing for your pet's procedure with your veterinarian, as age, breed, and health factors can influence the optimal approach. This is especially important for puppies and kittens.\n\n\n\n",
+    "summary": "Spaying or neutering prevents unplanned litters and can lower some health risks. We help you decide when the procedure makes sense for your pet.",
+    "description": "Surgery to prevent unplanned litters, with advice on timing and recovery.",
+    "body": "We review your pet's health before surgery and plan anesthesia for their needs. We also use blood tests before the procedure.\n\n### What's included\n\n* Advice about timing based on age, breed and health.\n* A health check and bloodwork before surgery.\n* Anesthesia and care through the procedure.\n* Guidance on what to expect.\n\nSpaying and neutering can reduce some hormone-driven behaviours. These procedures also lower certain risks, including mammary tumours and prostate disease. We can discuss the benefits for your pet.",
     "when": [],
     "questions": [
       {
@@ -508,7 +518,7 @@
       {
         "id": "q-what-is-the-best-age-to-spay-or-neuter-a-dog-or-cat",
         "q": "What is the best age to spay or neuter a dog or cat?",
-        "a": "The optimal timing for a spay or neuter procedure can vary based on your pet’s breed, adult size, and overall development. Your veterinarian will work with you to determine the best timeline for your specific companion.",
+        "a": "The suitable timing for a spay or neuter procedure can vary based on your pet’s breed, adult size, and overall development. Your veterinarian will work with you to determine the best timeline for your specific companion.",
         "group": "Spay and neuter"
       },
       {
@@ -550,8 +560,9 @@
     "slug": "pet-surgery",
     "name": "Pet surgery",
     "group": "Surgery and dental",
-    "summary": "Our surgical services address a wide range of medical conditions requiring precise intervention.",
-    "body": "\nOur surgical services address a wide range of medical conditions requiring precise intervention. From routine spay & neuter procedures to more complex soft tissue surgeries, our team focuses on careful planning, patient safety, and attentive recovery care.\n\nWe utilize modern surgical techniques and monitoring equipment to support successful outcomes. Every surgical patient receives individualized anesthesia and pre-operative bloodwork assessment.\n\n#### Key Surgical Services Include\n\n  * Soft tissue surgical procedures to treat internal medical conditions and remove abnormal growths.\n  * Tumor and mass removal surgeries aimed at improving comfort and preventing complications.\n  * Internal surgical treatments addressing digestive, reproductive, or structural concerns.\n  * Pre-surgical consultations and planning to ensure every procedure is carefully evaluated.\n  * Post-operative monitoring and recovery care supporting safe healing and patient comfort.\n\nOur surgical team prioritizes safety, precision, and compassionate care throughout every stage of treatment.\n\nDiscuss Surgery Options\n\n",
+    "summary": "We perform surgery for a range of health problems. We plan each procedure around your pet's condition, with anesthesia, monitoring and care during recovery.",
+    "description": "Surgery for lumps and internal health problems, with planning and recovery care.",
+    "body": "Before surgery, we examine your pet and review bloodwork. We explain the procedure and plan anesthesia for your pet's health needs.\n\n### What's included\n\n* Soft tissue procedures for internal health problems.\n* Removal of tumours, lumps and other growths.\n* Surgery for digestive, reproductive or structural problems.\n* Visits to discuss and plan surgery.\n* Monitoring and care after the procedure.",
     "when": [],
     "questions": [
       {
@@ -581,7 +592,7 @@
       {
         "id": "q-what-is-the-best-way-to-care-for-my-pet-after-surgery",
         "q": "What is the best way to care for my pet after surgery?",
-        "a": "A successful recovery depends on strict rest, typically for 10 to 14 days following surgery. This means restricting running, jumping, and strenuous activity. You will also need to monitor the incision site daily, administer prescribed medications, and ensure your dog or cat continuously wears their protective recovery cone.",
+        "a": "Your pet usually needs strict rest for 10 to 14 days after surgery. Limit running, jumping and hard activity. Check the wound each day, give prescribed medicines and keep their recovery cone on.",
         "group": "Surgery and anesthesia"
       },
       {
@@ -605,7 +616,7 @@
       {
         "id": "q-why-do-my-dogs-or-cats-need-bloodwork-prior-to-surgery",
         "q": "Why do my dogs or cats need bloodwork prior to surgery?",
-        "a": "Pre-surgical bloodwork screens your pet's internal health, specifically assessing liver and kidney functions. This evaluation provides a vital safety baseline to ensure your pet can properly metabolize and eliminate anesthetic agents.",
+        "a": "Before surgery, bloodwork checks your pet's liver and kidneys. The results help us assess how their body will process anesthesia.",
         "group": "Tests and imaging"
       }
     ],
@@ -629,14 +640,15 @@
     "slug": "soft-tissue-eye-ear",
     "name": "Soft tissue, eye and ear surgery",
     "group": "Surgery and dental",
-    "summary": "Beyond routine surgery, our team performs various soft tissue procedures to address masses, injuries, and conditions affecting the eyes, ears, and internal organs.",
-    "body": "\nBeyond routine surgery, our team performs various soft tissue procedures to address masses, injuries, and conditions affecting the eyes, ears, and internal organs.\n\nOur surgical team prioritizes safety, precision, and compassionate care throughout every stage of treatment, using tailored anesthesia protocols for each patient. For ear and skin conditions that don't require surgery, see our skin & ear infections services.\n\n#### Key Surgical Services Include\n\n  * Soft tissue surgical procedures to treat internal medical conditions and remove abnormal growths.\n  * Tumor and mass removal surgeries aimed at improving comfort and preventing complications.\n  * Internal surgical treatments addressing digestive, reproductive, or structural concerns.\n  * Pre-surgical consultations and planning to ensure every procedure is carefully evaluated.\n  * Post-operative monitoring and recovery care supporting safe healing and patient comfort.\n\nWe utilize modern surgical techniques and monitoring equipment to support successful outcomes. Pre-surgical bloodwork is recommended before any procedure.\n\nConsult On Surgery\n\n",
+    "summary": "Some lumps, injuries and eye or ear conditions need surgery. We assess your pet and explain which procedure may help.",
+    "description": "Surgical care for lumps, injuries and conditions affecting eyes, ears or internal organs.",
+    "body": "We perform soft tissue procedures for conditions affecting the eyes, ears and internal organs. We review your pet's needs before surgery and plan their anesthesia.\n\n### What's included\n\n* Procedures for internal health problems and abnormal growths.\n* Tumour and lump removal.\n* Surgery for digestive, reproductive or structural concerns.\n* A visit to assess your pet and plan treatment.\n* Monitoring and care during recovery.\n\nWe recommend bloodwork before surgery. Skin and ear problems that do not need surgery can be managed with medical treatment.",
     "when": [],
     "questions": [
       {
         "id": "q-how-do-you-figure-out-what-is-causing-my-pet-s-skin-or-ear-infection",
         "q": "How do you figure out what is causing my pet’s skin or ear infection?",
-        "a": "We perform a thorough physical examination and may recommend diagnostic tests such as skin or ear cytology. By evaluating these microscopic samples, we can determine whether the underlying cause involves bacteria, yeast, or environmental factors.",
+        "a": "We perform a full physical examination and may recommend diagnostic tests such as skin or ear cytology. By evaluating these microscopic samples, we can determine whether the underlying cause involves bacteria, yeast, or environmental factors.",
         "group": "Vaccines and prevention"
       },
       {
@@ -666,7 +678,7 @@
       {
         "id": "q-what-is-the-best-way-to-care-for-my-pet-after-surgery",
         "q": "What is the best way to care for my pet after surgery?",
-        "a": "A successful recovery depends on strict rest, typically for 10 to 14 days following surgery. This means restricting running, jumping, and strenuous activity. You will also need to monitor the incision site daily, administer prescribed medications, and ensure your dog or cat continuously wears their protective recovery cone.",
+        "a": "Your pet usually needs strict rest for 10 to 14 days after surgery. Limit running, jumping and hard activity. Check the wound each day, give prescribed medicines and keep their recovery cone on.",
         "group": "Surgery and anesthesia"
       },
       {
@@ -702,7 +714,7 @@
       {
         "id": "q-how-do-i-understand-if-my-dog-or-cat-needs-a-soft-tissue-procedure",
         "q": "How do I understand if my dog or cat needs a soft tissue procedure?",
-        "a": "If your pet exhibits abnormal tissue growths, persistent discomfort, traumatic injuries, or chronic conditions affecting their eyes, ears, or internal organs, a thorough clinical examination will help determine if a surgical procedure is appropriate.",
+        "a": "If your pet exhibits abnormal tissue growths, persistent discomfort, traumatic injuries, or chronic conditions affecting their eyes, ears, or internal organs, a full clinical examination will help determine if a surgical procedure is appropriate.",
         "group": "End-of-life care"
       },
       {
@@ -720,7 +732,7 @@
       {
         "id": "q-why-do-my-dogs-or-cats-need-bloodwork-prior-to-surgery",
         "q": "Why do my dogs or cats need bloodwork prior to surgery?",
-        "a": "Pre-surgical bloodwork screens your pet's internal health, specifically assessing liver and kidney functions. This evaluation provides a vital safety baseline to ensure your pet can properly metabolize and eliminate anesthetic agents.",
+        "a": "Before surgery, bloodwork checks your pet's liver and kidneys. The results help us assess how their body will process anesthesia.",
         "group": "Tests and imaging"
       }
     ],
@@ -744,8 +756,9 @@
     "slug": "dental-services",
     "name": "Dental care",
     "group": "Surgery and dental",
-    "summary": "Oral health is deeply connected to your pet's overall wellbeing.",
-    "body": "\nOral health is deeply connected to your pet's overall wellbeing. Left untreated, dental disease can cause pain and lead to systemic issues affecting the heart, liver, and kidneys. As part of a thorough preventative care approach, we offer professional dental care to keep your pet's smile healthy and their breath fresh.\n\nOur dental services include thorough cleanings, examinations, and polishing to remove plaque and tartar buildup. Advanced digital X-ray imaging helps us identify issues below the gumline.\n\n#### Our thorough Dental Services Include\n\n  * Professional teeth cleaning and polishing\n  * Dental X-rays for accurate diagnosis\n  * Tooth extractions and oral surgical procedures when needed\n\n#### Common Dental Problems\n\n  * Periodontal (gum) disease and plaque buildup\n  * Tooth decay and fractured or broken teeth\n  * Oral infections, inflammation, and tumours\n  * Persistent bad breath (halitosis)\n\n#### Preventative Care\n\n  * Regularly brushing your pet's teeth can effectively reduce the accumulation of harmful bacteria and plaque within its oral cavity.\n  * It is generally more advantageous to adopt a proactive approach in contrast to a reactive one.\n  * Human toothpaste should be avoided, as this can contain xylitol (also known as birch sugar), which is toxic to house pets.\n\nRegular dental checkups and professional cleanings are key to preventing painful oral conditions and supporting long-term health. Many dental procedures require safe anesthesia to ensure your pet remains comfortable throughout.\n\n\n\n",
+    "summary": "Dental problems can hurt and affect your pet's wider health. We examine teeth and gums, clean them and treat problems below the gumline.",
+    "description": "Teeth cleaning, dental X-rays and treatment for painful or damaged teeth.",
+    "body": "We remove plaque and tartar with professional cleaning and polishing. Dental X-rays help us find damage that we cannot see above the gums.\n\n### What's included\n\n* Teeth cleaning and polishing.\n* Dental X-rays.\n* Tooth removal and oral surgery when needed.\n\nGum disease, broken teeth, infections and tumours can cause discomfort. Many dental procedures need anesthesia to keep your pet still and comfortable.\n\n### Care at home\n\nBrushing can reduce plaque. Do not use human toothpaste, which may contain xylitol that is toxic to pets. Regular dental checks help us find problems early.",
     "when": [
       "Persistent bad breath",
       "Fractured or broken teeth",
@@ -779,8 +792,9 @@
     "slug": "anesthesia",
     "name": "Anesthesia",
     "group": "Surgery and dental",
-    "summary": "Safe anesthesia is an essential component of many veterinary procedures, including pet surgery, dental care, and spay & neuter procedures.",
-    "body": "\nSafe anesthesia is an essential component of many veterinary procedures, including pet surgery, dental care, and spay & neuter procedures. Our team follows strict safety protocols to ensure every pet remains stable, comfortable, and carefully monitored throughout the procedure.\n\nEach anesthetic plan is customised based on your pet's health status, age, and the specific procedure being performed. Pre-anesthetic bloodwork is recommended to evaluate organ function before sedation.\n\n#### Key Anesthesia Safety Measures Include\n\n  * thorough pre-anesthetic examinations and testing to evaluate overall health before procedures.\n  * Individualized anesthetic protocols tailored to each patient's medical history and needs.\n  * Continuous monitoring of vital signs including heart rate, oxygen levels, and blood pressure.\n  * Advanced anesthesia equipment and monitoring technology to ensure patient safety.\n  * Dedicated recovery monitoring to ensure a smooth and safe awakening after procedures.\n\nCareful anesthetic management allows us to perform medical and surgical procedures safely while prioritizing your pet's wellbeing.\n\nConsult On Anesthesia\n\n",
+    "summary": "Anesthesia keeps pets still and manages pain during surgery and dental care. We choose a plan for your pet and monitor them through the procedure.",
+    "description": "Anesthesia planned for your pet, with monitoring during the procedure and recovery.",
+    "body": "We review your pet's age, health and planned procedure before choosing anesthesia. We recommend bloodwork to check organ function before sedation.\n\n### What's included\n\n* An exam and tests before the procedure.\n* An anesthesia plan based on health history.\n* Checks of heart rate, oxygen levels and blood pressure.\n* Equipment to monitor your pet during anesthesia.\n* Close monitoring as your pet wakes up.",
     "when": [],
     "questions": [
       {
@@ -816,14 +830,15 @@
     "slug": "skin-ear-infections",
     "name": "Skin and ear problems",
     "group": "Ongoing care",
-    "summary": "Skin and ear conditions are among the most common reasons pets visit the veterinarian.",
-    "body": "\nSkin and ear conditions are among the most common reasons pets visit the veterinarian. Our team provides thorough examinations and diagnostic testing to determine the underlying cause of irritation, infection, or discomfort.\n\nBy identifying the source of the problem, we can provide targeted treatment and long-term management strategies. Persistent or severe cases may require soft tissue procedures for effective resolution.\n\n#### Key Dermatology Services Include\n\n  * Diagnosis and treatment of bacterial and yeast infections affecting the skin and ears.\n  * Evaluation and management of allergy-related skin conditions that cause itching and inflammation.\n  * thorough ear examinations to identify infections, inflammation, or structural issues.\n  * Skin cytology and diagnostic testing to accurately determine the cause of skin problems.\n  * Long-term treatment plans designed to prevent recurring infections and maintain skin health.\n\nEarly diagnosis and proper treatment help restore comfort while preventing chronic skin and ear conditions. Bloodwork may be recommended to rule out underlying systemic causes.\n\n\n\n",
+    "summary": "Itchy skin and sore ears can have several causes. We look for the cause so we can treat the problem and help your pet feel better.",
+    "description": "Exams and tests for itching, ear pain, infections and recurring skin problems.",
+    "body": "We examine your pet's skin and ears. Tests can help us tell whether bacteria, yeast or allergies are part of the problem.\n\n### What's included\n\n* Treatment for skin and ear infections.\n* Checks for allergy-related itching and swelling.\n* Ear exams for infections or changes in the ear.\n* Looking at skin samples under a microscope.\n* Plans for problems that keep coming back.\n\nBloodwork may help us check for other health conditions. Severe or lasting problems sometimes need surgery.",
     "when": [],
     "questions": [
       {
         "id": "q-how-do-you-figure-out-what-is-causing-my-pet-s-skin-or-ear-infection",
         "q": "How do you figure out what is causing my pet’s skin or ear infection?",
-        "a": "We perform a thorough physical examination and may recommend diagnostic tests such as skin or ear cytology. By evaluating these microscopic samples, we can determine whether the underlying cause involves bacteria, yeast, or environmental factors.",
+        "a": "We perform a full physical examination and may recommend diagnostic tests such as skin or ear cytology. By evaluating these microscopic samples, we can determine whether the underlying cause involves bacteria, yeast, or environmental factors.",
         "group": "Vaccines and prevention"
       },
       {
@@ -877,14 +892,15 @@
     "slug": "chronic-pain-management",
     "name": "Chronic pain",
     "group": "Ongoing care",
-    "summary": "Chronic pain, often caused by arthritis or age-related conditions, can significantly impact your pet's quality of life.",
-    "body": "\nChronic pain, often caused by arthritis or age-related conditions, can significantly impact your pet's quality of life. We focus on identifying the source of discomfort through diagnostic tools like bloodwork and X-ray imaging, and creating individualized multimodal plans to manage pain effectively.\n\nOur goal is to improve mobility, increase comfort, and help your pet stay active and happy in their daily life. Regular wellness exams can help detect pain early.\n\n#### Our Pain Management Approach Includes\n\n  * Assessment and treatment of osteoarthritis and joint pain commonly seen in aging pets.\n  * Long-term pain monitoring and evaluation to adjust treatment plans as your pet's condition evolves.\n  * Medication and therapeutic treatment strategies designed to manage inflammation and discomfort.\n  * Mobility support recommendations including lifestyle adjustments and supportive therapies.\n  * Ongoing quality-of-life evaluations to ensure your pet remains comfortable and active.\n\nRegular evaluations allow us to adjust protocols as needed making sure your pet receives optimal relief.\n\nLearn About Pain Relief\n\n",
+    "summary": "Pain from arthritis or other lasting conditions can change your pet's daily life. We look for the cause and adjust care as their needs change.",
+    "description": "Help with lasting pain, including arthritis, with regular checks and treatment adjustments.",
+    "body": "We assess how your pet moves and how comfortable they are. Blood tests and X-rays can help us find the source of pain.\n\n### What's included\n\n* Checks for arthritis and joint pain.\n* Regular reviews of pain and treatment.\n* Medicines and other therapies for pain and swelling.\n* Advice on daily habits and support for moving around.\n* Reviews of your pet's comfort and quality of life.\n\nWe follow up to see how treatment is working and make changes when needed.",
     "when": [],
     "questions": [
       {
         "id": "q-my-golden-retriever-has-been-slowing-down-a-bit-on-our-walks-and-i-thought-that-was-just-him-getting-older-could-this-actually-be-chronic-pain",
         "q": "My Golden Retriever has been slowing down a bit on our walks, and I thought that was just him getting older. Could this actually be chronic pain?",
-        "a": "Slowing down, experiencing stiffness after resting, or hesitating on stairs are often signs of chronic pain rather than just normal aging. A thorough veterinary assessment can help determine your dog's comfort levels and guide appropriate management strategies.",
+        "a": "Slowing down, experiencing stiffness after resting, or hesitating on stairs are often signs of chronic pain rather than just normal aging. A full veterinary assessment can help determine your dog's comfort levels and guide appropriate management strategies.",
         "group": "Vaccines and prevention"
       },
       {
@@ -920,7 +936,7 @@
       {
         "id": "q-how-do-you-keep-my-dog-or-cat-comfortable-if-they-are-in-pain",
         "q": "How do you keep my dog or cat comfortable if they are in pain?",
-        "a": "Prior to the procedure, we will administer gentle sedation or pain relief to help ensure your pet is deeply relaxed, comfortable, and resting peacefully.",
+        "a": "Before the procedure, we give gentle sedation or pain relief to help your pet rest comfortably.",
         "group": "End-of-life care"
       }
     ],
@@ -944,8 +960,9 @@
     "slug": "small-mammal-medicine",
     "name": "Small mammal medicine",
     "group": "Ongoing care",
-    "summary": "Small mammals such as rabbits and pocket pets require specialized medical knowledge and handling.",
-    "body": "\nSmall mammals such as rabbits and pocket pets require specialized medical knowledge and handling. Our veterinary team provides tailored examinations and treatment plans designed specifically for these unique companions, including specialized dental care for species with continuously growing teeth.\n\nBecause small mammals often hide signs of illness, early evaluation and preventative care are especially important in maintaining their health. Diagnostic bloodwork can reveal hidden conditions.\n\n#### Key Small Mammal Services Include\n\n  * Routine wellness examinations designed specifically for rabbits, guinea pigs, and other small mammals.\n  * Nutritional and habitat consultations to ensure optimal living conditions and balanced diets.\n  * Dental and digestive health evaluations addressing common issues in small mammals.\n  * Diagnostic testing and treatment plans for illness or behavioural changes.\n  * Preventative health recommendations tailored to the unique needs of small companion animals.\n\nWith attentive care and early intervention, we aim to support the long-term health and wellbeing of every small mammal we treat.\n\n\n\n",
+    "summary": "Rabbits and pocket pets have their own health needs. We offer exams, food advice, dental care and treatment suited to small mammals.",
+    "description": "Health checks, food advice and dental care for rabbits and other small mammals.",
+    "body": "Small mammals can hide signs of illness. We check their health and talk with you about changes in eating, movement or behaviour. Bloodwork can help find hidden problems.\n\n### What's included\n\n* Exams for rabbits, guinea pigs and other small mammals.\n* Advice on food and living space.\n* Dental and digestive health checks.\n* Tests and treatment for illness or behaviour changes.\n* Prevention advice for your pet's species.\n\nSome small mammals have teeth that keep growing. Their dental care needs regular attention.",
     "when": [],
     "questions": [],
     "related": [
@@ -968,8 +985,9 @@
     "slug": "dog-breeding",
     "name": "Dog breeding",
     "group": "Ongoing care",
-    "summary": "We provide professional veterinary support for breeders, focused on canine reproductive health and successful litters.",
-    "body": "\nWe provide professional veterinary support for breeders, focused on canine reproductive health and successful litters. Our services aim to support the health of the mother and the overall well-being of the puppies, including pre-breeding bloodwork and health assessments.\n\nFrom ovulation timing to pregnancy monitoring via ultrasound imaging, we offer the clinical expertise needed to manage reproductive cycles effectively.\n\n#### Our Breeding Services Include\n\n  * Reproductive health evaluations to assess breeding readiness and overall health.\n  * Breeding consultations and planning to support responsible breeding practices.\n  * Pregnancy monitoring and guidance throughout gestation.\n  * Pre-breeding health assessments to identify potential concerns before breeding.\n  * Post-birth health support for both the mother and newborn puppies.\n\nDetailed care during a breeding cycle ensures the health of the mother and promotes healthy developments for future litters. For those not planning to breed, learn about our spay & neuter services.\n\nConsult On Breeding\n\n",
+    "summary": "We help you plan breeding care and follow your dog's pregnancy. Health checks before breeding can help identify concerns for the mother and future puppies.",
+    "description": "Health checks before breeding, pregnancy monitoring and care for mothers and newborn puppies.",
+    "body": "We discuss reproductive health, breeding plans and care through pregnancy. Bloodwork and exams help us assess your dog before breeding.\n\n### What's included\n\n* Health checks before breeding.\n* Breeding advice and planning.\n* Help with ovulation timing.\n* Ultrasound and other checks during pregnancy.\n* Care for the mother and puppies after birth.\n\nIf you do not plan to breed your dog, we can discuss spaying or neutering.",
     "when": [],
     "questions": [
       {
@@ -999,7 +1017,7 @@
       {
         "id": "q-what-is-the-best-age-to-spay-or-neuter-a-dog-or-cat",
         "q": "What is the best age to spay or neuter a dog or cat?",
-        "a": "The optimal timing for a spay or neuter procedure can vary based on your pet’s breed, adult size, and overall development. Your veterinarian will work with you to determine the best timeline for your specific companion.",
+        "a": "The suitable timing for a spay or neuter procedure can vary based on your pet’s breed, adult size, and overall development. Your veterinarian will work with you to determine the best timeline for your specific companion.",
         "group": "Spay and neuter"
       },
       {
@@ -1011,7 +1029,7 @@
       {
         "id": "q-what-kind-of-dog-breeding-services-do-you-offer",
         "q": "What kind of dog breeding services do you offer?",
-        "a": "We offer breeding-related veterinary services designed to monitor reproductive health. Our services include pre-breeding health evaluations, reproductive consultations, ovulation timing support (progesterone tracking), and pregnancy monitoring.",
+        "a": "We offer breeding-related veterinary services used to monitor reproductive health. Our services include pre-breeding health evaluations, reproductive consultations, ovulation timing support (progesterone tracking), and pregnancy monitoring.",
         "group": "Breeding"
       },
       {
@@ -1041,7 +1059,7 @@
       {
         "id": "q-how-do-you-keep-my-dog-or-cat-comfortable-if-they-are-in-pain",
         "q": "How do you keep my dog or cat comfortable if they are in pain?",
-        "a": "Prior to the procedure, we will administer gentle sedation or pain relief to help ensure your pet is deeply relaxed, comfortable, and resting peacefully.",
+        "a": "Before the procedure, we give gentle sedation or pain relief to help your pet rest comfortably.",
         "group": "End-of-life care"
       },
       {
@@ -1083,7 +1101,7 @@
       {
         "id": "q-how-do-i-understand-if-my-dog-or-cat-needs-a-soft-tissue-procedure",
         "q": "How do I understand if my dog or cat needs a soft tissue procedure?",
-        "a": "If your pet exhibits abnormal tissue growths, persistent discomfort, traumatic injuries, or chronic conditions affecting their eyes, ears, or internal organs, a thorough clinical examination will help determine if a surgical procedure is appropriate.",
+        "a": "If your pet exhibits abnormal tissue growths, persistent discomfort, traumatic injuries, or chronic conditions affecting their eyes, ears, or internal organs, a full clinical examination will help determine if a surgical procedure is appropriate.",
         "group": "End-of-life care"
       },
       {
@@ -1113,13 +1131,13 @@
       {
         "id": "q-will-my-dog-cat-need-to-be-sedated",
         "q": "Will my dog/cat need to be sedated?",
-        "a": "Most dogs and cats do not require sedation and remain comfortable and relaxed with gentle handling and positioning mats. A mild sedative may be recommended only if a patient experiences significant anxiety or acute physical pain, helping to ensure their comfort.",
+        "a": "Most dogs and cats do not need sedation. Gentle handling and positioning mats help them stay comfortable. We may recommend mild sedation if your pet is very anxious or in pain.",
         "group": "Tests and imaging"
       },
       {
         "id": "q-why-do-my-dogs-or-cats-need-bloodwork-prior-to-surgery",
         "q": "Why do my dogs or cats need bloodwork prior to surgery?",
-        "a": "Pre-surgical bloodwork screens your pet's internal health, specifically assessing liver and kidney functions. This evaluation provides a vital safety baseline to ensure your pet can properly metabolize and eliminate anesthetic agents.",
+        "a": "Before surgery, bloodwork checks your pet's liver and kidneys. The results help us assess how their body will process anesthesia.",
         "group": "Tests and imaging"
       },
       {
@@ -1155,8 +1173,9 @@
     "slug": "pet-boarding-services",
     "name": "Boarding",
     "group": "Ongoing care",
-    "summary": "We offer cozy, individualized boarding specifically for our feline friends.",
-    "body": "\nWe offer cozy, individualized boarding specifically for our feline friends. Our boarding area is designed to be a quiet, low-stress environment where your cat can feel safe and relaxed while you are away. We recommend ensuring vaccinations are up to date before boarding.\n\nOur dedicated staff provides attentive care, clean facilities, and regular monitoring to ensure every guest stays happy and healthy.\n\n#### Cat Boarding Highlights Include\n\n  * Private and comfortable accommodations designed to provide a quiet and stress-free environment for each cat.\n  * Personalized daily care routines including feeding, litter maintenance, and attentive monitoring by our staff.\n  * Gentle interaction and enrichment time to help keep cats relaxed, engaged, and emotionally comfortable during their stay.\n  * Veterinary supervision within our clinic allowing immediate medical attention if any concerns arise.\n  * Flexible drop-off and pick-up scheduling available during regular hospital hours throughout the week.\n\nRest easy knowing your cat is in a calm, caring environment supervised by veterinary professionals. We also recommend microchipping and current parasite prevention for all boarding guests.\n\nWhen you can't be there, you can trust that your cat is in compassionate, capable hands, receiving attentive care in a clean, secure, and professionally supervised setting. We strive to maintain a calm, low-stress environment so your cat can rest comfortably and adjust with ease.\n\n\n\n",
+    "summary": "We provide boarding for cats while you are away. Your cat stays in a quiet space at the clinic, with daily care and veterinary supervision.",
+    "description": "Cat boarding at the clinic, with daily feeding, litter care and veterinary supervision.",
+    "body": "Our staff follow your cat's daily care routine and check on them during their stay. A vet can provide care if a health concern comes up.\n\n### What's included\n\n* Private accommodation in a quiet area.\n* Feeding, litter care and daily checks.\n* Gentle interaction and activities.\n* Veterinary supervision.\n* Drop-off and pick-up during regular hospital hours.\n\nWe recommend current vaccines, microchipping and parasite prevention before boarding.",
     "when": [],
     "questions": [],
     "related": [
@@ -1179,8 +1198,9 @@
     "slug": "euthanasia",
     "name": "End-of-life care",
     "group": "Ongoing care",
-    "summary": "Saying goodbye to a beloved pet is one of the most difficult decisions a pet owner will ever make.",
-    "body": "\nSaying goodbye to a beloved pet is one of the most difficult decisions a pet owner will ever make. At Walnut Grove Animal Hospital, we are dedicated to supporting you with the utmost compassion, respect, and dignity during this tender time. Our team is here to help you evaluate your pet's quality of life and guide you through a gentle, peaceful transition when the time comes.\n\nWe believe that every pet deserves a peaceful, painless, and dignified farewell. Our chronic pain management services can help improve comfort during difficult health challenges, and our staff handles every detail with gentle care, focusing entirely on your pet's comfort and your family's emotional needs.\n\n#### Our Supportive Services Include\n\n  * Quality of life consultations to help you assess your pet's comfort, pain levels, and overall well-being.\n  * A dedicated, quiet comfort space designed to provide a peaceful, stress-free setting for you and your pet.\n  * Step-by-step guidance on what to expect, ensuring you feel supported and informed throughout the process.\n  * Personalized options for family presence, allowing you to choose how you wish to say goodbye.\n  * Compassionate post-care arrangements, including private or communal cremation services and memorial keepsakes.\n\nWe are here to support you at every stage of the decision-making process. Diagnostic tools like bloodwork can help assess your pet's current condition. Please do not hesitate to reach out if you need to talk, ask questions about the procedure, or receive resources on pet loss and grieving.\n\n\n\n",
+    "summary": "Saying goodbye is hard. We can talk with you about your pet's comfort, help you weigh the choices and support your family through the next steps.",
+    "description": "Support with quality-of-life decisions, saying goodbye and aftercare arrangements.",
+    "body": "We listen to your concerns and help you assess pain and quality of life. Blood tests can help us understand your pet's current health. Pain management may help with comfort during difficult health problems.\n\n### What's included\n\n* Visits to discuss comfort, pain and quality of life.\n* A quiet, private space at the clinic.\n* An explanation of each step.\n* Choices about staying with your pet.\n* Private or communal cremation and memorial keepsakes.\n\nPlease call if you need to talk or ask questions. We can also help you find support for pet loss and grief.",
     "when": [],
     "questions": [
       {
@@ -1198,7 +1218,7 @@
       {
         "id": "q-what-kind-of-dog-breeding-services-do-you-offer",
         "q": "What kind of dog breeding services do you offer?",
-        "a": "We offer breeding-related veterinary services designed to monitor reproductive health. Our services include pre-breeding health evaluations, reproductive consultations, ovulation timing support (progesterone tracking), and pregnancy monitoring.",
+        "a": "We offer breeding-related veterinary services used to monitor reproductive health. Our services include pre-breeding health evaluations, reproductive consultations, ovulation timing support (progesterone tracking), and pregnancy monitoring.",
         "group": "Breeding"
       },
       {
@@ -1210,7 +1230,7 @@
       {
         "id": "q-what-kind-of-environment-do-you-provide-for-the-procedure",
         "q": "What kind of environment do you provide for the procedure?",
-        "a": "We offer a quiet comfort space within our clinic. This area is specifically designed to provide a peaceful, private, and low-stress environment for you and your pet.",
+        "a": "We offer a quiet comfort space within our clinic. This area is specifically used to provide a peaceful, private, and low-stress environment for you and your pet.",
         "group": "End-of-life care"
       },
       {
@@ -1222,7 +1242,7 @@
       {
         "id": "q-how-do-you-keep-my-dog-or-cat-comfortable-if-they-are-in-pain",
         "q": "How do you keep my dog or cat comfortable if they are in pain?",
-        "a": "Prior to the procedure, we will administer gentle sedation or pain relief to help ensure your pet is deeply relaxed, comfortable, and resting peacefully.",
+        "a": "Before the procedure, we give gentle sedation or pain relief to help your pet rest comfortably.",
         "group": "End-of-life care"
       },
       {
@@ -1258,7 +1278,7 @@
       {
         "id": "q-what-kinds-of-lab-tests-do-you-offer",
         "q": "What kinds of lab tests do you offer?",
-        "a": "We provide a thorough array of diagnostic testing, including: * *Bloodwork:* Evaluates red and white blood cells, platelets, glucose levels, electrolytes, and markers for kidney and liver function. * *Urinalysis and Fecal Testing:* Monitors urinary tract health, assesses renal filtration, and screens for internal gastrointestinal parasites. * *Screenings:* Evaluates for vector-borne diseases (such as tick-related illnesses), heartworm disease, and viral conditions like FeLV and FIV. * *Specialty Diagnostics:* Includes skin cytologies, ear swabs, and pancreatic biomarker tracking.",
+        "a": "We provide a full array of diagnostic testing, including: * *Bloodwork:* Evaluates red and white blood cells, platelets, glucose levels, electrolytes, and markers for kidney and liver function. * *Urinalysis and Fecal Testing:* Monitors urinary tract health, assesses renal filtration, and screens for internal gastrointestinal parasites. * *Screenings:* Evaluates for vector-borne diseases (such as tick-related illnesses), heartworm disease, and viral conditions like FeLV and FIV. * *Specialty Diagnostics:* Includes skin cytologies, ear swabs, and pancreatic biomarker tracking.",
         "group": "Tests and imaging"
       },
       {

@@ -10,11 +10,26 @@ from PIL import Image
 ROOT=Path(__file__).resolve().parent
 os.chdir(ROOT)
 SHOW_CONFIRM=True
-SITE_URL=os.environ.get('SITE_URL','https://example.invalid').rstrip('/')
+SITE_URL=os.environ.get('SITE_URL','https://walnut-grove-demo.vercel.app').rstrip('/')
 def clean(t):
  t=t.replace('—',', ').replace('!', '.').replace('deepy','deeply')
  for a,b in {'comprehensive':'thorough','state-of-the-art':'modern','cutting-edge':'modern','seamless':'simple','elevate':'improve','unparalleled':'dedicated','journey':'care','peace of mind':'reassurance','furry friends':'pets','fur babies':'pets'}.items():t=re.sub(re.escape(a),b,t,flags=re.I)
  for a,b in {'behavior':'behaviour','Behavior':'Behaviour','anemia':'anaemia','tumors':'tumours','personalized':'personalised','customized':'customised','center':'centre','color':'colour','recognize':'recognise','orthopedic':'orthopaedic'}.items():t=t.replace(a,b)
+ return t
+
+def service_plain(t):
+ t=clean(t)
+ rewrites={
+  'We evaluate weight trends and behavioural milestones during regular preventative care visits to help ensure your companion is progressing on a healthy developmental track.':"We track your young pet's weight and behaviour at regular visits. This helps us check how they are growing.",
+  'Implanting the chip is only the first step; you must register the unique chip number with your current contact details in the national database. Our team will provide you with the registry information to ensure your account is successfully updated.':"After we place the chip, register its number with your current contact details. We give you the registry information to do this.",
+  "Pre-surgical bloodwork screens your pet's internal health, specifically assessing liver and kidney functions. This evaluation provides a vital safety baseline to ensure your pet can properly metabolize and eliminate anesthetic agents.":"Before surgery, bloodwork checks your pet's liver and kidneys. The results help us assess how their body will process anesthesia.",
+  'Most dogs and cats do not require sedation and remain comfortable and relaxed with gentle handling and positioning mats. A mild sedative may be recommended only if a patient experiences significant anxiety or acute physical pain, helping to ensure their comfort.':"Most dogs and cats do not need sedation. Gentle handling and positioning mats help them stay comfortable. We may recommend mild sedation if your pet is very anxious or in pain.",
+  'A successful recovery depends on strict rest, typically for 10 to 14 days following surgery. This means restricting running, jumping, and strenuous activity. You will also need to monitor the incision site daily, administer prescribed medications, and ensure your dog or cat continuously wears their protective recovery cone.':"Your pet usually needs strict rest for 10 to 14 days after surgery. Limit running, jumping and hard activity. Check the wound each day, give prescribed medicines and keep their recovery cone on.",
+  'Prior to the procedure, we will administer gentle sedation or pain relief to help ensure your pet is deeply relaxed, comfortable, and resting peacefully.':"Before the procedure, we give gentle sedation or pain relief to help your pet rest comfortably."
+ }
+ t=rewrites.get(t,t)
+ for pattern,replacement in [(r'plays a critical role in','helps with'),(r'\bthorough\b','full'),(r'\bensure(?:s)?\b','check'),(r'\bensuring\b','checking'),(r'designed to','used to'),(r'\boptimal\b','suitable'),(r'\bfoundation\b','start')]:
+  t=re.sub(pattern,replacement,t,flags=re.I)
  return t
 
 def source(name):return (ROOT/'source/text'/name).read_text()
@@ -24,7 +39,7 @@ def md(t):return Markup(markdown.markdown(clean(t),extensions=['tables','toc','s
 def confirm(text):return Markup('<span class="confirm">[CONFIRM: '+html.escape(text)+']</span>') if SHOW_CONFIRM else Markup('')
 def photo(name,alt,limit=None,eager=False):
  path=ROOT/'assets/photos'/f'{name}.webp';w,h=Image.open(path).size
- return Markup(f'<img src="/assets/photos/{name}.webp" alt="{html.escape(alt,quote=True)}" width="{w}" height="{h}" style="max-width:{min(w,limit or w)}px" decoding="async" loading="{"eager" if eager else "lazy"}">')
+ return Markup(f'<img src="/assets/photos/{name}.webp" alt="{html.escape(alt,quote=True)}" width="{w}" height="{h}" style="max-width:min(100%, {min(w,limit or w)}px)" decoding="async" loading="{"eager" if eager else "lazy"}">')
 def save(name,data): (ROOT/'data'/name).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
 # Source slugs deliberately remain unchanged.
 GROUPS={'Everyday care':[('preventative-care','Wellness exams'),('vaccines','Vaccines'),('parasite-prevention','Parasite prevention'),('puppy-kitten-care','Puppy and kitten care'),('microchipping','Microchipping')], 'Finding answers':[('bloodwork','Bloodwork'),('lab-services','Lab services'),('pet-x-ray','Digital X-ray'),('ultrasound-services','Ultrasound')], 'Surgery and dental':[('spay-neuter','Spay and neuter'),('pet-surgery','Pet surgery'),('soft-tissue-eye-ear','Soft tissue, eye and ear surgery'),('dental-services','Dental care'),('anesthesia','Anesthesia')], 'Ongoing care':[('skin-ear-infections','Skin and ear problems'),('chronic-pain-management','Chronic pain'),('small-mammal-medicine','Small mammal medicine'),('dog-breeding','Dog breeding'),('pet-boarding-services','Boarding'),('euthanasia','End-of-life care')]}
@@ -48,6 +63,7 @@ for part in qparts:
  faq.append({'id':'q-'+slug(q),'q':q,'a':short.strip() or ' '.join(answer.split()[:80]),'group':group})
 # Remove repeated IDs if source questions repeat.
 faq=list({q['id']:q for q in faq}.values());save('faq.json',faq)
+service_copy=json.loads(Path('data/service-copy.json').read_text())
 services=[]
 for group,items in GROUPS.items():
  for key,name in items:
@@ -60,7 +76,7 @@ for group,items in GROUPS.items():
   related=[{'slug':a,'name':b} for a,b in items if a!=key][:3]
   terms=set(re.findall(r'[a-z]+',name.lower()))-{'and','care','pet','services','medicine','problems'}
   questions=[q for q in faq if q['id'][2:] in qnames or any(re.search(r'\b'+re.escape(term)+r'\w*\b',q['q'].lower()) for term in terms)]
-  services.append({'slug':key,'name':name,'group':group,'summary':summary,'body':clean(body),'when':symptoms,'questions':questions,'related':related,'before':[q for q in questions if any(x in q['q'].lower() for x in ['fast','meal prior'])]})
+  services.append({'slug':key,'name':name,'group':group,'summary':service_copy[key]['summary'],'description':service_copy[key]['description'],'body':service_copy[key]['body'],'when':symptoms,'questions':[{**q,'a':service_plain(q['a']),'q':service_plain(q['q'])} for q in questions],'related':related,'before':[{**q,'a':service_plain(q['a'])} for q in questions if any(x in q['q'].lower() for x in ['fast','meal prior'])]})
 save('services.json',services)
 # Parse plants directly from the supplied resource, preserving every group/list entry.
 plants=[];ptext=source('resources_poisonous-plants.md')
@@ -87,6 +103,11 @@ Path('site/assets').mkdir(parents=True,exist_ok=True)
 for name in ['site.css','site.js']:shutil.copyfile('templates/'+name,'site/assets/'+name)
 for directory in ['photos','fonts']:shutil.copytree('assets/'+directory,'site/assets/'+directory,dirs_exist_ok=True)
 shutil.copyfile('assets/logo.png','site/assets/logo.png')
+logo=Image.open('assets/logo.png').convert('RGBA').crop((0,0,96,105))
+logo=logo.crop(logo.getbbox())
+for size,name in [(32,'favicon-32.png'),(180,'apple-touch-icon.png')]:
+ icon=Image.new('RGBA',(size,size),'#F7F3EC');scaled=logo.copy();scaled.thumbnail((size,size),Image.Resampling.LANCZOS);icon.alpha_composite(scaled,((size-scaled.width)//2,(size-scaled.height)//2));icon.convert('RGB').save(Path('site/assets')/name)
+
 pages=[]
 def render(path,title,template,**kwargs):
  out=Path('site')/(path.strip('/')+'/index.html' if path!='/' else 'index.html');
