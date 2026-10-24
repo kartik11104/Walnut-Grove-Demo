@@ -20,3 +20,23 @@ h1[tabindex="-1"],h2[tabindex="-1"],h3[tabindex="-1"],h4[tabindex="-1"],h5[tabin
 .team-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 25%;margin:0}
 .home-blog .post-list>li{border-bottom:0;border-top:1px solid var(--line)}
 @media(min-width:900px){.first-visit,.home-blog .post-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.first-visit li{min-width:0}.home-blog .post-list>li{min-width:0}}
+
+/* B: full-bleed bands, preserving the 1200px grid without viewport overflow. */
+main.page-content{display:grid;grid-template-columns:minmax(var(--gutter),1fr) minmax(0,calc(1200px - 2*var(--gutter))) minmax(var(--gutter),1fr)}
+main.page-content>*{grid-column:2;min-width:0;width:100%}
+main.page-content>.band-dark,main.page-content>.band-soft{grid-column:1/-1}
+.band-inner{max-width:1200px;margin-inline:auto;padding-inline:var(--gutter)}
+.band-dark{background:var(--walnut-deep);color:#E6DDCF;padding-block:96px}
+.band-dark h1,.band-dark h2,.band-dark h3{color:#F7F3EC}
+.band-dark a{color:#F2C98A;text-decoration:underline}
+.band-dark .button.primary{background:#F7F3EC;color:#2B201A;border-color:#F7F3EC;text-decoration:none}
+.band-dark .button.primary:hover{background:#FFFFFF}
+.band-dark .button.secondary{border:1.5px solid #E6DDCF;color:#F7F3EC;background:transparent;text-decoration:none}
+.band-dark :focus-visible{outline-color:#F7F3EC}
+.band-dark .confirm{color:#6B4000}
+.home-doctor img{border:6px solid #F7F3EC}
+.visit-band .map-box{background:#3A2C24;color:#E6DDCF}
+.visit-band .map-box button{color:#F7F3EC;border-color:#E6DDCF}
+.band-soft{background:#EFE7DA;padding-block:96px}
+.page-content:has(>.band-dark:last-child){padding-bottom:96px}
+@media(max-width:599px){.band-dark,.band-soft{padding-block:64px}}
