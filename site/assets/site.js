@@ -52,7 +52,13 @@ const form=$('#booking');if(form){
  if(clinic.bookingLive===true)await fetch(clinic.formEndpoint,{method:'POST',mode:'no-cors',body:payload});
  $$('[data-step]',form).forEach(el=>el.hidden=true);$('#booking-actions').hidden=true;$('#booking-success').hidden=false;$('#review-mode').hidden=clinic.bookingLive===true;$('#success-message').textContent=`Thanks, ${d.name}. We'll call you at ${d.phone} to confirm a time for ${d.pet||'your pet'}.`;try{localStorage.removeItem(draftKey)}catch{}$('#booking-success h2').focus();
  }catch{$('#send-error').hidden=false}finally{sending=false;$('#booking-next').disabled=false}});
- restore();refresh();form.hidden=false;hashStep();showStep();
+ restore();
+ const query=new URLSearchParams(location.search),speciesMap={dog:'Dog',cat:'Cat',rabbit:'Rabbit','small-pet':'Other small mammal'},reasonMap={wellness:'Wellness exam or vaccines',sick:'Sick or injured',dental:'Dental',surgery:'Surgery consult'};
+ function preselect(name,selected){const radio=$(`input[name="${name}"][value="${selected}"]`,form);if(radio){radio.checked=true;return true}return false}
+ const petFilled=query.has('species')&&preselect('species',speciesMap[query.get('species')]),reasonFilled=query.has('reason')&&preselect('reason',reasonMap[query.get('reason')]);
+ refresh();form.hidden=false;hashStep();showStep();
+ if(petFilled)$('#prefill-pet').textContent="We've filled in what you picked.";
+ if(reasonFilled)$('#prefill-reason').textContent="We've filled in what you picked.";
 }
 
 /* C1: keyboard-native radio picker. */
