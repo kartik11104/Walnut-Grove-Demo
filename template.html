@@ -117,6 +117,11 @@ section+section{margin-top:56px}
 }
 
 /* services */
+#v-services .svc-search{margin-bottom:16px;max-width:36rem}
+#v-services input[type=search]{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;width:100%;min-height:44px;min-width:0}
+#v-services .pill{min-height:44px}
+#v-services .svc-empty{margin-top:18px}
+#v-services .svc-empty a{display:inline-flex;align-items:center;min-height:44px}
 .svc-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
 .pill{font:600 14px var(--body);border:1.5px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 13px;border-radius:999px;cursor:pointer}
 .pill[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
@@ -138,7 +143,7 @@ section+section{margin-top:56px}
 .drawer .ph{aspect-ratio:16/9;background:var(--sunk)} .drawer .ph img{width:100%;height:100%;object-fit:cover}
 .drawer .in{padding:22px max(22px,env(safe-area-inset-right,0px)) 0 22px;display:grid;gap:14px}
 .drawer ul{margin:0;padding-left:20px;display:grid;gap:6px}
-.drawer .close{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));background:var(--surface);border:1px solid var(--line);border-radius:10px;width:40px;height:40px;cursor:pointer;color:var(--ink);font-size:20px}
+.drawer .close{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));background:var(--surface);border:1px solid var(--line);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--ink);font-size:20px}
 
 /* booking */
 .book{display:grid;grid-template-columns:1fr 320px;gap:22px;align-items:start}
@@ -287,8 +292,12 @@ footer a{color:var(--ink)}
 <!-- SERVICES -->
 <div class="view" id="v-services" data-title="Services">
  <div class="sec-head"><div><div class="eyebrow">Services</div><h1>Care for every stage of your pet's life</h1></div></div>
+ <label class="svc-search" for="svcSearch">Search services
+  <input type="search" id="svcSearch" placeholder="e.g. dental" aria-controls="svcGrid" autocomplete="off">
+ </label>
  <div class="svc-filter" role="group" aria-label="Filter services" id="svcFilter"></div>
  <div class="grid svc-grid" id="svcGrid"></div>
+ <p class="svc-empty muted" id="svcEmpty" role="status" hidden>No match, call us: <a href="tel:+16048882628">(604) 888-2628</a>.</p>
 </div>
 
 <!-- BOOK -->
@@ -458,20 +467,26 @@ function openStatus(){const n=vanNow(),[oh,om,ch,cm]=HOURS[n.wd],t=n.h*60+n.m,o=
 /* services */
 const CATS=["All",...new Set(SVC.map(s=>s.cat))];
 function card(s){return `<button class="svc" data-slug="${s.slug}" type="button"><div class="ph">${s.img?`<img src="${s.img}" alt="" loading="lazy">`:""}</div><div class="bd"><div class="cat">${esc(s.cat)}</div><h3>${esc(s.name)}</h3><p>${esc(s.intro)}</p></div></button>`}
-function renderSvc(cat){$("#svcGrid").innerHTML=SVC.filter(s=>cat==="All"||s.cat===cat).map(card).join("");
+let svcCategory="All";
+function renderSvc(cat=svcCategory){svcCategory=cat;
+ const query=$("#svcSearch").value.trim().toLocaleLowerCase();
+ const matches=SVC.filter(s=>(cat==="All"||s.cat===cat)&&[s.name,s.cat,s.intro,...s.points,...s.more].join(" ").toLocaleLowerCase().includes(query));
+ $("#svcGrid").innerHTML=matches.map(card).join("");
+ $("#svcEmpty").hidden=matches.length>0;
  $$("#svcFilter .pill").forEach(p=>p.setAttribute("aria-pressed",p.dataset.cat===cat))}
+$("#svcSearch").addEventListener("input",()=>renderSvc());
 $("#svcFilter").innerHTML=CATS.map(c=>`<button class="pill" type="button" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
 $("#svcFilter").addEventListener("click",e=>{const b=e.target.closest(".pill");if(b)renderSvc(b.dataset.cat)});
 renderSvc("All");
 $("#homeSvc").innerHTML=["preventative-care","vaccines","dental-services","spay-neuter","puppy-kitten-care","bloodwork"].map(k=>card(SVC.find(s=>s.slug===k))).join("");
 let lastFocus=null;
-function openSvc(slug){const s=SVC.find(x=>x.slug===slug);if(!s)return;lastFocus=document.activeElement;
+function openSvc(slug,opener=document.activeElement){const s=SVC.find(x=>x.slug===slug);if(!s)return;lastFocus=opener;
  $("#dPh").innerHTML=s.img?`<img src="${s.img}" alt="">`:"";$("#dCat").textContent=s.cat;$("#dTitle").textContent=s.name;
  $("#dBody").innerHTML=`<p>${esc(s.intro)}</p>`+(s.points.length?`<div><div class="eyebrow" style="margin-bottom:6px">What's included</div><ul>${s.points.map(p=>`<li>${esc(p)}</li>`).join("")}</ul></div>`:"")+s.more.map(p=>`<p class="muted">${esc(p)}</p>`).join("");
  $("#dBook").onclick=()=>{closeSvc();preset=s.slug};
  $("#drawer").classList.add("on");$("#scrim").classList.add("on");$("#drawer").setAttribute("aria-hidden","false");$("#dClose").focus()}
 function closeSvc(){$("#drawer").classList.remove("on");$("#scrim").classList.remove("on");$("#drawer").setAttribute("aria-hidden","true");if(lastFocus)lastFocus.focus()}
-document.addEventListener("click",e=>{const c=e.target.closest(".svc");if(c)openSvc(c.dataset.slug)});
+document.addEventListener("click",e=>{const c=e.target.closest(".svc");if(c)openSvc(c.dataset.slug,c)});
 $("#dClose").onclick=closeSvc;$("#scrim").onclick=closeSvc;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("#drawer").classList.contains("on"))closeSvc()});
 
