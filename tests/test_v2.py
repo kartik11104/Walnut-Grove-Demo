@@ -18,6 +18,49 @@ def tab_to(page,selector):
   if page.locator(selector).first.evaluate('(el)=>el===document.activeElement'):return
   page.keyboard.press('Tab')
  raise AssertionError('Tab could not reach '+selector)
+# Static checks still run when Chromium is unavailable.
+from html.parser import HTMLParser
+from urllib.request import urlopen
+class StaticPage(HTMLParser):
+ def __init__(self):
+  super().__init__();self.h1=0;self.images=[];self.links=[];self.ids=[];self.title=False;self.title_text='';self.lang=False;self.description=False;self.canonical=False
+ def handle_starttag(self,tag,attrs):
+  a=dict(attrs)
+  if tag=='h1':self.h1+=1
+  if tag=='img':self.images.append(a)
+  if tag=='a':self.links.append(a.get('href',''))
+  if 'id' in a:self.ids.append(a['id'])
+  if tag=='title':self.title=True
+  if tag=='html':self.lang=a.get('lang')=='en-CA'
+  if tag=='meta' and a.get('name')=='description':self.description=0<len(a.get('content',''))<=155
+  if tag=='link' and a.get('rel')=='canonical':self.canonical=True
+ def handle_endtag(self,tag):
+  if tag=='title':self.title=False
+ def handle_data(self,text):
+  if self.title:self.title_text+=text
+static={}
+for path in paths:
+ with urlopen(BASE+path) as response:
+  page=StaticPage();page.feed(response.read().decode());static[path]=page
+ check(page.h1==1 and page.lang and page.description and page.canonical,path+': static metadata/H1')
+ check(len(page.ids)==len(set(page.ids)),path+': duplicate IDs')
+ for image in page.images:check(all(k in image for k in ['alt','width','height','decoding']),path+': image attributes')
+for path,page in static.items():
+ for link in page.links:
+  u=urlsplit(link)
+  if u.scheme or u.netloc:continue
+  target=u.path or path
+  if u.path:
+   try:
+    with urlopen(BASE+u.path) as response:
+     check(response.status==200,path+': broken link '+link);response.read()
+   except Exception:errors.append(path+': broken link '+link)
+  if u.fragment and not u.fragment.startswith('step-') and target in static:check(unquote(u.fragment) in static[target].ids,path+': missing fragment '+link)
+check(len({p.title_text for p in static.values()})==len(static),'Duplicate page titles')
+check(json.loads((ROOT/'data/clinic.json').read_text())['bookingLive'] is False,'bookingLive must be false')
+print(f'Static checks: {len(static)} pages, {len(errors)} errors')
+if errors:
+ print('ERRORS:',json.dumps(errors));server.shutdown();sys.exit(1)
 try:
  with sync_playwright() as p:
   try:browser=p.chromium.launch()

@@ -51,5 +51,5 @@ const form=$('#booking');if(form){
  if(clinic.bookingLive===true)await fetch(clinic.formEndpoint,{method:'POST',mode:'no-cors',body:payload});
  $$('[data-step]',form).forEach(el=>el.hidden=true);$('#booking-actions').hidden=true;$('#booking-success').hidden=false;$('#review-mode').hidden=clinic.bookingLive===true;$('#success-message').textContent=`Thanks, ${d.name}. We'll call you at ${d.phone} to confirm a time for ${d.pet||'your pet'}.`;try{localStorage.removeItem(draftKey)}catch{}$('#booking-success h2').focus();
  }catch{$('#send-error').hidden=false}finally{sending=false;$('#booking-next').disabled=false}});
- restore();refresh();hashStep();showStep();
+ restore();refresh();form.hidden=false;hashStep();showStep();
 }

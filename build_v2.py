@@ -5,6 +5,7 @@ sys.path.insert(0,str(Path(__file__).parent/'.build-deps'))
 from jinja2 import Environment,FileSystemLoader,select_autoescape
 from markupsafe import Markup
 import markdown
+from markdown.extensions.toc import slugify as heading_slug
 from PIL import Image
 ROOT=Path(__file__).resolve().parent
 os.chdir(ROOT)
@@ -50,7 +51,7 @@ faq=list({q['id']:q for q in faq}.values());save('faq.json',faq)
 services=[]
 for group,items in GROUPS.items():
  for key,name in items:
-  text=source('services_'+key+'.md');text=text[text.index('## '):];text=re.split(r'^## Answers|^### RELATED|^## HERE',text,flags=re.M)[0]
+  full=source('services_'+key+'.md');qnames={slug(clean(q.strip(' *'))) for q in re.findall(r'^### (.+)$',full,re.M)};text=full[full.index('## '):];text=re.split(r'^## Answers|^### RELATED|^## HERE',text,flags=re.M)[0]
   body=text.split('\n',1)[1];ps=paras(body);intro=clean(ps[0]) if ps else '';summary=' '.join(re.split(r'(?<=[.])\s+',intro)[:1]);summary=' '.join(summary.split()[:45])
   # Keep medical content from source, excluding navigation and standalone booking calls to action.
   body=re.sub(r'(?m)^(Schedule|Book|Request|Update|Contact|Explore|Learn More|Call)[^\n]*$','',body)
@@ -58,7 +59,7 @@ for group,items in GROUPS.items():
   if key=='dental-services':symptoms=['Persistent bad breath','Fractured or broken teeth','Oral infections or inflammation']
   related=[{'slug':a,'name':b} for a,b in items if a!=key][:3]
   terms=set(re.findall(r'[a-z]+',name.lower()))-{'and','care','pet','services','medicine','problems'}
-  questions=[q for q in faq if any(re.search(r'\b'+re.escape(term)+r'\w*\b',q['q'].lower()) for term in terms)]
+  questions=[q for q in faq if q['id'][2:] in qnames or any(re.search(r'\b'+re.escape(term)+r'\w*\b',q['q'].lower()) for term in terms)]
   services.append({'slug':key,'name':name,'group':group,'summary':summary,'body':clean(body),'when':symptoms,'questions':questions,'related':related,'before':[q for q in questions if any(x in q['q'].lower() for x in ['fast','meal prior'])]})
 save('services.json',services)
 # Parse plants directly from the supplied resource, preserving every group/list entry.
@@ -74,7 +75,7 @@ for p in sorted(Path('source/text').glob('blog_*.md')):
  topic=next(x for x in ['vaccinations','ultrasound','microchipping','diagnostics','preventative'] if key.startswith('pet-'+x) or key.startswith(x))
  m=next(m for m in date_matches if topic.lower() in m[3].lower())
  title=m[3].strip('* ');date=f'2026-{"10" if m[1]=="Oct" else "09"}-{int(m[2]):02d}'
- intro=paras(raw);posts.append({'slug':key,'title':clean(title),'date':date,'date_label':f'{m[1]} {m[2]}, 2026' if m else date,'read':'4 min read','body':clean(raw),'summary':clean(intro[0]) if intro else title})
+ intro=paras(raw);posts.append({'slug':key,'title':clean(title),'date':date,'date_label':f'{m[1]} {m[2]}, 2026' if m else date,'read':'4 min read','body':clean(raw),'toc':[{'id':heading_slug(clean(h.strip('* ')),'-'),'name':clean(h.strip('* '))} for h in re.findall(r'^## (.+)$',raw,re.M)],'summary':clean(intro[0]) if intro else title})
 posts.sort(key=lambda p:p['date'],reverse=True);save('posts.json',posts)
 if not Path('data/reviews.json').exists():save('reviews.json',[])
 reviews=json.loads(Path('data/reviews.json').read_text())

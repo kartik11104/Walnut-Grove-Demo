@@ -51,9 +51,21 @@
     "when": [],
     "questions": [
       {
+        "id": "q-why-are-vaccinations-important-for-my-dog-or-cat",
+        "q": "Why are vaccinations important for my dog or cat?",
+        "a": "Vaccinations help protect dogs and cats against serious, highly contagious, and potentially life-threatening infectious diseases. They provide essential support for your pet's long-term immune system health and contribute to overall community disease prevention.",
+        "group": "Vaccines and prevention"
+      },
+      {
         "id": "q-what-vaccines-does-my-pet-actually-require",
         "q": "What vaccines does my pet actually require?",
         "a": "Vaccination recommendations are categorized into core vaccines, which are standard for all dogs and cats, and lifestyle vaccines, which are recommended based on your pet's age, daily routine, travel habits, and exposure risks. Our team will help establish an appropriate protocol.",
+        "group": "Vaccines and prevention"
+      },
+      {
+        "id": "q-can-vaccination-plans-be-customised-for-my-pet",
+        "q": "Can vaccination plans be customised for my pet?",
+        "a": "Yes, we provide personalised vaccine consultations. This allows us to review your pet’s individual risk factors and design a customised protection plan tailored to their specific lifestyle.",
         "group": "Vaccines and prevention"
       }
     ],
@@ -153,6 +165,18 @@
         "q": "How do you follow my puppy's or kitten's growth?",
         "a": "We evaluate weight trends and behavioural milestones during regular preventative care visits to help ensure your companion is progressing on a healthy developmental track.",
         "group": "Vaccines and prevention"
+      },
+      {
+        "id": "q-do-you-provide-advice-for-first-time-pet-owners",
+        "q": "Do you provide advice for first-time pet owners?",
+        "a": "Yes. We offer foundational puppy care and kitten care education, providing guidance on essential topics such as socialization, nutrition, basic training, and establishing early preventative health routines.",
+        "group": "Vaccines and prevention"
+      },
+      {
+        "id": "q-what-long-term-health-topics-should-i-consult-for-my-young-pet",
+        "q": "What long-term health topics should I consult for my young pet?",
+        "a": "During early veterinary visits, it is highly beneficial to discuss future milestones, including permanent identification via microchipping, establishing a life-stage vaccination timeline, and planning for an optimal spay or neuter schedule.",
+        "group": "Vaccines and prevention"
       }
     ],
     "related": [
@@ -183,6 +207,12 @@
         "id": "q-is-microchipping-a-safe-procedure-for-dogs-and-cats",
         "q": "Is microchipping a safe procedure for dogs and cats?",
         "a": "Yes, microchipping is a quick, safe, and minimally invasive procedure. The microchip is roughly the size of a grain of rice and is implanted quickly beneath the loose skin between the shoulder blades, causing minimal temporary discomfort.",
+        "group": "Vaccines and prevention"
+      },
+      {
+        "id": "q-what-occurs-after-my-pet-receives-a-microchip",
+        "q": "What occurs after my pet receives a microchip?",
+        "a": "Implanting the chip is only the first step; you must register the unique chip number with your current contact details in the national database. Our team will provide you with the registry information to ensure your account is successfully updated.",
         "group": "Vaccines and prevention"
       }
     ],
@@ -217,9 +247,33 @@
         "group": "Tests and imaging"
       },
       {
+        "id": "q-how-long-does-it-take-to-get-my-pet-s-blood-test-results",
+        "q": "How long does it take to get my pet’s blood test results?",
+        "a": "We perform different diagnostics within our in-house laboratory, we can often process samples efficiently and relay the results to you as soon as they are available.",
+        "group": "Tests and imaging"
+      },
+      {
         "id": "q-why-do-my-dogs-or-cats-need-bloodwork-prior-to-surgery",
         "q": "Why do my dogs or cats need bloodwork prior to surgery?",
         "a": "Pre-surgical bloodwork screens your pet's internal health, specifically assessing liver and kidney functions. This evaluation provides a vital safety baseline to ensure your pet can properly metabolize and eliminate anesthetic agents.",
+        "group": "Tests and imaging"
+      },
+      {
+        "id": "q-what-does-the-cbc-test-detect",
+        "q": "What does the CBC test detect?",
+        "a": "A Complete Blood Count (CBC) evaluates the cellular elements of your pet's blood. It tracks red blood cells (to screen for anaemia), white blood cells (to identify signs of infection or inflammation), and platelets (to review blood clotting abilities).",
+        "group": "Tests and imaging"
+      },
+      {
+        "id": "q-what-is-a-good-time-for-my-older-pet-to-have-their-blood-checked",
+        "q": "What is a good time for my older pet to have their blood checked?",
+        "a": "For senior dogs and cats, we generally recommend thorough blood screening once or twice a year. Senior animals can experience rapid changes in their health, and regular testing allows us to monitor chronic conditions proactively.",
+        "group": "Tests and imaging"
+      },
+      {
+        "id": "q-should-my-pet-fast-prior-to-their-blood-sample",
+        "q": "Should my pet fast prior to their blood sample?",
+        "a": "Fasting requirements depend entirely on the specific diagnostic panel being performed. For many general tests, a brief fast of several hours is ideal, as recent meal consumption can increase fats in the blood sample (lipemia), potentially altering test accuracy.",
         "group": "Tests and imaging"
       }
     ],
@@ -237,7 +291,14 @@
         "name": "Ultrasound"
       }
     ],
-    "before": []
+    "before": [
+      {
+        "id": "q-should-my-pet-fast-prior-to-their-blood-sample",
+        "q": "Should my pet fast prior to their blood sample?",
+        "a": "Fasting requirements depend entirely on the specific diagnostic panel being performed. For many general tests, a brief fast of several hours is ideal, as recent meal consumption can increase fats in the blood sample (lipemia), potentially altering test accuracy.",
+        "group": "Tests and imaging"
+      }
+    ]
   },
   {
     "slug": "lab-services",
@@ -266,6 +327,12 @@
         "group": "Tests and imaging"
       },
       {
+        "id": "q-how-fast-can-i-get-my-pet-s-test-results",
+        "q": "How fast can I get my pet’s test results?",
+        "a": "Our clinic is equipped with an on-site diagnostic laboratory suite. This allows us to perform different diagnostics in-house and promptly relay the results to you, supporting timely implementation of a treatment plan when needed.",
+        "group": "Vaccines and prevention"
+      },
+      {
         "id": "q-do-lab-tests-replace-things-like-x-rays-or-ultrasounds",
         "q": "Do lab tests replace things like X-rays or ultrasounds?",
         "a": "No, laboratory testing and diagnostic imaging are complementary tools. While bloodwork and fluid tests evaluate the biochemical and cellular functions of internal systems, X-rays and ultrasounds allow us to view the physical size, shape, and structure of organs.",
@@ -286,7 +353,14 @@
         "name": "Ultrasound"
       }
     ],
-    "before": []
+    "before": [
+      {
+        "id": "q-how-fast-can-i-get-my-pet-s-test-results",
+        "q": "How fast can I get my pet’s test results?",
+        "a": "Our clinic is equipped with an on-site diagnostic laboratory suite. This allows us to perform different diagnostics in-house and promptly relay the results to you, supporting timely implementation of a treatment plan when needed.",
+        "group": "Vaccines and prevention"
+      }
+    ]
   },
   {
     "slug": "pet-x-ray",
@@ -376,9 +450,21 @@
         "group": "Tests and imaging"
       },
       {
+        "id": "q-will-my-dog-cat-need-to-be-sedated",
+        "q": "Will my dog/cat need to be sedated?",
+        "a": "Most dogs and cats do not require sedation and remain comfortable and relaxed with gentle handling and positioning mats. A mild sedative may be recommended only if a patient experiences significant anxiety or acute physical pain, helping to ensure their comfort.",
+        "group": "Tests and imaging"
+      },
+      {
         "id": "q-can-i-get-the-ultrasound-results-right-away",
         "q": "Can I get the ultrasound results right away?",
         "a": "Ultrasound images are routinely submitted to a board-certified veterinary radiologist for a thorough final review and formal report.",
+        "group": "Tests and imaging"
+      },
+      {
+        "id": "q-should-my-pet-skip-the-meal-prior-to-their-appointment",
+        "q": "Should my pet skip the meal prior to their appointment?",
+        "a": "If we are scanning your pet's abdomen, fasting (such as skipping breakfast) is generally recommended. A stomach containing food or excess gastrointestinal gas can obstruct the veterinary team's view of surrounding internal organs.",
         "group": "Tests and imaging"
       }
     ],
@@ -396,7 +482,14 @@
         "name": "Digital X-ray"
       }
     ],
-    "before": []
+    "before": [
+      {
+        "id": "q-should-my-pet-skip-the-meal-prior-to-their-appointment",
+        "q": "Should my pet skip the meal prior to their appointment?",
+        "a": "If we are scanning your pet's abdomen, fasting (such as skipping breakfast) is generally recommended. A stomach containing food or excess gastrointestinal gas can obstruct the veterinary team's view of surrounding internal organs.",
+        "group": "Tests and imaging"
+      }
+    ]
   },
   {
     "slug": "spay-neuter",
@@ -429,6 +522,12 @@
         "q": "Will spaying or neutering change my pet's behaviour?",
         "a": "These surgeries can reduce behaviours driven by reproductive hormones, such as roaming, territorial urine marking, or certain hormone-related aggressive tendencies. However, your pet's core personality, affection levels, and intelligence remain the same.",
         "group": "Spay and neuter"
+      },
+      {
+        "id": "q-how-long-does-it-take-for-a-pet-to-recover-from-the-surgery",
+        "q": "How long does it take for a pet to recover from the surgery?",
+        "a": "Most dogs and cats heal smoothly within 10 to 14 days. Adhering closely to your veterinarian’s post-operative care instructions, including activity restriction and recovery cone use, will help support an uneventful recovery phase.",
+        "group": "Surgery and anesthesia"
       }
     ],
     "related": [
@@ -455,6 +554,18 @@
     "body": "\nOur surgical services address a wide range of medical conditions requiring precise intervention. From routine spay & neuter procedures to more complex soft tissue surgeries, our team focuses on careful planning, patient safety, and attentive recovery care.\n\nWe utilize modern surgical techniques and monitoring equipment to support successful outcomes. Every surgical patient receives individualized anesthesia and pre-operative bloodwork assessment.\n\n#### Key Surgical Services Include\n\n  * Soft tissue surgical procedures to treat internal medical conditions and remove abnormal growths.\n  * Tumor and mass removal surgeries aimed at improving comfort and preventing complications.\n  * Internal surgical treatments addressing digestive, reproductive, or structural concerns.\n  * Pre-surgical consultations and planning to ensure every procedure is carefully evaluated.\n  * Post-operative monitoring and recovery care supporting safe healing and patient comfort.\n\nOur surgical team prioritizes safety, precision, and compassionate care throughout every stage of treatment.\n\nDiscuss Surgery Options\n\n",
     "when": [],
     "questions": [
+      {
+        "id": "q-what-types-of-surgeries-do-you-complete",
+        "q": "What types of surgeries do you complete?",
+        "a": "Our clinic provides a wide range of surgical care for dogs and cats. This includes routine elective procedures, such as spays and neuters, orthopaedic surgeries, as well as soft tissue surgeries. Soft tissue procedures may include the removal of lumps or masses, and surgeries addressing internal abdominal conditions.",
+        "group": "Surgery and anesthesia"
+      },
+      {
+        "id": "q-how-do-you-keep-my-dog-or-cat-from-feeling-pain",
+        "q": "How do you keep my dog or cat from feeling pain?",
+        "a": "We take pain management seriously and utilize multi-modal protocols. Your pet receives pain relief medications before the procedure begins, continuous general anesthesia during surgery, and tailored post-operative medications to help support a comfortable recovery at home.",
+        "group": "Vaccines and prevention"
+      },
       {
         "id": "q-why-does-my-pet-require-a-checkup-before-surgery",
         "q": "Why does my pet require a checkup before surgery?",
@@ -593,6 +704,12 @@
         "q": "How do I understand if my dog or cat needs a soft tissue procedure?",
         "a": "If your pet exhibits abnormal tissue growths, persistent discomfort, traumatic injuries, or chronic conditions affecting their eyes, ears, or internal organs, a thorough clinical examination will help determine if a surgical procedure is appropriate.",
         "group": "End-of-life care"
+      },
+      {
+        "id": "q-is-anesthesia-used-during-these-procedures",
+        "q": "Is anesthesia used during these procedures?",
+        "a": "Yes. All soft tissue surgeries are conducted under monitored general anesthesia, utilizing individualized medication protocols to support a safe and stable surgical experience.",
+        "group": "Surgery and anesthesia"
       },
       {
         "id": "q-what-type-of-care-does-my-pet-receive-after-surgery",
@@ -777,6 +894,12 @@
         "group": "Vaccines and prevention"
       },
       {
+        "id": "q-my-older-labrador-has-been-diagnosed-with-arthritis-what-should-i-ask-the-vet",
+        "q": "My older Labrador has been diagnosed with arthritis. What should I ask the vet?",
+        "a": "We recommend discussing appropriate exercise durations, low-impact walking surfaces, weight management plans, and therapeutic options, such as tailored joint supplements or prescribed medications, to support their mobility and comfort.",
+        "group": "Vaccines and prevention"
+      },
+      {
         "id": "q-how-often-would-my-dog-or-cat-be-visiting-after-we-begin-a-pain-plan",
         "q": "How often would my dog or cat be visiting after we begin a pain plan?",
         "a": "Follow-up visits are typically scheduled more frequently at the beginning of a plan, such as every few weeks, to monitor your pet's response to treatment. Once comfort levels are stably managed, the intervals between evaluations are usually extended to every few months.",
@@ -907,6 +1030,12 @@
         "id": "q-can-you-help-first-time-dog-breeders",
         "q": "Can you help first-time dog breeders?",
         "a": "Yes. We offer professional consultations to help guide first-time breeders through the reproductive process, helping you understand veterinary timelines and care requirements before, during, and after a pregnancy.",
+        "group": "Breeding"
+      },
+      {
+        "id": "q-do-you-provide-care-once-the-puppies-are-born",
+        "q": "Do you provide care once the puppies are born?",
+        "a": "Yes, we offer postpartum health assessments for both the mother and her puppies to monitor nursing, growth, and general health during the early stages of neonatal life (whelping care).",
         "group": "Breeding"
       },
       {
@@ -1073,9 +1202,33 @@
         "group": "Breeding"
       },
       {
+        "id": "q-when-is-the-right-time-to-say-goodbye",
+        "q": "When is the right time to say goodbye?",
+        "a": "Determining the right time to say goodbye is a deeply personal and difficult decision. We provide supportive quality of life consultations and diagnostic reviews to help you objectively assess your dog or cat's comfort and well-being, helping your family make an informed, compassionate choice.",
+        "group": "End-of-life care"
+      },
+      {
         "id": "q-what-kind-of-environment-do-you-provide-for-the-procedure",
         "q": "What kind of environment do you provide for the procedure?",
         "a": "We offer a quiet comfort space within our clinic. This area is specifically designed to provide a peaceful, private, and low-stress environment for you and your pet.",
+        "group": "End-of-life care"
+      },
+      {
+        "id": "q-can-i-stay-with-my-pet-during-the-process",
+        "q": "Can I stay with my pet during the process?",
+        "a": "Yes, you are welcome to remain with your pet throughout the procedure. We tailor the experience to suit what makes your family feel most supported and comfortable.",
+        "group": "End-of-life care"
+      },
+      {
+        "id": "q-how-do-you-keep-my-dog-or-cat-comfortable-if-they-are-in-pain",
+        "q": "How do you keep my dog or cat comfortable if they are in pain?",
+        "a": "Prior to the procedure, we will administer gentle sedation or pain relief to help ensure your pet is deeply relaxed, comfortable, and resting peacefully.",
+        "group": "End-of-life care"
+      },
+      {
+        "id": "q-what-happens-after-the-procedure",
+        "q": "What happens after the procedure?",
+        "a": "We handle all aftercare arrangements with dignity and respect. You may choose between private cremation (where your pet's ashes are returned to you) or communal cremation, and we can assist you with memorial keepsakes.",
         "group": "End-of-life care"
       },
       {
