@@ -54,5 +54,6 @@
   "bookingLive": false,
   "instagram": "https://www.instagram.com/walnutgroveanimalhospitalbc/",
   "facebook": "https://www.facebook.com/walnutgroveanimalhospitalbc/",
-  "formEndpoint": "https://docs.google.com/forms/d/e/1FAIpQLScJA4N82tv0x5Ek5wLkXZteAvFi0kyf3CBZqdagPe8AmGja3w/formResponse"
+  "formEndpoint": "https://docs.google.com/forms/d/e/1FAIpQLScJA4N82tv0x5Ek5wLkXZteAvFi0kyf3CBZqdagPe8AmGja3w/formResponse",
+  "_comment_email": "\"email\": \"[CONFIRM: clinic email]\" — disabled until supplied"
 }
