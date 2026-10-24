@@ -60,3 +60,4 @@ header{view-transition-name:site-header}
 @keyframes v3-page-out{to{opacity:0}}@keyframes v3-page-in{from{opacity:0}}
 ::view-transition-group(site-header),::view-transition-new(site-header){animation:none}::view-transition-old(site-header){display:none}
 @media(prefers-reduced-motion:reduce){@view-transition{navigation:none}::view-transition-old(root),::view-transition-new(root){animation:none!important}}
+@media(max-width:899px){header{transition:transform 200ms}header.phone-hidden{transform:translateY(-100%)}html:has(#menu-sheet[open]) header{transform:none}}
