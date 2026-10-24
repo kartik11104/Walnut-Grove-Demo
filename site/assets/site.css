@@ -50,3 +50,6 @@ main.page-content>.band-dark,main.page-content>.band-soft{grid-column:1/-1}
 #plant-checker{height:56px;font:1.4rem Newsreader,Georgia,serif}#plant-suggestions{max-width:640px;list-style:none;padding:0;margin:0;border:1px solid var(--line);background:var(--card)}#plant-suggestions [role=option]{padding:12px;cursor:pointer}#plant-suggestions [aria-selected=true]{background:var(--blue-soft)}#plant-result{margin-block:24px;padding-left:24px;border-left:4px solid #A3361F}#plant-result.plant-miss{border-left-color:#2F6B45}
 
 #wall-lightbox::backdrop{background:rgba(26,20,16,.92)}.lightbox-media{max-width:100%;overflow:auto;clear:both}#wall-image{max-width:none;height:auto}
+
+.service-group-index{display:none}[data-filter-group]{scroll-margin-top:96px}
+@media(min-width:900px){.service-index{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px}.service-group-index{display:grid;gap:16px;position:sticky;top:96px;align-self:start}.service-group-index a{padding-left:12px;border-left:2px solid transparent}.service-group-index a.active{border-left-color:var(--walnut)}.service-group-content{min-width:0}}
